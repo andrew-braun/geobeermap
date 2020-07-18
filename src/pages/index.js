@@ -1,5 +1,11 @@
 import React from "react"
+import { Link } from 'gatsby'
 
-export default function Home() {
-  return <div>Hello world!</div>
+export default () => {
+  return (
+  <React.Fragment>
+    <div>Hello world!</div>
+    <p><Link to="/blog">View Blog</Link></p>
+  </React.Fragment>
+  )
 }
