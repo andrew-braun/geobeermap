@@ -1,0 +1,32 @@
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas: 
+    "header header header"
+    "main   main   main"
+    "footer footer footer";
+}
+
+.main-header {
+    grid-area: header;
+    grid-row: 1 / 3;
+    display: flex;
+    justify-content: space-between;
+    background: gray;
+}
+
+.main-container {
+    grid-area: main;
+    grid-row: 3 / 11;
+    min-height: 80vh;
+    background: burlywood;
+}
+
+.main-footer {
+    grid-area: footer;
+    grid-row: 11 / 13;
+    display: flex;
+    justify-content: center;
+    background: firebrick;
+}

@@ -15,6 +15,16 @@ module.exports = {
         name: `markdown-pages`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
+      }
+    },
     `gatsby-transformer-remark`
-  ]
+  ],
+  siteMetadata: {
+    title: `GeoBeerMap`,
+    description: `Your gateway to Georgia's craft beer`,
+  }, 
 }
