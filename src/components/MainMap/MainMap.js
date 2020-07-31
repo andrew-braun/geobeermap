@@ -6,9 +6,9 @@ export default class MainMap extends React.Component {
     constructor() {
         super()
         this.state = {
-            lat: 51.505,
-            lng: -0.09,
-            zoom: 13
+            lat: 41.689482,
+            lng: 44.798579,
+            zoom: 16
         }
     }
     render() {
@@ -18,8 +18,8 @@ export default class MainMap extends React.Component {
                 <Map center={position}
                     zoom = {this.state.zoom}>
                     <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://api.mapbox.com/styles/v1/ab-dev/ckdaldm751b6s1ipgqrzoquzj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYWItZGV2IiwiYSI6ImNrZGFjcjFnNjBoM3QydG1oeG01NHg3cm4ifQ.MumpPYqqGqbsFqUJPMxNsg"
+                        attribution="Map data &copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors, <a href=&quot;https://creativecommons.org/licenses/by-sa/2.0/&quot;>CC-BY-SA</a>, Imagery &copy; <a href=&quot;https://www.mapbox.com/&quot;>Mapbox</a>"
                     />
                     <Marker position={position}>
                         <Popup>
