@@ -44,6 +44,12 @@ body {
 
 }
 
+/* Leaflet map */
+.leaflet-container {
+    width: 100%;
+    height: 100%;
+}
+
 @media screen and (max-width: 500px) {
     .info-bar-section {
         flex: 100%;
@@ -56,3 +62,4 @@ body {
     }
 
 }
+

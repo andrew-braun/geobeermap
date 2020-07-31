@@ -12,7 +12,6 @@ export default () => {
           <p>Info bar</p>
         </section>
         <section className="map-section">
-          <p>Map</p>
           <MainMap />
         </section>
       </div>
