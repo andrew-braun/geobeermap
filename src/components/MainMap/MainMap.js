@@ -13,6 +13,7 @@ export default class MainMap extends React.Component {
     }
     render() {
         const position = [this.state.lat, this.state.lng]
+        if (typeof window !== 'undefined') {
         return (
             <div id={styles.mainMapId}>
                 <Map center={position}
@@ -23,12 +24,14 @@ export default class MainMap extends React.Component {
                     />
                     <Marker position={position}>
                         <Popup>
-                            Pop!
+                            Sma
                         </Popup>
                     </Marker>
                 </Map>
             </div>
         );
+        }
+        return null
     }
 
     // const primaryMap = L.map("main-map-id").setView([51.505, -0.09], 13);

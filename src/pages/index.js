@@ -9,7 +9,6 @@ export default () => {
     <Layout >
       <div class="frontpage-main-content">
         <section className="info-bar-section">
-          <p>Info bar</p>
         </section>
         <section className="map-section">
           <MainMap />
