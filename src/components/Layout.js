@@ -29,9 +29,18 @@ const Layout = ({ children }) => {
                 <nav className="main-nav">
                   <ul className="nav-list">
                     <li className="nav-list-item">
-                      <a href="/blog" className="nav-list-link">
+                      <Link
+                        to="/"
+                        className="nav-list-link">
+                        Home
+                        </Link>
+                    </li>
+                    <li className="nav-list-item">
+                    <Link
+                        to="/blog"
+                        className="nav-list-link">
                         Blog
-                      </a>
+                        </Link>
                     </li>
                   </ul>
                 </nav>
