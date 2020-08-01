@@ -27,7 +27,7 @@ collections:
       - { name: open, label: "Currently Operating", widget: boolean, default: true }
       - { name: location, label: Location, widget: map }
       - { name: images, label: Images, widget: image, allow_multiple: true, required: false }
-      - { name: description, label: Description, widget: markdown, required: false }
+      - { name: body, label: Description, widget: markdown, required: false }
       - { name: website, label: Website, required: false }
       - { name: googlemaps, label: "Google Maps", required: false }
       - { name: facebook, label: Facebook, required: false }
