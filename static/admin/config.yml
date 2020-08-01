@@ -15,3 +15,14 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+  - name: entries
+    label: Entries
+    folder: entries
+    extension: "json"
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: name, label: Name }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: code }
