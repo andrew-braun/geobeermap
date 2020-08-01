@@ -21,8 +21,19 @@ collections:
     extension: "json"
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
       - { name: name, label: Name }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: code }
+      - { name: type, label: Type, widget: select, multiple: true, options: ["Brewery", "Bar", "Retailer", "Other"], default: ["Brewery"] }
+      - { name: opening-date, label: Opening Date, widget: datetime, required: false }
+      - { name: open, label: "Currently Operating", widget: boolean, default: true }
+      - { name: location, label: Location, widget: map }
+      - { name: images, label: Images, widget: image, allow_multiple: true, required: false }
+      - { name: description, label: Description, widget: markdown, required: false }
+      - { name: website, label: Website, required: false }
+      - { name: googlemaps, label: "Google Maps", required: false }
+      - { name: facebook, label: Facebook, required: false }
+      - { name: instagram, label: Instagram, required: false }
+      - { name: twitter, label: Twitter, required: false }
+      - { name: path, label: Path }
+      - { name: date, label: Publication Date, widget: datetime }
+      - { name: title, label: File Name }
+      
