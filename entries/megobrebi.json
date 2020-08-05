@@ -2,14 +2,16 @@
   "body": "# Megobrebi",
   "opening-date": "2020-08-01T11:16:41.615Z",
   "path": "/megobrebi/",
+  "facebook": "https://www.facebook.com/megobrebibrew",
   "open": true,
-  "name": "Megobrebi Rocks",
+  "name": "Megobrebi",
   "date": "2020-08-01T11:16:42.247Z",
+  "googlemaps": "https://goo.gl/maps/cVAHZSDKNX6yQWJY9",
+  "instagram": "https://www.instagram.com/megobrebi.brewery",
   "location": "{\"type\":\"Point\",\"coordinates\":[44.1210938,42.1199555]}",
   "title": "megobrebi",
   "type": [
-    "Brewery",
-    "Bar"
+    "Brewery"
   ],
-  "website": "mgbrew.com"
+  "website": "https://mgbrew.com"
 }
