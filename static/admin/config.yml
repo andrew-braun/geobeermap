@@ -14,6 +14,7 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - { name: images, label: Images, widget: image, allow_multiple: true, required: false }
       - { name: body, label: Body, widget: markdown }
   - name: entries
     label: Entries
