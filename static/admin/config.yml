@@ -28,6 +28,7 @@ collections:
       - { name: location, label: Location, widget: map }
       - { name: openingdate, label: Opening Date, widget: datetime, required: false }
       - { name: images, label: Images, widget: image, allow_multiple: true, required: false }
+      - { name: logo, label: Logo, widget: image, allow_multiple: false, required: false }
       - { name: body, label: Description, widget: markdown, required: false }
       - { name: website, label: Website, required: false }
       - { name: googlemaps, label: "Google Maps", required: false }
