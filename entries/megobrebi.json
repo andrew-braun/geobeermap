@@ -2,15 +2,18 @@
   "body": "# Megobrebi",
   "opening-date": "2018-12-31T20:00:00.000Z",
   "path": "/megobrebi/",
+  "openingdate": "2020-08-06T19:11:50.309Z",
   "facebook": "https://www.facebook.com/megobrebibrew",
   "open": true,
   "name": "Megobrebi",
   "date": "2020-08-01T11:16:42.247Z",
   "googlemaps": "https://goo.gl/maps/cVAHZSDKNX6yQWJY9",
   "instagram": "https://www.instagram.com/megobrebi.brewery",
+  "address": "Tbilisi",
   "title": "megobrebi",
   "type": [
     "Brewery"
   ],
-  "website": "https://mgbrew.com"
+  "website": "https://mgbrew.com",
+  "coordinates": "41.662295,44.919024"
 }
