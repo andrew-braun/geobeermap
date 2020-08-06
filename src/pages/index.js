@@ -6,7 +6,7 @@ import "./styles/index.css"
 export default () => {
   return (
     <Layout >
-      <div class="frontpage-main-content">
+      <div className="frontpage-main-content">
         <section className="info-bar-section">
         </section>
         <section className="map-section">

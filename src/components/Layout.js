@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
     return (
         <div className="main-grid">
             <header className="main-header">
-                <div class="site-identity">
+                <div className="site-identity">
                     <div className="site-title">
                       {data.site.siteMetadata.title}
                     </div>
