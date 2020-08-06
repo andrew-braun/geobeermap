@@ -25,7 +25,8 @@ collections:
       - { name: name, label: Name }
       - { name: type, label: Type, widget: select, multiple: true, options: ["Brewery", "Bar", "Retailer", "Other"], default: ["Brewery"] }
       - { name: open, label: "Currently Operating", widget: boolean, default: true }
-      - { name: location, label: Location, widget: map }
+      - { name: address, label: Address }
+      - { name: coordinates, label: Coordinates }
       - { name: openingdate, label: Opening Date, widget: datetime, required: false }
       - { name: images, label: Images, widget: image, allow_multiple: true, required: false }
       - { name: logo, label: Logo, widget: image, allow_multiple: false, required: false }
