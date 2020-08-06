@@ -15,6 +15,14 @@ module.exports = {
         name: `markdown-pages`,
       },
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/entries`,
+        name: `entries`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {

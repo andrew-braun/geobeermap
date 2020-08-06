@@ -20,6 +20,7 @@
     "gatsby-plugin-react-leaflet": "^2.0.13",
     "gatsby-plugin-sharp": "^2.6.24",
     "gatsby-source-filesystem": "^2.3.20",
+    "gatsby-transformer-json": "^2.4.11",
     "gatsby-transformer-remark": "^2.8.25",
     "gatsby-transformer-sharp": "^2.5.12",
     "leaflet": "^1.6.0",
