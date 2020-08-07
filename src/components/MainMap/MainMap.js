@@ -2,6 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import { Map, TileLayer } from "react-leaflet"
 import MapMarker from "./MapMarker"
+import MapSidebar from "../MapSidebar/MapSidebar"
 import styles from "./mainmap.module.css"
 
 export default function MainMap() {
@@ -55,7 +56,11 @@ export default function MainMap() {
 
     if (typeof window !== 'undefined') {
         return (
-            <div id={styles.mainMapId}>
+            <div id={styles.mainMapId} className={styles.mainMapContainer}>
+                <div className={styles.mainMapSidebar}>
+                    <MapSidebar 
+                    />
+                </div>
                 <Map center={position}
                     zoom = {10}>
                     <TileLayer

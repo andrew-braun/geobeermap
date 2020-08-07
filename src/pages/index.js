@@ -7,8 +7,6 @@ export default () => {
   return (
     <Layout >
       <div className="frontpage-main-content">
-        <section className="info-bar-section">
-        </section>
         <section className="map-section">
           <MainMap />
         </section>

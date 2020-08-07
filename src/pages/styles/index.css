@@ -36,16 +36,9 @@ body {
     background: linear-gradient(90deg, hsla(205, 100%, 7%, 0.3), hsla(188, 69%, 25%, 0.1));
 }
 
-.info-bar-section {
-    flex: 30%;
-    max-width: 25vw;
-    background: hsla(0, 0%, 0%, 0.4);
-    color: var(--main-bg);
-}
-
 /* Map */
 .map-section {
-    flex: 70%;
+    width: 100%;
 
 }
 
