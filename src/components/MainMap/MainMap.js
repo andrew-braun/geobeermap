@@ -69,10 +69,3 @@ export default function MainMap() {
         }
         return null
     }
-
-/* 
-
-1. Create Marker component containing location + content 
-passed to Marker in props from MainMap
-2. For every node returned by GraphQL query, generate a marker
-*/

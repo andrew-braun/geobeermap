@@ -3,6 +3,8 @@
 html {
     font-family: 'Recursive', sans-serif, 'Courier New', Courier, monospace;
     font-size: 10px;
+    width: 100%;
+    height: 100%;
 }
 
 body {
