@@ -10,14 +10,21 @@ export default function MapMarker( props ) {
                             <div className={styles.popupName}>{props.name}</div>
                             <div className={styles.popupType}>{props.type}</div>
                             <div className={styles.popupSocialButtons}>
-                                <div className={styles.popupFb}>
-                                    <a href={props.facebook} target="_blank">FB</a>
-                                </div>
-                                <div className={styles.popupIg}>
-                                    <a href={props.instagram} target="_blank">IG</a></div>
-                                <div className={styles.popupWebsite}>
-                                    <a href={props.website} target="_blank">Website</a>
-                                </div>
+                                { (props.facebook) &&
+                                    <div className={styles.popupFb}>
+                                        <a href={props.facebook} target="_blank">FB</a>
+                                    </div>
+                                }
+                                { (props.instagram) &&
+                                    <div className={styles.popupIg}>
+                                        <a href={props.instagram} target="_blank">IG</a>
+                                    </div>
+                                }
+                                { (props.website) &&
+                                    <div className={styles.popupWebsite}>
+                                        <a href={props.website} target="_blank">Website</a>
+                                    </div>
+                                }
                             </div>
                         </Popup>
                     </Marker>
