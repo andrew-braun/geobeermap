@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import { Map, TileLayer, Marker, Popup } from "react-leaflet"
+import { Map, TileLayer } from "react-leaflet"
 import MapMarker from "./MapMarker"
 import styles from "./mainmap.module.css"
 
@@ -35,21 +35,21 @@ export default function MainMap() {
 
     for (let i=0; i<data.allEntriesJson.edges.length; i++) {
         entryArray.push(data.allEntriesJson.edges[i].node);
-    };
+        entryArray[i].coordinates = entryArray[i].coordinates.toString().split(",").map(str => parseFloat(str));
 
-    for (let entry of entryArray) {
-        entry.coordinates = entry.coordinates.toString().split(",").map(str => parseFloat(str));
-        console.log(entry.coordinates)
-    }
+    };
 
     const Markers = entryArray.map(entry => 
         <MapMarker 
             name={entry.name}
+            type={entry.type}
+            googlemaps={entry.googlemaps}
+            facebook={entry.facebook}
+            instagram={entry.instagram}
+            website={entry.website}
             position={entry.coordinates}
         />
     )
-
-    console.log(Markers);
 
     const position=[41.689472,44.798480];
 
@@ -57,7 +57,7 @@ export default function MainMap() {
         return (
             <div id={styles.mainMapId}>
                 <Map center={position}
-                    zoom = {18}>
+                    zoom = {10}>
                     <TileLayer
                         url="https://api.mapbox.com/styles/v1/ab-dev/ckdaldm751b6s1ipgqrzoquzj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYWItZGV2IiwiYSI6ImNrZGFjcjFnNjBoM3QydG1oeG01NHg3cm4ifQ.MumpPYqqGqbsFqUJPMxNsg"
                         attribution="Map data &copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors, <a href=&quot;https://creativecommons.org/licenses/by-sa/2.0/&quot;>CC-BY-SA</a>, Imagery &copy; <a href=&quot;https://www.mapbox.com/&quot;>Mapbox</a>"
