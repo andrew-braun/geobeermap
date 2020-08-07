@@ -1,4 +1,6 @@
 .map-sidebar-item {
+    margin: 0.1rem 0;
+    padding: 1rem;
     background: var(--dark-1);
     color: var(--light-1);
     transition: background 0.2s ease-in-out;
@@ -7,6 +9,16 @@
 .map-sidebar-item:hover {
     background: var(--dark-2);
 }
+
+.sidebar-name {
+    font-size: 1.4rem;
+    color: var(--bright-1);
+}
+
+.sidebar-type {
+    font-size: 1.2rem;
+}
+
 .sidebar-social-buttons {
     display: flex;
 }
