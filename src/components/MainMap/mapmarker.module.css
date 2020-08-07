@@ -1,0 +1,17 @@
+.popup-name {
+    font-size: 1.2em;
+}
+
+.popup-type {
+    font-size: 0.9em;
+}
+
+.popup-social-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.popup-social-buttons div a {
+    padding: 0.1em;
+    color: black;
+}
