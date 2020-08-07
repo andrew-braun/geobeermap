@@ -1,0 +1,16 @@
+.map-sidebar-item {
+    background: var(--dark-1);
+    color: var(--light-1);
+    transition: background 0.2s ease-in-out;
+}
+
+.map-sidebar-item:hover {
+    background: var(--dark-2);
+}
+.sidebar-social-buttons {
+    display: flex;
+}
+
+.sidebar-social-link {
+    padding: 0.2em;
+}
