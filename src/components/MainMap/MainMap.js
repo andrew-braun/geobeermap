@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import { Map, TileLayer } from "react-leaflet"
 import MapMarker from "./MapMarker"
@@ -6,6 +6,13 @@ import MapSidebar from "./MapSidebar"
 import styles from "./mainmap.module.css"
 
 export default function MainMap() {
+    const [ selectedItem, setSelectedItem ] = useState("")
+
+    const itemSelect = (id) => {
+        setSelectedItem(id)
+    }
+    
+    console.log(selectedItem)
 
     const data = useStaticQuery(
         graphql`
@@ -37,7 +44,7 @@ export default function MainMap() {
     for (let i=0; i<data.allEntriesJson.edges.length; i++) {
         entryArray.push(data.allEntriesJson.edges[i].node);
         entryArray[i].coordinates = entryArray[i].coordinates.toString().split(",").map(str => parseFloat(str));
-
+        entryArray[i].id = `${entryArray[i].name.toLowerCase()[0]}${entryArray[i].type.toString().toLowerCase()[0]}-${i}`;
     };
 
     const Markers = entryArray.map(entry => 
@@ -49,6 +56,8 @@ export default function MainMap() {
             instagram={entry.instagram}
             website={entry.website}
             position={entry.coordinates}
+            id={entry.id}
+            key={entry.id}
         />
     )
 
@@ -59,6 +68,7 @@ export default function MainMap() {
             <div id={styles.mainMapId} className={styles.mainMapContainer}>
                 <div className={styles.mainMapSidebar}>
                     <MapSidebar 
+                        data={entryArray}
                     />
                 </div>
                 <Map center={position}

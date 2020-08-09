@@ -1,41 +1,9 @@
 import React from 'react'
-import { useStaticQuery, graphql } from "gatsby"
 import SidebarItem from "./SidebarItem"
 import styles from "./mapsidebar.module.css"
 
-export default function MapSidebar() {
-    const data = useStaticQuery(
-        graphql`
-            query SidebarEntriesQuery {
-                allEntriesJson {
-                    edges {
-                        node {
-                            id
-                            facebook
-                            googlemaps
-                            instagram
-                            coordinates
-                            name
-                            open
-                            title
-                            twitter
-                            type
-                            website
-                        }
-                    }
-                }
-            }
-        `
-    );
-
-    /* Create an array of entry objects */
-    const entryArray = [];
-
-    for (let i=0; i<data.allEntriesJson.edges.length; i++) {
-        entryArray.push(data.allEntriesJson.edges[i].node);
-        entryArray[i].coordinates = entryArray[i].coordinates.toString().split(",").map(str => parseFloat(str));
-
-    };
+export default function MapSidebar( props ) {
+    const entryArray = props.data;
 
     const sidebarItems = entryArray.map(entry => 
         <SidebarItem 
@@ -46,6 +14,8 @@ export default function MapSidebar() {
             instagram={entry.instagram}
             website={entry.website}
             position={entry.coordinates}
+            id={entry.id}
+            key={entry.id}
         />
     )
         return (
