@@ -19,20 +19,33 @@ export default function MapSidebar( props ) {
             markers={props.markers}
         />
     )
+
         return (
             <div className={styles.mapSidebar}>
                 <div className={styles.sidebarHeader}>
                     <div className={styles.sidebarTabs}>
-                        <button className={styles.sidebarTab} id={styles.sidebarTab1}>
+                        <button className={styles.sidebarTab} 
+                            id={styles.sidebarTab1}
+                            
+                            >
                             All
                         </button>
-                        <button className={styles.sidebarTab} id={styles.sidebarTab2}>
+                        <button className={styles.sidebarTab} 
+                            id={styles.sidebarTab2}
+                            
+                            >
                             Breweries
                         </button>
-                        <button className={styles.sidebarTab} id={styles.sidebarTab3}>
+                        <button className={styles.sidebarTab} 
+                            id={styles.sidebarTab3}
+                            
+                            >
                             Bars
                         </button>
-                        <button className={styles.sidebarTab} id={styles.sidebarTab4}>
+                        <button className={styles.sidebarTab} 
+                        
+                            id={styles.sidebarTab4}
+                            >
                             Stores
                         </button>
                     </div>

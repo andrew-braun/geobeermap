@@ -45,6 +45,7 @@ export default function MainMap() {
         entryArray.push(data.allEntriesJson.edges[i].node);
         entryArray[i].coordinates = entryArray[i].coordinates.toString().split(",").map(str => parseFloat(str));
         entryArray[i].id = `${entryArray[i].name.toLowerCase()[0]}${entryArray[i].type.toString().toLowerCase()[0]}-${i}`;
+        entryArray[i].type = Object.values(entryArray[i].type).join(", ")
     };
 
     const Markers = entryArray.map( (entry, props) => { 
