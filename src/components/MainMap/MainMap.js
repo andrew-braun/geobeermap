@@ -47,18 +47,23 @@ export default function MainMap() {
         entryArray[i].id = `${entryArray[i].name.toLowerCase()[0]}${entryArray[i].type.toString().toLowerCase()[0]}-${i}`;
     };
 
-    const Markers = entryArray.map(entry => 
-        <MapMarker 
-            name={entry.name}
-            type={entry.type}
-            googlemaps={entry.googlemaps}
-            facebook={entry.facebook}
-            instagram={entry.instagram}
-            website={entry.website}
-            position={entry.coordinates}
-            id={entry.id}
-            key={entry.id}
-        />
+    const Markers = entryArray.map( (entry, props) => { 
+        const { data, selectedIndex } = props;
+        return (
+            <MapMarker 
+                name={entry.name}
+                type={entry.type}
+                googlemaps={entry.googlemaps}
+                facebook={entry.facebook}
+                instagram={entry.instagram}
+                website={entry.website}
+                position={entry.coordinates}
+                id={entry.id}
+                key={entry.id}
+                openPopup={selectedIndex === entry.id}
+            />
+        )
+        }
     )
 
     const position=[41.689472,44.798480];
@@ -69,6 +74,7 @@ export default function MainMap() {
                 <div className={styles.mainMapSidebar}>
                     <MapSidebar 
                         data={entryArray}
+                        markers = {Markers}
                     />
                 </div>
                 <Map center={position}

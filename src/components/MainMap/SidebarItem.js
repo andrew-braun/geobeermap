@@ -1,15 +1,15 @@
 import React from 'react'
-import { Map, Marker, sidebar } from "react-leaflet"
 import styles from "./sidebaritem.module.css"
 
 export default function SidebarItem( props ) {
+    const popupHandler = () => {
+        console.log(props.id)
+    }
 
-    const handleClick = () => {
-        console.log(`${props.id}-marker`)
-    }   
         return (
             <div className={styles.mapSidebarItem} id={`${props.id}-sidebar`}
-                onClick={handleClick}
+                onClick={popupHandler}
+                role="button"
                 >
                 <div className={styles.sidebarName}>{props.name}</div>
                 <div className={styles.sidebarType}>{props.type}</div>

@@ -16,6 +16,7 @@ export default function MapSidebar( props ) {
             position={entry.coordinates}
             id={entry.id}
             key={entry.id}
+            markers={props.markers}
         />
     )
         return (
