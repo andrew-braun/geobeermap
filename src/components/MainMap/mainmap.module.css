@@ -24,7 +24,7 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	animation: fadeInOut .6s infinite alternate ease-in-out;
+	animation: fadeInOut .6s alternate ease-in-out;
 
 }
 @keyframes fadeInOut {
