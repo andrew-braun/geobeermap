@@ -1,15 +1,13 @@
 .main-map-container {
-	display: flex;
-}
-
-.main-map-sidebar {
-	width: 30%;
-	min-width: 25rem;
-	max-width: 30vw;
-	background: hsla(0, 0%, 0%, 0.2);
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-auto-rows: 1fr;
+	grid-template-areas: 
+	"sidebar map";
 }
 
 .leaflet-container {
+	grid-area: map;
 	width: 100%;
 	height: 100%;
 }
@@ -22,6 +20,12 @@
 }
 
 /* Sidebar styles */
+
+.main-map-sidebar {
+	grid-area: sidebar;
+	height: 100%;
+}
+
 .map-sidebar {
 	display: flex;
 	flex-direction: column;
@@ -47,4 +51,14 @@
 	background: var(--bright-1);
 	cursor: pointer;
 	transform: scaleY(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+	.main-map-container {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+		"sidebar"
+		"map";
+	}	
 }

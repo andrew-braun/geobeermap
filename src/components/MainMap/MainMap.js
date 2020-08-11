@@ -2,8 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Map, TileLayer } from "react-leaflet"
 import MapMarker from "./MapMarker"
-import styles from "./mainmap.module.css"
 import SidebarItem from "./SidebarItem"
+import styles from "./mainmap.module.css"
 
 export default function MainMap() {
 

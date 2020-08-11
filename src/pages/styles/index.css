@@ -50,15 +50,6 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-    .info-bar-section {
-        flex: 100%;
-        max-width: 100%;
-        order: 2;
-    }
-    .map-section {
-        flex: 100%;
-        order: 1;
-    }
 
 }
 
