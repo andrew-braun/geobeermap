@@ -158,7 +158,7 @@ export default function MainMap() {
 					{Markers}
 				</Map>
 			) : (
-				<div><h2>Failed to load map</h2></div>
+				<div className={styles.mapLoading}><h2>Loading map</h2></div>
 			)}
 		</div>
 	) 
