@@ -25,8 +25,12 @@
 	align-items: center;
 	text-align: center;
 	animation: fadeInOut .6s alternate ease-in-out;
-
 }
+
+.map-loading h2 {
+	animation: fadeInOut .6s infinite alternate ease-in-out;
+}
+
 @keyframes fadeInOut {
 	from {
 		opacity: .1;
