@@ -12,6 +12,7 @@ export default function SidebarItem(props) {
 			id={`${props.id}-sidebar`}
 			onClick={popupHandler}
 			role="button"
+			tabIndex={"-"+ props.index}
 		>
 			<div className={styles.sidebarName}>{props.name}</div>
 			<div className={styles.sidebarType}>{props.type}</div>

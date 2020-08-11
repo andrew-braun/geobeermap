@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Map, TileLayer } from "react-leaflet"
 import MapMarker from "./MapMarker"
@@ -6,6 +6,7 @@ import SidebarItem from "./SidebarItem"
 import styles from "./mainmap.module.css"
 
 export default function MainMap() {
+    const [ clickedTab, setClickedTab ] = useState("")
 
     // GraphQL query for data entries
 	const data = useStaticQuery(
@@ -56,8 +57,22 @@ export default function MainMap() {
         
     }
 
+    const filteredEntryArray = entryArray.filter(entry => {
+        if (clickedTab.textContent === "All" || clickedTab === "") {
+            return entry
+        } else {
+            return entry.type.toLowerCase().includes(clickedTab.textContent.toLowerCase().slice(0,3))
+        }
+    }
+    )
+
+    const handleTabClick = (event) => {
+        setClickedTab(event.currentTarget);
+    }
+
+
     // Generate map markers using MapMarker component
-	const Markers = entryArray.map(entry => {
+	const Markers = entryArray.map((entry, index) => {
 		return (
 			<MapMarker
 				name={entry.name}
@@ -68,13 +83,14 @@ export default function MainMap() {
 				website={entry.website}
 				position={entry.coordinates}
 				id={entry.id}
-				key={entry.id}
+                key={entry.id}
+                index={index}
 			/>
 		)
 	})
 
     // Generate sidebar items using SidebarItem component
-	const sidebarItems = entryArray.map(entry => (
+	const sidebarItems = filteredEntryArray.map(entry => (
 		<SidebarItem
 			name={entry.name}
 			type={entry.type}
@@ -98,17 +114,33 @@ export default function MainMap() {
 				<div className={styles.mapSidebar}>
 					<div className={styles.sidebarHeader}>
 						<div className={styles.sidebarTabs}>
-							<button className={styles.sidebarTab} id={styles.sidebarTab1}>
+                            <button className={styles.sidebarTab} 
+                            id={styles.sidebarTab1}
+                            tabIndex="-3"
+                            onClick={handleTabClick}
+                            >
 								All
 							</button>
-							<button className={styles.sidebarTab} id={styles.sidebarTab2}>
+                            <button className={styles.sidebarTab} 
+                            id={styles.sidebarTab2}
+                            tabIndex="-4"
+                            onClick={handleTabClick}
+                            >
 								Breweries
 							</button>
-							<button className={styles.sidebarTab} id={styles.sidebarTab3}>
+                            <button className={styles.sidebarTab} 
+                            id={styles.sidebarTab3}
+                            tabIndex="-5"
+                            onClick={handleTabClick}
+                            >
 								Bars
 							</button>
-							<button className={styles.sidebarTab} id={styles.sidebarTab4}>
-								Stores
+                            <button className={styles.sidebarTab} 
+                            id={styles.sidebarTab4}
+                            tabIndex="-6"
+                            onClick={handleTabClick}
+                            >
+								Retailers
 							</button>
 						</div>
 					</div>
@@ -129,6 +161,5 @@ export default function MainMap() {
 				<div><h2>Failed to load map</h2></div>
 			)}
 		</div>
-	)
-	return null
+	) 
 }
