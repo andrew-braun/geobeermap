@@ -72,7 +72,7 @@ export default function MainMap() {
 
 
     // Generate map markers using MapMarker component
-	const Markers = entryArray.map((entry, index) => {
+	const Markers = filteredEntryArray.map((entry, index) => {
 		return (
 			<MapMarker
 				name={entry.name}
