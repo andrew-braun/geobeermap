@@ -2,7 +2,6 @@
 .map-sidebar-item {
     display: flex;
     flex-grow: 1;
-    max-height: 25%;
     margin: 0.1rem 0;
     padding: .5rem;
     background: var(--dark-1);
