@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import SocialButtons from "../components/SocialButtons/SocialButtons"
 import styles from "./entry.module.css"
 
 export default function entryTemplate({ data }) {
@@ -15,12 +16,18 @@ export default function entryTemplate({ data }) {
         <header className={styles.entryHeader}>
           <h1>{entry.name}</h1>
           <div className={styles.infoBox}>
-            <div className={styles.infoBoxSection}>
+            <div className={styles.infoBox}>
               {entry.type}
             </div>
-            <div className={styles.infoBoxSection}>
+            <div className={styles.infoBox}>
               {entry.open}
             </div>
+          </div>
+          <div className={styles.SocialBox}>
+            <SocialButtons 
+              facebook={entry.facebook}
+              instagram={entry.instagram}
+              />
           </div>
         </header>
       </div>

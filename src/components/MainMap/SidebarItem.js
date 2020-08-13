@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import SocialButtons from "../SocialButtons/SocialButtons"
 import styles from "./sidebaritem.module.css"
 
 export default function SidebarItem(props) {
@@ -22,7 +23,11 @@ export default function SidebarItem(props) {
 			</div>
 			<div className={styles.sidebarType}>{props.type}</div>
 			<div className={styles.sidebarSocialButtons}>
-				{props.facebook && (
+				<SocialButtons 
+					facebook={props.facebook}
+					instagram={props.instagram}
+					/>
+				{/* {props.facebook && (
 					<div className={styles.sidebarFb}>
 						<a
 							className={styles.sidebarSocialLink}
@@ -45,7 +50,7 @@ export default function SidebarItem(props) {
 							IG
 						</a>
 					</div>
-				)}
+				)} */}
 				{props.website && (
 					<div className={styles.sidebarWebsite}>
 						<a
