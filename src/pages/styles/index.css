@@ -25,6 +25,11 @@ body {
     --dark-2: hsla(188, 68%, 25%, 1);
 }
 
+a {
+    color: var(--light-1);
+    text-decoration: none;
+}
+
 /* MAIN CONTENT */
 
 /* Info bar */

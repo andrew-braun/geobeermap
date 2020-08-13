@@ -17,6 +17,10 @@
     align-items: center;
 }
 
+.main-header a {
+    color: var(--main-text);
+}
+
 .site-identity {
     justify-self: center;
     text-align: center;

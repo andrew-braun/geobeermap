@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
     return (
         <div className="main-grid">
             <header className="main-header">
+              <Link to = "/">
                 <div className="site-identity">
                     <div className="site-title">
                       {data.site.siteMetadata.title}
@@ -26,6 +27,7 @@ const Layout = ({ children }) => {
                       {data.site.siteMetadata.description}
                     </div>
                 </div>
+              </Link>
                 <nav className="main-nav">
                   <ul className="nav-list">
                     <li className="nav-list-item">
