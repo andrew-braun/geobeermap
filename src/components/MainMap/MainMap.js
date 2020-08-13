@@ -26,6 +26,7 @@ export default function MainMap() {
 							twitter
 							type
 							website
+							path
 						}
 					}
 				}
@@ -83,7 +84,8 @@ export default function MainMap() {
 				website={entry.website}
 				position={entry.coordinates}
 				id={entry.id}
-                key={entry.id}
+				key={entry.id}
+				path={entry.path}
                 index={index}
 			/>
 		)
@@ -100,6 +102,7 @@ export default function MainMap() {
 			website={entry.website}
 			position={entry.coordinates}
 			id={entry.id}
+			path={entry.path}
 			key={entry.id}
 		/>
 	))

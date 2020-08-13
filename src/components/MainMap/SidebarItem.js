@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styles from "./sidebaritem.module.css"
 
 export default function SidebarItem(props) {
@@ -14,7 +15,11 @@ export default function SidebarItem(props) {
 			role="button"
 			tabIndex={"-"+ props.index}
 		>
-			<div className={styles.sidebarName}>{props.name}</div>
+			<div className={styles.sidebarName}>
+			<Link to={`${props.path}`}>
+					{props.name}
+			</Link>
+			</div>
 			<div className={styles.sidebarType}>{props.type}</div>
 			<div className={styles.sidebarSocialButtons}>
 				{props.facebook && (

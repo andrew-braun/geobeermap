@@ -26,8 +26,13 @@ body {
 }
 
 a {
-    color: var(--light-1);
+    color: var(--bright-1);
     text-decoration: none;
+    transition: color .2s ease-in-out;
+}
+
+a:hover {
+    color: var(--light-1);
 }
 
 /* MAIN CONTENT */
