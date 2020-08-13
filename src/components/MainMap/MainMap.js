@@ -118,40 +118,40 @@ export default function MainMap() {
 		<div id={styles.mainMapId} className={styles.mainMapContainer}>
 			{/* Map sidebar */}
             <div className={styles.mainMapSidebar}>
-				<div className={styles.mapSidebar}>
-					<div className={styles.sidebarHeader}>
-						<div className={styles.sidebarTabs}>
-                            <button className={styles.sidebarTab} 
-                            id={styles.sidebarTab1}
-                            tabIndex="-3"
-                            onClick={handleTabClick}
-                            >
-								All
-							</button>
-                            <button className={styles.sidebarTab} 
-                            id={styles.sidebarTab2}
-                            tabIndex="-4"
-                            onClick={handleTabClick}
-                            >
-								Breweries
-							</button>
-                            <button className={styles.sidebarTab} 
-                            id={styles.sidebarTab3}
-                            tabIndex="-5"
-                            onClick={handleTabClick}
-                            >
-								Bars
-							</button>
-                            <button className={styles.sidebarTab} 
-                            id={styles.sidebarTab4}
-                            tabIndex="-6"
-                            onClick={handleTabClick}
-                            >
-								Retailers
-							</button>
-						</div>
+				<div className={styles.sidebarHeader}>
+					<div className={styles.sidebarTabs}>
+						<button className={styles.sidebarTab} 
+						id={styles.sidebarTab1}
+						tabIndex="-3"
+						onClick={handleTabClick}
+						>
+						All
+						</button>
+						<button className={styles.sidebarTab} 
+						id={styles.sidebarTab2}
+						tabIndex="-4"
+						onClick={handleTabClick}
+						>
+							Breweries
+						</button>
+						<button className={styles.sidebarTab} 
+						id={styles.sidebarTab3}
+						tabIndex="-5"
+						onClick={handleTabClick}
+						>
+							Bars
+						</button>
+						<button className={styles.sidebarTab} 
+						id={styles.sidebarTab4}
+						tabIndex="-6"
+						onClick={handleTabClick}
+						>
+							Retailers
+						</button>
 					</div>
-                    {/* Use generated list of map sidebar items */}
+				</div>
+				<div className={styles.mapSidebar}>
+					{/* Use generated list of map sidebar items */}
 					{sidebarItems}
 				</div>
 			</div>
