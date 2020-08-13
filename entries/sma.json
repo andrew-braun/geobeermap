@@ -7,10 +7,13 @@
   "name": "Sma",
   "date": "2020-08-10T18:40:22.276Z",
   "googlemaps": "https://g.page/SMAtbilisi",
+  "instagram": "https://www.instagram.com/sma.tbilisi/",
   "address": "48 Lado Asatiani St, Tbilisi",
   "title": "sma",
   "type": [
     "Bar"
   ],
-  "coordinates": "41.689467, 44.798533"
+  "website": "https://smacraftbeer.bar/en",
+  "coordinates": "41.689467, 44.798533",
+  "untappd": "https://untappd.com/v/sma-craft-bar/7535042"
 }
