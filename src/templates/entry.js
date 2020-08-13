@@ -1,18 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/Layout"
 
 export default function entryTemplate({ data }) {
 //   const { markdownRemark } = data // data.markdownRemark holds your post data
 
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{data.allEntriesJson.edges[1].node.name}</h1>
-        <div
-          className="blog-post-content"
-        />
+    <Layout>
+      <div className="blog-post-container">
+        <div className="blog-post">
+          <h1>{data.allEntriesJson.edges[1].node.name}</h1>
+          <div
+            className="blog-post-content"
+          />
+        </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 
