@@ -1,14 +1,20 @@
 {
+  "body": "# Bayo",
   "opening-date": "2020-08-01T11:14:38.369Z",
   "path": "/bayo/",
+  "openingdate": "2020-08-13T19:27:15.081Z",
+  "facebook": "https://www.facebook.com/Bayobrewery/",
   "open": true,
   "name": "Bayo",
   "date": "2020-08-01T11:14:38.763Z",
+  "googlemaps": "https://goo.gl/maps/jThro7bP6346riuGA",
+  "address": "133 Kvareli St, Tbilisi, Georgia",
   "location": "{\"type\":\"Point\",\"coordinates\":[44.4726563,42.3801876]}",
   "title": "bayo",
   "type": [
     "Brewery"
   ],
+  "coordinates": "41.697438, 44.841412",
   "description": "# Bayo",
-  "coordinates": "41.697432,44.841412"
+  "untappd": "https://untappd.com/w/bayo/429218"
 }
