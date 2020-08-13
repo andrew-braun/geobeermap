@@ -36,6 +36,7 @@ collections:
       - { name: facebook, label: Facebook, required: false }
       - { name: instagram, label: Instagram, required: false }
       - { name: twitter, label: Twitter, required: false }
+      - { name: untappd, label: Untappd, required: false }
       - { name: path, label: Path }
       - { name: date, label: Publication Date, widget: datetime }
       - { name: title, label: File Name }

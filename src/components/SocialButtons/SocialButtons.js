@@ -1,6 +1,7 @@
 import React from "react"
 import { MaterialDesign, DevIcons, AmtDesignIcons, Ionicons, Typicons, Feather, FlatColorIcons, GrommetIcons, Remix} from "react-icons"
 import { AiFillFacebook, AiOutlineInstagram } from "react-icons/ai"
+import { GrTwitter } from "react-icons/gr"
 import styles from "./socialbuttons.module.css"
 
 export default function SocialButtons ( props ) {
@@ -21,6 +22,22 @@ export default function SocialButtons ( props ) {
                         rel="noreferrer"
                     >
                         <AiOutlineInstagram />
+                    </a> : null
+                } 
+                { (props.twitter) ?
+                    <a href={props.twitter}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <GrTwitter />
+                    </a> : null
+                } 
+                { (props.twitter) ?
+                    <a href={props.twitter}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <GrTwitter />
                     </a> : null
                 } 
             </div>

@@ -27,6 +27,9 @@ export default function entryTemplate({ data }) {
             <SocialButtons 
               facebook={entry.facebook}
               instagram={entry.instagram}
+              twitter={entry.twitter}
+              untappd={entry.untappd}
+              website={entry.website}
               />
           </div>
         </header>

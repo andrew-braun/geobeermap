@@ -50,7 +50,7 @@ export default function SidebarItem(props) {
 							IG
 						</a>
 					</div>
-				)} */}
+				)} 
 				{props.website && (
 					<div className={styles.sidebarWebsite}>
 						<a
@@ -61,8 +61,8 @@ export default function SidebarItem(props) {
 						>
 							Website
 						</a>
-					</div>
-				)}
+					</div> 
+				)} */}
 			</div>
 		</div>
 	)
