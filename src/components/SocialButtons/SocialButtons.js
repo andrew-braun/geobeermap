@@ -1,4 +1,6 @@
 import React from "react"
+import { MaterialDesign, DevIcons, AmtDesignIcons, Ionicons, Typicons, Feather, FlatColorIcons, GrommetIcons, Remix} from "react-icons"
+import { AiFillFacebook, AiOutlineInstagram } from "react-icons/ai"
 import styles from "./socialbuttons.module.css"
 
 export default function SocialButtons ( props ) {
@@ -10,7 +12,7 @@ export default function SocialButtons ( props ) {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        FB
+                        <AiFillFacebook />
                     </a> : null
                 } 
                 { (props.instagram) ?
@@ -18,7 +20,7 @@ export default function SocialButtons ( props ) {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        IG
+                        <AiOutlineInstagram />
                     </a> : null
                 } 
             </div>
