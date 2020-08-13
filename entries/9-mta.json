@@ -2,17 +2,20 @@
   "body": "# 9 Mta",
   "path": "/9-mta/",
   "openingdate": "2020-08-10T18:45:16.278Z",
-  "facebook": "",
+  "facebook": "https://www.facebook.com/Beer9Mta/",
   "open": true,
   "name": "9 Mta",
   "date": "2020-08-10T18:45:16.392Z",
   "googlemaps": "https://goo.gl/maps/FSzzK2RoEKv7TQiC6",
+  "instagram": "https://www.instagram.com/9_mta/",
   "address": "10 Galaktion Tabidze St, Tbilisi",
   "title": "9-mta",
   "type": [
     "Retailer",
-    "Bar"
+    "Bar",
+    "Brewery"
   ],
   "website": "https://9mta.ge/",
-  "coordinates": "41.691891, 44.801301"
+  "coordinates": "41.691891, 44.801301",
+  "untappd": "https://untappd.com/9MTA"
 }
