@@ -1,6 +1,9 @@
+/* Main item */
 .map-sidebar-item {
+    display: flex;
+    flex-grow: 1;
     margin: 0.1rem 0;
-    padding: 1rem;
+    padding: .5rem;
     background: var(--dark-1);
     color: var(--light-1);
     transition: background 0.2s ease-in-out;
@@ -10,19 +13,37 @@
     background: var(--dark-2);
 }
 
+/* Vital info */
+.sidebar-info-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    max-width: 80%;
+}
+
 .sidebar-name {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    padding: 0.2rem 0;
     color: var(--bright-1);
+    text-decoration: underline;
+    text-decoration-style: dashed;
 }
 
 .sidebar-type {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+    padding: 0.2rem 0;
 }
 
+.sidebar-website {
+    font-size: 0.8rem;
+}
+
+/* Social buttons */
 .sidebar-social-buttons {
     display: flex;
+    flex: 1 0 25%;
 }
 
 .sidebar-social-link {
-    padding: 0.2em;
+    padding: 0.2rem;
 }

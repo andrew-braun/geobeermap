@@ -24,6 +24,7 @@ export default function MainMap() {
 							open
 							title
 							twitter
+							untappd
 							type
 							website
 							path
@@ -80,6 +81,7 @@ export default function MainMap() {
 				type={entry.type}
 				googlemaps={entry.googlemaps}
 				facebook={entry.facebook}
+				twitter={entry.twitter}
 				instagram={entry.instagram}
 				website={entry.website}
 				position={entry.coordinates}
@@ -100,6 +102,8 @@ export default function MainMap() {
 			facebook={entry.facebook}
 			instagram={entry.instagram}
 			website={entry.website}
+			twitter={entry.twitter}
+			untappd={entry.untappd}
 			position={entry.coordinates}
 			id={entry.id}
 			path={entry.path}

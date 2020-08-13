@@ -53,6 +53,7 @@ export const data =
                         open
                         title
                         twitter
+                        untappd
                         type
                         website
                         body

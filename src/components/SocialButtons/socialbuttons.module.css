@@ -1,0 +1,10 @@
+.socialButtonsContainer {
+    display: flex;
+    flex: 1 0 50%;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
