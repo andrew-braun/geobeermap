@@ -45,7 +45,7 @@
 .main-map-sidebar {
 	position: relative;
 	grid-area: sidebar;
-	height: 100%;
+
 }
 
 .map-sidebar {
