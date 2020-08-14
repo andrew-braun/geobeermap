@@ -33,6 +33,6 @@ module.exports = {
   ],
   siteMetadata: {
     title: `GeoBeerMap`,
-    description: `Your gateway to Georgia's craft beer`,
+    description: `Find craft beer in Georgia`,
   }, 
 }
