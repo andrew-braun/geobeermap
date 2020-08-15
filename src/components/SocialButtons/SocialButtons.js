@@ -1,5 +1,5 @@
 import React from "react"
-import { MaterialDesign, DevIcons, AmtDesignIcons, Ionicons, Typicons, Feather, FlatColorIcons, GrommetIcons, Remix} from "react-icons"
+
 import { AiFillFacebook, AiOutlineInstagram } from "react-icons/ai"
 import { GrTwitter } from "react-icons/gr"
 import { FaUntappd } from "react-icons/fa"
