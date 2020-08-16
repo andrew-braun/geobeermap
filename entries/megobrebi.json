@@ -10,6 +10,8 @@
   "googlemaps": "https://goo.gl/maps/cVAHZSDKNX6yQWJY9",
   "instagram": "https://www.instagram.com/megobrebi.brewery",
   "address": "Tbilisi",
+  "city": "Tbilisi",
+  "country": "Georgia",
   "title": "megobrebi",
   "type": [
     "Brewery"

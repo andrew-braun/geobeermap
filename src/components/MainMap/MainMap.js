@@ -50,13 +50,20 @@ export default function MainMap() {
         // Type list to comma-separated string (but only if original Array to avoid rejoin on reload issue)
         if (Array.isArray(entryArray[i].type)) {
             entryArray[i].type = Object.values(entryArray[i].type).join(", ")
-        }
+		}
+		
+		/* Convert boolean to yes/no */
+		if (entryArray[i].open === true) {
+			entryArray[i].open = "Yes"
+		} else {
+			entryArray[i].open = "No"
+		}
+
         
         // Create unique ids
 		entryArray[i].id = `${entryArray[i].name.toLowerCase()[0]}${
 			entryArray[i].type.toString().toLowerCase()[0]
         }-${i}`
-        
     }
 
     const filteredEntryArray = entryArray.filter(entry => {
@@ -66,7 +73,9 @@ export default function MainMap() {
             return entry.type.toLowerCase().includes(clickedTab.textContent.toLowerCase().slice(0,3))
         }
     }
-    )
+	)
+	
+	console.log(entryArray)
 
     const handleTabClick = (event) => {
         setClickedTab(event.currentTarget);
@@ -85,6 +94,7 @@ export default function MainMap() {
 				instagram={entry.instagram}
 				website={entry.website}
 				position={entry.coordinates}
+				open={entry.open}
 				id={entry.id}
 				key={entry.id}
 				path={entry.path}
@@ -98,6 +108,7 @@ export default function MainMap() {
 		<SidebarItem
 			name={entry.name}
 			type={entry.type}
+			open={entry.open}
 			googlemaps={entry.googlemaps}
 			facebook={entry.facebook}
 			instagram={entry.instagram}

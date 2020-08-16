@@ -42,6 +42,8 @@
 .sidebar-social-buttons {
     display: flex;
     flex: 1 0 25%;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .sidebar-social-link {

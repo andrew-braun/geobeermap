@@ -1,8 +1,7 @@
 import React from "react"
-
 import { AiFillFacebook, AiOutlineInstagram } from "react-icons/ai"
 import { GrTwitter } from "react-icons/gr"
-import { FaUntappd } from "react-icons/fa"
+import { FaUntappd, FaMapMarkerAlt } from "react-icons/fa"
 import styles from "./socialbuttons.module.css"
 
 export default function SocialButtons ( props ) {
@@ -39,6 +38,14 @@ export default function SocialButtons ( props ) {
                         rel="noreferrer"
                     >
                        <FaUntappd />
+                    </a> : null
+                } 
+                { (props.googlemaps) ?
+                    <a href={props.googlemaps}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                       <FaMapMarkerAlt />
                     </a> : null
                 } 
             </div>

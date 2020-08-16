@@ -40,6 +40,7 @@ export default function SidebarItem(props) {
 					twitter={props.twitter}
 					website={props.website}
 					untappd={props.untappd}
+					googlemaps={props.googlemaps}
 					/>
 			</div>
 		</div>
