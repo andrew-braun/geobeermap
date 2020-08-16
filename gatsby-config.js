@@ -29,27 +29,6 @@ module.exports = {
         linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       }
     },
-    `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-plugin-json-remark`,
-      options: {
-        paths: [
-          `${__dirname}/entries`,
-          `${__dirname}/entries/json-markdown`,
-          `${__dirname}/entries/megobrebi.json`
-        ], // Process all JSON files in these directories.
-        pathsExclude: [``], // Process all files in the directories above, except `pages/contact.json`.
-        fieldNameBlacklist: [
-          "id",
-          "children",
-          "parent",
-          "fields",
-          "internal",
-          "path",
-          "template",
-        ],
-      },
-    },
   ],
   siteMetadata: {
     title: `GeoBeerMap`,

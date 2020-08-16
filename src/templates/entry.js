@@ -9,6 +9,7 @@ import "./entry.css"
 export default function entryTemplate({ data }) {
   const entry = data.allEntriesJson.edges[0].node
 
+    
   return (
     <Layout>
       <div className={styles.entryContainer}>
