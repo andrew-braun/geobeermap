@@ -1,0 +1,9 @@
+.entry-body p {
+    display: flex;
+    flex-wrap: wrap;
+}
+.entry-image {
+    max-width: 40%;
+    float: right;
+    clear: left;
+}

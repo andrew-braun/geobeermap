@@ -51,6 +51,11 @@
     background: hsla(270, 50%, 50%, 0.2);
 }
 
+.entry-image {
+    max-width: 20rem;
+    width: 100px;
+}
+
 @media only screen and (max-width: 600px) {
     .entry-container {
         grid-template-columns: 1fr;

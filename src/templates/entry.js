@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
+import ReactMarkdown from "react-markdown/with-html"
 import Layout from "../components/Layout"
 import SocialButtons from "../components/SocialButtons/SocialButtons"
 import styles from "./entry.module.css"
+import "./entry.css"
 
 export default function entryTemplate({ data }) {
-  // const { markdownRemark } = data // data.markdownRemark holds your post data
-  // const { entry } = data.allEntriesJson.edges
-
   const entry = data.allEntriesJson.edges[0].node
 
   return (
@@ -44,7 +43,11 @@ export default function entryTemplate({ data }) {
           </table>
         </aside>
         <main className={styles.entryMain}>
-          {entry.body}
+          <ReactMarkdown source={entry.body}
+            className="entry-body"
+            escapeHtml={false}
+            unwrapDisallowed={true}
+            />
         </main>
       </div>
     </Layout>
