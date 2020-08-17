@@ -51,7 +51,7 @@
 	max-height: 100%;
 	position: relative;
 	grid-area: sidebar;
-	background: hsla(0, 0%, 0%, 0.4);
+	background: var(--dull-1);
 }
 
 .map-sidebar {
@@ -101,5 +101,6 @@
 	.main-map-sidebar {
 		min-height: 40vh;
 		max-height: 40vh;
+		background: black;
 	}
 }
