@@ -1,17 +1,33 @@
 import React from "react"
 import { Marker, Popup } from "react-leaflet"
+import SocialButtons from "../SocialButtons/SocialButtons"
 import styles from "./mapmarker.module.css"
 
 export default function MapMarker(props) {
-	const { id, name, type, facebook, website, instagram } = props
+	const { id, name, type, path, facebook, website, instagram, untappd, googlemaps, twitter } = props
 
 	return (
 		<div className={styles.mapMarker} id={`${id}-marker`}>
 			<Marker position={props.position}>
 				<Popup>
-					<div className={styles.popupName}>{name}</div>
+					<div className={styles.popupName}>
+						<a href={path}>
+							{name}
+						</a>
+					</div>
 					<div className={styles.popupType}>{type}</div>
-					<div className={styles.popupSocialButtons}>
+					<div className={styles.socialBox}>
+					<SocialButtons 
+					facebook={facebook}
+					instagram={instagram}
+					twitter={twitter}
+					untappd={untappd}
+					website={website}
+					googlemaps={googlemaps}
+					/>
+				</div>
+
+					{/* <div className={styles.popupSocialButtons}>
 						{facebook && (
 							<div className={styles.popupFb}>
 								<a href={facebook} target="_blank" rel="noreferrer">
@@ -33,7 +49,7 @@ export default function MapMarker(props) {
 								</a>
 							</div>
 						)}
-					</div>
+					</div> */}
 				</Popup>
 			</Marker>
 		</div>

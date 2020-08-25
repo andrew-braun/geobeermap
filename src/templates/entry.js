@@ -13,9 +13,6 @@ export default function entryTemplate({ data }) {
   return (
     <Layout>
       <div className={styles.entryContainer}>
-        <header className={styles.entryHeader}>
-          <h1>{entry.name}</h1>
-        </header>
         <aside className={styles.entrySidebar}>
           <h1 className={styles.entrySidebarTitle}>{entry.name}</h1>
           <div className={styles.socialBox}>
@@ -27,6 +24,9 @@ export default function entryTemplate({ data }) {
               website={entry.website}
               googlemaps={entry.googlemaps}
               />
+          </div>
+          <div className={styles.entryWebsite}>
+            <a href={entry.website}>Website</a>
           </div>
           <table className={styles.infoTable}>
             <tr className={styles.infoRow}>
@@ -47,7 +47,6 @@ export default function entryTemplate({ data }) {
           <ReactMarkdown source={entry.body}
             className="entry-body"
             escapeHtml={false}
-            unwrapDisallowed={true}
             />
         </main>
       </div>
