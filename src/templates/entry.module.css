@@ -78,10 +78,6 @@
     padding: 1rem;
 }
 
-.entry-body {
-    display: flex;
-}
-
 .entry-image {
     max-width: 20rem;
     width: 100px;

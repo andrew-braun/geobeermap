@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -17,6 +18,9 @@ const Layout = ({ children }) => {
 	)
 	return (
 		<div className="main-grid">
+			<Helmet>
+				<title>GeoBeerMap</title>
+			</Helmet>
 			<header className="main-header">
 				<div className="site-identity">
 					<Link to="/">
