@@ -79,6 +79,12 @@
     padding: 1rem;
 }
 
+.entry-body a {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
 .entry-image {
     max-width: 20rem;
     width: 100px;
