@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import { graphql } from "gatsby"
 import ReactMarkdown from "react-markdown/with-html"
 import Layout from "../components/Layout"
@@ -8,7 +8,6 @@ import "./entry.css"
 
 export default function entryTemplate({ data }) {
   const entry = data.allEntriesJson.edges[0].node
-
     
   return (
     <Layout>
@@ -43,7 +42,7 @@ export default function entryTemplate({ data }) {
             </tr>
           </table>
         </aside>
-        <main className={styles.entryMain}>
+        <main className={styles.entryMain} tabIndex="-1">
           <ReactMarkdown source={entry.body}
             className="entry-body"
             escapeHtml={false}

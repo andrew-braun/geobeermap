@@ -6,6 +6,13 @@
     min-height: 77vh;
 }
 
+.entry-main {
+    min-height: 70vh;
+    max-height: 72vh;
+    overflow-y: scroll;
+}
+
+
 /* Sidebar */
 .entry-sidebar {
     grid-area: sidebar;
@@ -70,9 +77,6 @@
     grid-area: main;
     background: hsla(270, 50%, 50%, 0.2);
     padding: 1rem;
-}
-
-.entry-body {
 }
 
 .entry-image {
