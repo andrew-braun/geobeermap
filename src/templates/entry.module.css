@@ -12,7 +12,6 @@
     overflow-y: scroll;
 }
 
-
 /* Sidebar */
 .entry-sidebar {
     grid-area: sidebar;
