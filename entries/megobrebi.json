@@ -5,18 +5,19 @@
   "openingdate": "2020-08-06T19:11:50.309Z",
   "facebook": "https://www.facebook.com/megobrebibrew",
   "open": true,
+  "city": "Tbilisi",
   "name": "Megobrebi",
   "date": "2020-08-01T11:16:42.247Z",
   "googlemaps": "https://goo.gl/maps/cVAHZSDKNX6yQWJY9",
   "instagram": "https://www.instagram.com/megobrebi.brewery",
   "address": "Tbilisi",
-  "city": "Tbilisi",
   "country": "Georgia",
   "title": "megobrebi",
+  "images": "assets/megobrebi-beer-tests.jpg",
   "type": [
     "Brewery"
   ],
   "website": "https://mgbrew.com",
-  "untappd": "https://untappd.com/Megobrebi1",
-  "coordinates": "41.662293,44.919020"
+  "coordinates": "41.662293,44.919020",
+  "untappd": "https://untappd.com/Megobrebi1"
 }
