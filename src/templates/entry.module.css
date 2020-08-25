@@ -72,6 +72,9 @@
     padding: 1rem;
 }
 
+.entry-body {
+}
+
 .entry-image {
     max-width: 20rem;
     width: 100px;
