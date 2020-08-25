@@ -1,9 +1,21 @@
+.entry-body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto-fit, minmax(5rem, 1fr));
+    grid-template-areas:
+    "image"
+    "text";
+    width: 100%;
+}
+
 .entry-body p {
     display: block;
+    margin: 0.5rem;
 }
 
 .entry-image {
+    grid-area: image;
+    margin: auto;
+    text-align: center;
     max-width: 40%;
-    float: right;
-    clear: left;
 }
