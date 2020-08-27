@@ -8,7 +8,10 @@ import "./entry.css"
 
 export default function entryTemplate({ data }) {
   const entry = data.allEntriesJson.edges[0].node
-    
+  if (Array.isArray(entry.type)) {
+    entry.type = Object.values(entry.type).join(", ")
+}
+  
   return (
     <Layout>
       <div className={styles.entryContainer}>

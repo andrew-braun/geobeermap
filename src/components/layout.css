@@ -88,7 +88,6 @@
 .main-container {
     grid-area: main;
     max-height: 100vh;
-    overflow: hidden;
 }
 
 /* FOOTER */
@@ -114,18 +113,18 @@
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     .main-grid {
         display: grid;
         grid-template-columns: 100%;
         grid-template-areas: 
         "main"
         "header"
-        "footer";
+;
         max-width: 100vw;
-        max-height: 100vh;
+
     }
-    .main-container {
-        
+    .main-footer {
+        position: relative;
     }
 }

@@ -15,6 +15,9 @@
 /* Sidebar */
 .entry-sidebar {
     grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: hsla(0, 0%, 0%, 0.2);
     min-width: 15rem;
     padding: 1rem;
@@ -22,6 +25,7 @@
 }
 
 .entry-sidebar-title {
+    width: 100%;
     text-align: center;
     font-size: 1.8rem;
     margin: 0.5rem;
@@ -49,7 +53,6 @@
 
 .entry-website {
     width: min-content;
-    margin: auto;
     padding: 0.4rem;
     border-radius: 0.2rem;
     background: var(--bright-1);
@@ -87,11 +90,15 @@
     .entry-container {
         grid-template-columns: 1fr;
         grid-template-areas: 
-        "header"
         "sidebar"
-        "main";
+        "main"
+        "footer"
+        ;
     }
     .entry-sidebar {
-        min-width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.5rem;
     }
 }
