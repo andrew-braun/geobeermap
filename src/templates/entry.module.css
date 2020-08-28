@@ -88,6 +88,7 @@
     grid-area: main;
     background: hsla(270, 50%, 50%, 0.2);
     padding: 1rem;
+    min-height: 0;
 }
 
 .entry-image {
