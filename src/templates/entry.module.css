@@ -3,12 +3,17 @@
     grid-template-columns: 1fr 4fr;
     grid-template-areas: 
     "sidebar main";
-    min-height: 77vh;
+    min-height: 0;
+    max-height: 100%;
+    height: 100%;
 }
 
 .entry-main {
-    min-height: 70vh;
-    max-height: 72vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 0;
+    max-height: 100%;
     overflow-y: scroll;
 }
 
@@ -20,6 +25,8 @@
     align-items: center;
     background: hsla(0, 0%, 0%, 0.2);
     min-width: 15rem;
+    min-height: 0;
+    max-height: 100%;
     padding: 1rem;
 
 }
@@ -43,6 +50,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 60%;
     padding: 0.2rem;
     text-align: center;
 }
@@ -52,7 +60,7 @@
 }
 
 .entry-website {
-    width: min-content;
+    min-width: 50%;
     padding: 0.4rem;
     border-radius: 0.2rem;
     background: var(--bright-1);
@@ -72,6 +80,7 @@
 }
 
 .info-table {
+    min-width: 50%;
     margin-top: 1rem;
 }
 /* Main */
@@ -92,13 +101,22 @@
         grid-template-areas: 
         "sidebar"
         "main"
-        "footer"
         ;
+        overflow-y: scroll;
     }
     .entry-sidebar {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         padding: 0.5rem;
+        min-height: min-content
+    }
+    .entry-main {
+        overflow-y: visible;
+        min-height: 0;
+        max-height: 100%;
+    }
+    .entry-body {
+
     }
 }

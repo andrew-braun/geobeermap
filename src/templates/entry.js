@@ -14,7 +14,7 @@ export default function entryTemplate({ data }) {
   
   return (
     <Layout>
-      <div className={styles.entryContainer}>
+      <div className={styles.entryContainer} tabIndex="-3">
         <aside className={styles.entrySidebar}>
           <h1 className={styles.entrySidebarTitle}>{entry.name}</h1>
           <div className={styles.socialBox}>
@@ -45,7 +45,7 @@ export default function entryTemplate({ data }) {
             </tr>
           </table>
         </aside>
-        <main className={styles.entryMain} tabIndex="-1">
+        <main className={styles.entryMain} tabIndex="-2">
           <ReactMarkdown source={entry.body}
             className="entry-body"
             escapeHtml={false}
