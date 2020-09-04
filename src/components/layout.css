@@ -1,6 +1,6 @@
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-template-columns: 100%;
     grid-template-rows: 1.2fr 8fr 1fr;
     grid-template-areas: 
     "header"

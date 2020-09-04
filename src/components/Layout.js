@@ -1,9 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
+import HamburgerMenu from "./HamburgerMenu/HamburgerMenu/HamburgerMenu"
+import Hamburger from "./HamburgerMenu/Hamburger/Hamburger"
 import "./layout.css"
 
 const Layout = ({ children }) => {
+	const [menuOpen, setMenuOpen] = useState(false)
+
+
 	const data = useStaticQuery(
 		graphql`
 			query {
@@ -49,6 +54,10 @@ const Layout = ({ children }) => {
 			<footer className="main-footer">
 				<p>Made by Andrew Braun</p>
 			</footer>
+			<div className="hamburger-menu-grid-container">
+				<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+				<HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+			</div>
 		</div>
 	)
 }
