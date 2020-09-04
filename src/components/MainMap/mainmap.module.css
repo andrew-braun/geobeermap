@@ -86,7 +86,7 @@
 @media only screen and (max-width: 600px) {
 	.main-map-container {
 		grid-template-columns: 1fr;
-		grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
+		grid-template-rows: 1fr 1fr;
 		grid-template-areas:
 		"sidebar"
 		"map";
