@@ -60,6 +60,11 @@ a:hover {
     height: 100%;
 }
 
+/* LEAFLET FIXES */
+.leaflet-control-zoom, .leaflet-control, .leaflet-top, .leaflet-bottom, .leaflet-left {
+    z-index: 9;
+}
+
 @media screen and (min-width: 320px) {
     html {
         font-size: calc(10px + (32-10) * ((100vw - 280px) / 2000-280));
