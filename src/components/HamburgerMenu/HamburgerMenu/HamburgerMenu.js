@@ -1,23 +1,24 @@
 import React from "react"
 import { Link } from "gatsby"
+import classNames from "classnames"
+import "../../../pages/styles/index.css"
 import styles from "./hamburgermenu.module.css"
 
 export default function HamburgerMenu({ menuOpen }) {
-    const menuState = menuOpen ? "open" : "closed";
-
+    let burgerClassNames = classNames(styles.hamburgerMenuContainer, menuOpen ? styles.hamburgerMenuOpen : styles.hamburgerMenuClosed)
     return(
-        <div className={styles.hamburgerMenuContainer} menuOpen={ menuOpen }>
-            <div className={styles.hamburgerElement}>
-                <Link to="/" className={styles.hamburgerLink}>
-                    Home
-                </Link>
+            <div className={burgerClassNames} menuOpen={ menuOpen }>
+                <div className={styles.hamburgerElement}>
+                    <Link to="/" className={styles.hamburgerLink}>
+                        Home
+                    </Link>
+                </div>
+                <div className={styles.hamburgerElement}>
+                    <Link to="/blog" className={styles.hamburgerLink}>
+                        Blog
+                    </Link>
+                </div>
             </div>
-            <div className={styles.hamburgerElement}>
-                <Link to="/blog" className={styles.hamburgerLink}>
-                    Blog
-                </Link>
-            </div>
-        </div>
     )
 }
 

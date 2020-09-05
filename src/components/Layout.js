@@ -54,10 +54,10 @@ const Layout = ({ children }) => {
 			<footer className="main-footer">
 				<p>Made by Andrew Braun</p>
 			</footer>
-			<div className="hamburger-menu-grid-container">
-				<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-				<HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-			</div>
+				<div className="hamburger-menu-grid-container">
+					<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+					<HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+				</div>
 		</div>
 	)
 }

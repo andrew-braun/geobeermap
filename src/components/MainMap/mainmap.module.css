@@ -5,10 +5,12 @@
 	"sidebar map";
 	min-height: 0;
 	max-height: 100%;
+	z-index: 9;
 }
 
 .leaflet-container {
 	grid-area: map;
+	
 }
 
 #main-map-id {
@@ -93,8 +95,10 @@
 		grid-gap: .2rem;
 	}
 	.leaflet-container {
+		
 	}
 	.main-map-sidebar {
 		background: black;
+		min-height: 40vh;
 	}
 }
