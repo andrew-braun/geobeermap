@@ -118,11 +118,6 @@
     max-height: min-content;
 }
 
-/* LEAFLET FIXES */
-.leaflet-control-zoom, .leaflet-control, .leaflet-top, .leaflet-bottom, .leaflet-left {
-    z-index: 9;
-}
-
 /* Media queries */
 @media only screen and (max-width: 700px) {
     .site-identity {
@@ -164,6 +159,10 @@
     .hamburger-menu-grid-container {
         display: block;
         z-index: 500;
+    }
+    /* LEAFLET FIXES */
+    .leaflet-control-zoom, .leaflet-control, .leaflet-top, .leaflet-bottom, .leaflet-left {
+        z-index: 1000;
     }
 }
 

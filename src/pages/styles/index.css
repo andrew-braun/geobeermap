@@ -61,9 +61,7 @@ a:hover {
 }
 
 /* LEAFLET FIXES */
-.leaflet-control-zoom, .leaflet-control, .leaflet-top, .leaflet-bottom, .leaflet-left {
-    z-index: 9;
-}
+
 
 @media screen and (min-width: 320px) {
     html {
