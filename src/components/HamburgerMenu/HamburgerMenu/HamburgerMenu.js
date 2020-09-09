@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import classNames from "classnames"
-import "../../../pages/styles/index.css"
+import "../../../styles/global.css"
 import styles from "./hamburgermenu.module.css"
 
 export default function HamburgerMenu({ menuOpen }) {
