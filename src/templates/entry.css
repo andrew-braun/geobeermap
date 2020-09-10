@@ -1,19 +1,8 @@
 .entry-body {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(auto-fit, minmax(5rem, 1fr));
-    grid-template-areas:
-    "image"
-    "text";
-    width: 100%;
-    min-height: 0;
-    max-height: 100%;
-}
-
-.entry-body {
     display: flex;
     flex-direction: column;
     min-height: 0;
+    max-height: 75vh;
 }
 
 .entry-body p {
@@ -27,4 +16,10 @@
     text-align: center;
     min-width: 60%;
     max-width: 65%;
+}
+
+@media only screen and (max-width: 600px) {
+    .entry-body {
+        max-height: 100%;
+    }
 }

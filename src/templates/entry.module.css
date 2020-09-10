@@ -1,24 +1,18 @@
 .entry-container {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
     "sidebar main";
     min-height: 0;
-    max-height: 100%;
     height: 100%;
-}
-
-.entry-main {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    min-height: 0;
     max-height: 100%;
-    overflow-y: scroll;
 }
 
 /* Sidebar */
 .entry-sidebar {
+    position: relative;
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
@@ -26,7 +20,6 @@
     background: hsla(0, 0%, 0%, 0.2);
     min-width: 15rem;
     min-height: 0;
-    max-height: 100%;
     padding: 1rem;
 
 }
@@ -88,7 +81,10 @@
     grid-area: main;
     background: hsla(270, 50%, 50%, 0.2);
     padding: 1rem;
-    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    overflow-y: scroll;
 }
 
 .entry-image {
@@ -98,11 +94,9 @@
 
 @media only screen and (max-width: 600px) {
     .entry-container {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "sidebar"
-        "main"
-        ;
+        display: flex;
+        flex-direction: column;
+        max-height: 88vh;
         overflow-y: scroll;
     }
     .entry-sidebar {
@@ -110,14 +104,12 @@
         flex-wrap: wrap;
         justify-content: center;
         padding: 0.5rem;
-        min-height: min-content
+        min-height: min-content;
     }
     .entry-main {
+        position: relative;
+        height: 100%;
         overflow-y: visible;
-        min-height: 0;
-        max-height: 100%;
-    }
-    .entry-body {
-
+        
     }
 }

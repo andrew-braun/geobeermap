@@ -48,8 +48,7 @@
 	flex-grow: 1;
 	width: 100%;
 	min-width: min-content;
-	min-height: 0;
-	height: 100%;
+	min-height: 81vh;
 	max-height: 81vh;
 	grid-area: sidebar;
 	background: var(--dull-1);
