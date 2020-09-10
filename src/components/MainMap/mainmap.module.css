@@ -94,7 +94,8 @@
 		"sidebar"
 		"map";
 		grid-gap: .2rem;
-		max-height: 90vh;
+		max-height: 93vh;
+		overflow: hidden;
 	}
 	.leaflet-container {
 		height: 100%;
@@ -103,5 +104,6 @@
 		grid-area: sidebar;
 		background: black;
 		min-height: 50vh;
+		max-height: 55vh;
 	}
 }

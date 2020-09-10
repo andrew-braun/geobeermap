@@ -4,12 +4,9 @@ html {
     font-family: 'Recursive', sans-serif, 'Courier New', Courier, monospace;
     font-size: calc(10px + (32-10) * ((100vw - 280px) / 2000-280));
     max-width: 100vw;
-    min-height: 0;
-    max-height: 100%;
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
+
 }
 
 body {
@@ -17,7 +14,7 @@ body {
     margin: 0;
     max-height: 100%;
     background: linear-gradient(90deg, hsla(350, 96%, 20%, .6), hsla(29, 100%, 50%, 1));
-    overflow: hidden;
+
 }
 
 /* variables */
@@ -64,8 +61,6 @@ a:hover {
     height: 100%;
     z-index: 5;
 }
-
-/* LEAFLET FIXES */
 
 @media screen and (max-width: 600px) {
     
