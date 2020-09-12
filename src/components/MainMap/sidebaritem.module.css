@@ -1,7 +1,8 @@
 /* Main item */
 .map-sidebar-item {
     display: flex;
-    flex-grow: 1;
+    flex: 1 1 auto;
+    min-height: 0;
     margin: 0.1rem 0;
     padding: .5rem;
     background: var(--dark-1);

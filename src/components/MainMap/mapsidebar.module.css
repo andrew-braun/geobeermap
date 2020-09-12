@@ -1,6 +1,7 @@
 /* Sidebar styles */
 
 .main-map-sidebar {
+    position: relative;
     flex: 1 1 auto;
     background: black;
     overflow-y: scroll;

@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     width: 100%;
     min-height: 0;
-    height: 84.5vh;
+    height: 100%;
     align-items: stretch;
     justify-content: stretch;
 }
@@ -30,9 +30,11 @@
 
 @media screen and (max-width: 625px) {
     .sidebar-container {
+        min-height: 0;
         max-height: 50%;
     }
     .map-container {
+        min-height: 0;
         max-height: 50%;
     }
 }
