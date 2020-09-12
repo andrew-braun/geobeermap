@@ -25,4 +25,14 @@
     flex: 1 1 60%;
     min-width: 0;
     min-height: 0;
+    max-height: 100%;
+}
+
+@media screen and (max-width: 625px) {
+    .sidebar-container {
+        max-height: 50%;
+    }
+    .map-container {
+        max-height: 50%;
+    }
 }

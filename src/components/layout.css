@@ -53,11 +53,11 @@
 }
 
 .site-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .site-description {
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 /* Nav */
@@ -123,11 +123,6 @@
 }
 
 /* Media queries */
-@media only screen and (max-width: 700px) {
-    .site-identity {
-        align-items: center;
-    }
-}
 
 @media only screen and (max-width: 600px) {
     .main-header {
@@ -139,6 +134,9 @@
         max-width: 100vw;
         min-height: 0;
         padding: 1%;
+    }
+    .site-identity {
+        align-items: center;
     }
     .site-description {
         display: none;
@@ -155,10 +153,4 @@
         z-index: 500;
     }
     
-}
-
-@media (max-width: 360px) {
-    .site-identity {
-        align-items: flex-end;
-    }
 }
