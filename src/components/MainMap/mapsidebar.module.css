@@ -4,6 +4,7 @@
     position: relative;
 	display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     flex: 1 1 auto;
     background: var(--dull-1);
     overflow-y: scroll;
@@ -16,8 +17,8 @@
 }
 
 .sidebar-tab {
-	flex: 1 0 20%;
-	padding: .8rem;
+	flex: 1 0 auto;
+    padding: .8em;
 	border: 1px solid var(--dull-1);
 	border-width: 0 1px;
 	background: var(--dark-1);
