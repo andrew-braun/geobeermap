@@ -41,11 +41,13 @@ export default function MainMap() {
     
 	for (let i = 0; i < data.allEntriesJson.edges.length; i++) {
         entryArray.push(data.allEntriesJson.edges[i].node)
-        // Coordinates to floats
-		entryArray[i].coordinates = entryArray[i].coordinates
-			.toString()
-			.split(",")
-            .map(str => parseFloat(str))
+		// Coordinates to floats
+		if (entryArray[i].coordinates !== null) {
+			entryArray[i].coordinates = entryArray[i].coordinates
+				.toString()
+				.split(",")
+				.map(str => parseFloat(str))
+		}
 
         // Type list to comma-separated string (but only if original Array to avoid rejoin on reload issue)
         if (Array.isArray(entryArray[i].type)) {
