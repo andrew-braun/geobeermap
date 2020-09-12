@@ -1,10 +1,13 @@
 .main-app-container {
+    position: relative;
     display: flex;
     flex: 1 1 auto;
     flex-wrap: wrap;
     width: 100%;
     min-height: 0;
-    max-height: 80vh;
+    height: 84.5vh;
+    align-items: stretch;
+    justify-content: stretch;
 }
 
 .sidebar-container {
@@ -22,5 +25,4 @@
     flex: 1 1 60%;
     min-width: 0;
     min-height: 0;
-    max-height: 100%;
 }

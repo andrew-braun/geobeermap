@@ -1,13 +1,10 @@
 /* Sidebar styles */
 
 .main-map-sidebar {
-    position: relative;
-	display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     flex: 1 1 auto;
-    background: var(--dull-1);
+    background: black;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .sidebar-tabs {
