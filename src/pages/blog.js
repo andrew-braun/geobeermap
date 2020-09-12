@@ -1,4 +1,5 @@
 import React from 'react'
+import "../styles/global.css"
 import Layout from "../components/Layout"
 import BlogRoll from '../components/BlogRoll'
 
