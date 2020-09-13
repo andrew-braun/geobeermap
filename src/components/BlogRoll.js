@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import styles from "./blogroll.module.css"
 
 class BlogRoll extends React.Component {
   render() {
@@ -8,25 +9,23 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className="columns is-multiline">
+      <div className={styles.feedContainer}>
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className={styles.postContainer} key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
+                className={styles.post}
               >
                 <header>
-                  <p className="post-meta">
+                  <p className={styles.postMeta}>
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className={styles.postTitle}
                       to={post.frontmatter.path}
                     >
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+                    <span className={styles.postData}>
                       {post.frontmatter.date}
                     </span>
                   </p>
@@ -35,7 +34,7 @@ class BlogRoll extends React.Component {
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="button" to={post.frontmatter.path}>
+                  <Link className={styles.postLink} to={post.frontmatter.path}>
                     Keep Reading →
                   </Link>
                 </p>
