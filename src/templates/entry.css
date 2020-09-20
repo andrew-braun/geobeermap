@@ -1,8 +1,17 @@
 .entry-body {
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 100%;
     min-height: 0;
-    max-height: 75vh;
+    height: 100%;
+}
+
+.entry-body:after {
+    content: "";
+    padding: 1rem 0.5rem;
 }
 
 .entry-body p {
@@ -20,6 +29,5 @@
 
 @media only screen and (max-width: 600px) {
     .entry-body {
-        max-height: 100%;
     }
 }
