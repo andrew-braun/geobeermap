@@ -1,12 +1,13 @@
 .blog-page-container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-auto-rows: 50px;
     grid-template-areas: 
-    "heading heading"
+    "sidebar heading"
     "sidebar feed";
+    flex: 1 1 auto;
     position: relative;
     width: 100%;
+    min-height: 0;
     height: 100%;
 }
 
@@ -17,11 +18,19 @@
 }
 
 .blog-sidebar-container {
-    display: none;
+    background: hsla(0, 0%, 0%, 0.5);
     grid-area: sidebar;
+    min-height: 0;
+    max-height: 100%;
 }
 
 .blog-feed-container {
     grid-area: feed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 auto;
     padding: 1rem;
+    min-height: 0;
+    max-height: 100%;
 }

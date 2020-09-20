@@ -1,5 +1,16 @@
+.feed-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: 100%;
+}
+
 .post-container {
-    max-width: 35rem;
+    flex: 1 1 auto;
+    min-width: 20rem;
+    max-width: 30rem;
     margin: 0.5rem;
     padding: 0.7rem;
     border: 1px solid black;
