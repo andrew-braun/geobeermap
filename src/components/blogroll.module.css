@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     min-height: 0;
     max-height: 100%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .post-container {

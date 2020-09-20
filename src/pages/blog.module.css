@@ -1,14 +1,15 @@
 .blog-page-container {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-areas: 
     "sidebar heading"
-    "sidebar feed";
+    "sidebar feed"; */
     flex: 1 1 auto;
     position: relative;
     width: 100%;
     min-height: 0;
     height: 100%;
+    overflow-y: scroll;
 }
 
 .blog-page-heading {
@@ -18,6 +19,7 @@
 }
 
 .blog-sidebar-container {
+    display: none;
     background: hsla(0, 0%, 0%, 0.5);
     grid-area: sidebar;
     min-height: 0;
