@@ -29,6 +29,7 @@
     justify-content: space-between;
     align-items: center;
     max-width: 100vw;
+    min-height: min-content;
 }
 
 .main-header a {
@@ -132,7 +133,7 @@
         align-items: center;
         max-width: 100vw;
         min-height: 0;
-        padding: 1%;
+        height: 10rem;
     }
     .site-identity {
         align-items: center;
