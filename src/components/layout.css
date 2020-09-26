@@ -104,7 +104,7 @@
     flex: 1 1 auto;
     justify-content: stretch;
     align-items: stretch;
-    min-height: 0;
+    min-height: 80vh;
     max-height: 100%;
 }
 
