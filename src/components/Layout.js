@@ -42,11 +42,11 @@ const Layout = ({ children }) => {
 								Home
 							</Link>
 						</li>
-						<li className="nav-list-item">
+						{/* <li className="nav-list-item">
 							<Link to="/blog" className="nav-list-link">
 								Blog
 							</Link>
-						</li>
+						</li> */}
 					</ul>
 				</nav>
 			</header>
