@@ -5,7 +5,7 @@ import "../../styles/global.css"
 import styles from "./mainmap.module.css"
 
 export default function MainMap(props) {
-	const { data } = props
+	const { data, initialPosition, zoomLevel } = props
 
 	// Generate map markers using MapMarker component
 	const Markers = data.map((entry, index) => {
@@ -29,13 +29,13 @@ export default function MainMap(props) {
 	})
 
 	// Set initial map position
-	const position = [41.689472, 44.79848]
+	const position = initialPosition
 
 	return (
 		<div id={styles.mainMapId} className={styles.mainMapContainer}>
 			{/* Check for window and add map */}
 			{typeof window !== "undefined" ? (
-				<Map center={position} zoom={10}>
+				<Map center={position} zoom={zoomLevel}>
 					<TileLayer
 						url="https://api.mapbox.com/styles/v1/ab-dev/ckdaldm751b6s1ipgqrzoquzj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYWItZGV2IiwiYSI6ImNrZGFjcjFnNjBoM3QydG1oeG01NHg3cm4ifQ.MumpPYqqGqbsFqUJPMxNsg"
 						attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'

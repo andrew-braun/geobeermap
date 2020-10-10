@@ -97,7 +97,12 @@ export default function AppContainer() {
 				<MapSidebar data={filteredEntryArray} handleTabClick={handleTabClick} />
 			</div>
 			<div className={styles.mapContainer}>
-				<MainMap data={filteredEntryArray} handleTabClick={handleTabClick} />
+				<MainMap
+					data={filteredEntryArray}
+					zoomLevel={11}
+					initialPosition={[41.689472, 44.79848]}
+					handleTabClick={handleTabClick}
+				/>
 			</div>
 		</div>
 	)

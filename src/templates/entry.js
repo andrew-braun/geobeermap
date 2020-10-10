@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import ReactMarkdown from "react-markdown/with-html"
 import Layout from "../components/Layout"
 import SocialButtons from "../components/SocialButtons/SocialButtons"
+import MainMap from "../components/MainMap/MainMap"
 import styles from "./entry.module.css"
 import "./entry.css"
 
@@ -12,6 +13,37 @@ export default function entryTemplate({ data }) {
 		entry.type = Object.values(entry.type).join(", ")
 	}
 
+	const entryArray = []
+
+	for (let i = 0; i < data.allEntriesJson.edges.length; i++) {
+		entryArray.push(data.allEntriesJson.edges[i].node)
+		// Convert coordinates to floats
+		if (entryArray[i].coordinates !== null) {
+			entryArray[i].coordinates = entryArray[i].coordinates
+				.toString()
+				.split(",")
+				.map(str => parseFloat(str))
+		}
+
+		// Type list to comma-separated string (but only if original Array to avoid rejoin on reload issue)
+		if (Array.isArray(entryArray[i].type)) {
+			entryArray[i].type = Object.values(entryArray[i].type).join(", ")
+		}
+
+		/* Convert boolean to yes/no */
+		if (entryArray[i].open === true) {
+			entryArray[i].open = "Yes"
+		} else {
+			entryArray[i].open = "No"
+		}
+
+		// Create unique ids
+		entryArray[i].id = `${entryArray[i].name.toLowerCase()[0]}${
+			entryArray[i].type.toString().toLowerCase()[0]
+		}-${i}`
+	}
+
+	console.log(Array(entry))
 	return (
 		<Layout>
 			<div className={styles.entryContainer} tabIndex="-3">
@@ -50,11 +82,20 @@ export default function entryTemplate({ data }) {
 					</table>
 				</aside>
 				<main className={styles.entryMain} tabIndex="-2">
-					<ReactMarkdown
-						source={entry.body}
-						className="entry-body"
-						escapeHtml={false}
-					/>
+					<div className={styles.entryContent}>
+						<ReactMarkdown
+							source={entry.body}
+							className="entry-body"
+							escapeHtml={false}
+						/>
+					</div>
+					<div className={styles.entryMap}>
+						<MainMap
+							data={entryArray}
+							zoomLevel={13}
+							initialPosition={entry.coordinates}
+						/>
+					</div>
 				</main>
 			</div>
 		</Layout>
