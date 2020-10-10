@@ -27,9 +27,11 @@ export default function entryTemplate({ data }) {
 							googlemaps={entry.googlemaps}
 						/>
 					</div>
-					<div className={styles.entryWebsite}>
-						<a href={entry.website}>Website</a>
-					</div>
+					{entry.website ? (
+						<div className={styles.entryWebsite}>
+							<a href={entry.website}>Website</a>
+						</div>
+					) : null}
 					<table className={styles.infoTable}>
 						<tr className={styles.infoRow}>
 							<td className={styles.infoCell}>Type:</td>

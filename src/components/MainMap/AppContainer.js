@@ -65,15 +65,21 @@ export default function AppContainer() {
 		}-${i}`
 	}
 
-	const filteredEntryArray = entryArray.filter(entry => {
-		if (clickedTab.textContent === "All" || clickedTab === "") {
-			return entry
-		} else {
-			return entry.type
-				.toLowerCase()
-				.includes(clickedTab.textContent.toLowerCase().slice(0, 3))
-		}
-	})
+	const filteredEntryArray = entryArray
+		.filter(entry => {
+			if (clickedTab.textContent === "All" || clickedTab === "") {
+				return entry
+			} else {
+				return entry.type
+					.toLowerCase()
+					.includes(clickedTab.textContent.toLowerCase().slice(0, 3))
+			}
+		})
+		.sort((a, b) => {
+			const nameA = a.name.toLowerCase()
+			const nameB = b.name.toLowerCase()
+			nameA < nameB ? -1 : 1
+		})
 
 	const handleTabClick = event => {
 		setClickedTab(event.currentTarget)

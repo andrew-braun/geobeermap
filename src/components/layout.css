@@ -101,7 +101,7 @@
 .main-container {
 	position: relative;
 	display: flex;
-	flex: 2 0 auto;
+	flex: 2 1 auto;
 	justify-content: stretch;
 	align-items: stretch;
 	min-height: 78vh;
