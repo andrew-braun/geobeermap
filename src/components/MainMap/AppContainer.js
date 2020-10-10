@@ -78,7 +78,13 @@ export default function AppContainer() {
 		.sort((a, b) => {
 			const nameA = a.name.toLowerCase()
 			const nameB = b.name.toLowerCase()
-			nameA < nameB ? -1 : 1
+			if (nameA < nameB) {
+				return -1
+			}
+			if (nameA > nameB) {
+				return 1
+			}
+			return 0
 		})
 
 	const handleTabClick = event => {
