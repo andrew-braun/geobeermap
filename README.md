@@ -1,7 +1,6 @@
-# GeoBeerMap 
+# GeoBeerMap
 
-A site showcasing Georgia's growing craft beer culture by marking breweries, bars, retailers, and other locations relevant to craft beer on a map and providing a browseable directory with links and information. 
-
+A site showcasing Georgia's growing craft beer culture by marking breweries, bars, retailers, and other locations relevant to craft beer on a map and providing a browseable directory with links and information.
 
 ## Functionality
 
@@ -10,6 +9,7 @@ A site showcasing Georgia's growing craft beer culture by marking breweries, bar
 - Blog
 
 ## Concepts
+
 - Building a site from scratch
 - Designing with components
 - Creating a static site showcasing data
@@ -21,6 +21,7 @@ A site showcasing Georgia's growing craft beer culture by marking breweries, bar
 - Creating a responsive menu
 
 ## Technologies
+
 - Gatsby
 - React
 - GraphQL
@@ -33,7 +34,9 @@ A site showcasing Georgia's growing craft beer culture by marking breweries, bar
 - GitHub Authentication
 
 ## Planned Features
+
 - Better-looking entry pages
+- List of beers/bars on entry page
 - Improved footer
 - Search function
 - Clicking sidebar item zooms map to relevant location
@@ -44,4 +47,5 @@ A site showcasing Georgia's growing craft beer culture by marking breweries, bar
 - Better mobile interface
 
 ## Moonshot Features
+
 - Untappd API integration

@@ -1,11 +1,13 @@
 /* Sidebar styles */
 
 .main-map-sidebar {
-    position: relative;
-    flex: 1 1 auto;
-    background: black;
-    overflow-y: scroll;
-    overflow-x: hidden;
+	position: relative;
+	flex: 1 1 auto;
+	min-height: 40vh;
+	height: 100%;
+	background: black;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .sidebar-tabs {
@@ -16,7 +18,7 @@
 
 .sidebar-tab {
 	flex: 1 0 auto;
-    padding: .8em;
+	padding: 0.8em;
 	border: 1px solid var(--dull-1);
 	border-width: 0 1px;
 	background: var(--dark-1);
