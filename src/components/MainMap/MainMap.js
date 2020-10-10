@@ -4,11 +4,10 @@ import MapMarker from "./MapMarker"
 import "../../styles/global.css"
 import styles from "./mainmap.module.css"
 
-export default function MainMap( props ) {
+export default function MainMap(props) {
+	const { data } = props
 
-	const { data, handleTabClick } = props
-
-    // Generate map markers using MapMarker component
+	// Generate map markers using MapMarker component
 	const Markers = data.map((entry, index) => {
 		return (
 			<MapMarker
@@ -24,17 +23,17 @@ export default function MainMap( props ) {
 				id={entry.id}
 				key={entry.id}
 				path={entry.path}
-                index={index}
+				index={index}
 			/>
 		)
 	})
 
-    // Set initial map position
+	// Set initial map position
 	const position = [41.689472, 44.79848]
 
 	return (
 		<div id={styles.mainMapId} className={styles.mainMapContainer}>
-            {/* Check for window and add map */}
+			{/* Check for window and add map */}
 			{typeof window !== "undefined" ? (
 				<Map center={position} zoom={10}>
 					<TileLayer
@@ -44,8 +43,10 @@ export default function MainMap( props ) {
 					{Markers}
 				</Map>
 			) : (
-				<div className={styles.mapLoading}><h2>Loading map</h2></div>
+				<div className={styles.mapLoading}>
+					<h2>Loading map</h2>
+				</div>
 			)}
 		</div>
-	) 
+	)
 }

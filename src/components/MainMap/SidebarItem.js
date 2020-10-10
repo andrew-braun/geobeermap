@@ -13,35 +13,32 @@ export default function SidebarItem(props) {
 			className={styles.mapSidebarItem}
 			id={`${props.id}-sidebar`}
 			onClick={popupHandler}
+			onKeyDown={popupHandler}
 			role="button"
-			tabIndex={"-"+ props.index}
+			tabIndex={"-" + props.index}
 		>
 			<div className={styles.sidebarInfoContainer}>
 				<div className={styles.sidebarName}>
-				<Link to={`${props.path}`}>
-						{props.name}
-				</Link>
+					<Link to={`${props.path}`}>{props.name}</Link>
 				</div>
 				<div className={styles.sidebarType}>{props.type}</div>
-				{ (props.website) ?
+				{props.website ? (
 					<span className={styles.sidebarWebsite}>
-						<a href={props.website}
-							target="_blank"
-							rel="noreferrer"
-						>
-						Website
-						</a></span> : null
-					} 
+						<a href={props.website} target="_blank" rel="noreferrer">
+							Website
+						</a>
+					</span>
+				) : null}
 			</div>
 			<div className={styles.sidebarSocialButtons}>
-				<SocialButtons 
+				<SocialButtons
 					facebook={props.facebook}
 					instagram={props.instagram}
 					twitter={props.twitter}
 					website={props.website}
 					untappd={props.untappd}
 					googlemaps={props.googlemaps}
-					/>
+				/>
 			</div>
 		</div>
 	)
