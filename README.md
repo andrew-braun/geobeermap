@@ -35,9 +35,11 @@ A site showcasing Georgia's growing craft beer culture by marking breweries, bar
 
 ## Planned Features
 
-- Better-looking entry pages
+- Map on entry pages
+- Image carousel on entry pages
 - List of beers/bars on entry page
 - Improved footer
+- SEO
 - Search function
 - Clicking sidebar item zooms map to relevant location
 - Logos/images for breweries
