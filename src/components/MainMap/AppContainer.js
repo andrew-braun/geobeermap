@@ -6,6 +6,9 @@ import styles from "./appcontainer.module.css"
 
 export default function AppContainer() {
 	const [clickedTab, setClickedTab] = useState("")
+	const [clickedItem, setClickedItem] = useState("")
+	const [mapPosition, setMapPosition] = useState([41.689472, 44.79848])
+	const [mapZoom, setMapZoom] = useState("11")
 
 	// GraphQL query for data entries
 	const data = useStaticQuery(
@@ -62,7 +65,7 @@ export default function AppContainer() {
 		// Create unique ids
 		entryArray[i].id = `${entryArray[i].name.toLowerCase()[0]}${
 			entryArray[i].type.toString().toLowerCase()[0]
-		}-${i}`
+		}${i}`
 	}
 
 	const filteredEntryArray = entryArray
@@ -90,18 +93,31 @@ export default function AppContainer() {
 	const handleTabClick = event => {
 		setClickedTab(event.currentTarget)
 	}
+	// console.log(filteredEntryArray)
+
+	const handleItemClick = event => {
+		const item = filteredEntryArray.find(
+			obj => obj.id === event.currentTarget.id.split("-")[0]
+		)
+		setClickedItem(item)
+		setMapPosition(clickedItem.coordinates)
+		setMapZoom(16)
+	}
 
 	return (
 		<div className={styles.mainAppContainer}>
 			<div className={styles.sidebarContainer}>
-				<MapSidebar data={filteredEntryArray} handleTabClick={handleTabClick} />
+				<MapSidebar
+					data={filteredEntryArray}
+					handleItemClick={handleItemClick}
+				/>
 			</div>
 			<div className={styles.mapContainer}>
 				<MainMap
 					data={filteredEntryArray}
-					zoomLevel={11}
-					initialPosition={[41.689472, 44.79848]}
-					handleTabClick={handleTabClick}
+					zoomLevel={mapZoom}
+					position={mapPosition}
+					// handleTabClick={handleTabClick}
 				/>
 			</div>
 		</div>

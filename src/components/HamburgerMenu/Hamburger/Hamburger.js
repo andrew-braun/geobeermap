@@ -5,7 +5,6 @@ export default function Hamburger({ menuOpen, setMenuOpen }) {
 	return (
 		<div
 			className={styles.hamburgerContainer}
-			menuOpen={menuOpen}
 			onClick={() => setMenuOpen(!menuOpen)}
 			onKeyDown={() => setMenuOpen(!menuOpen)}
 			role="button"

@@ -8,7 +8,6 @@ import "./layout.css"
 const Layout = ({ children }) => {
 	const [menuOpen, setMenuOpen] = useState(false)
 
-
 	const data = useStaticQuery(
 		graphql`
 			query {
@@ -55,8 +54,8 @@ const Layout = ({ children }) => {
 				<p>Made by Andrew Braun</p>
 			</footer>
 			<div className="hamburger-menu-grid-container">
-				<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-				<HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+				<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+				<HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 			</div>
 		</div>
 	)

@@ -1,19 +1,14 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import { Link } from "gatsby"
 import SocialButtons from "../SocialButtons/SocialButtons"
 import styles from "./sidebaritem.module.css"
 
 export default function SidebarItem(props) {
-	const popupHandler = () => {
-		console.log(props.id)
-	}
-
 	return (
 		<div
 			className={styles.mapSidebarItem}
 			id={`${props.id}-sidebar`}
-			onClick={popupHandler}
-			onKeyDown={popupHandler}
+			onClick={props.handleItemClick}
 			role="button"
 			tabIndex={"-" + props.index}
 		>

@@ -21,6 +21,7 @@ export default function MapSidebar(props) {
 			id={entry.id}
 			path={entry.path}
 			key={entry.id}
+			handleItemClick={props.handleItemClick}
 		/>
 	))
 

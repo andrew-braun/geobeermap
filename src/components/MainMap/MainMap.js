@@ -1,14 +1,18 @@
-import React from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Map, TileLayer } from "react-leaflet"
 import MapMarker from "./MapMarker"
 import "../../styles/global.css"
 import styles from "./mainmap.module.css"
+import { marker } from "leaflet"
 
 export default function MainMap(props) {
-	const { data, initialPosition, zoomLevel } = props
+	const { data, position, zoomLevel } = props
+	// const [position, setPosition] = useState(initialPosition)
 
 	// Generate map markers using MapMarker component
 	const Markers = data.map((entry, index) => {
+		// console.log(markerClickHandler)
+		const testFunction = "hi"
 		return (
 			<MapMarker
 				name={entry.name}
@@ -27,9 +31,6 @@ export default function MainMap(props) {
 			/>
 		)
 	})
-
-	// Set initial map position
-	const position = initialPosition
 
 	return (
 		<div id={styles.mainMapId} className={styles.mainMapContainer}>

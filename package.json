@@ -16,7 +16,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "dot-prop": "^5.2.0",
-    "gatsby": "^2.23.12",
+    "gatsby": "^2.24.88",
     "gatsby-plugin-json-remark": "^1.1.5",
     "gatsby-plugin-netlify-cms": "^4.3.11",
     "gatsby-plugin-react-helmet": "^3.3.10",
