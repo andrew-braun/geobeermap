@@ -93,7 +93,6 @@ export default function AppContainer() {
 	const handleTabClick = event => {
 		setClickedTab(event.currentTarget)
 	}
-	// console.log(filteredEntryArray)
 
 	const handleItemClick = event => {
 		const item = filteredEntryArray.find(
@@ -110,6 +109,7 @@ export default function AppContainer() {
 				<MapSidebar
 					data={filteredEntryArray}
 					handleItemClick={handleItemClick}
+					handleTabClick={handleTabClick}
 				/>
 			</div>
 			<div className={styles.mapContainer}>

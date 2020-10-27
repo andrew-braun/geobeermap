@@ -4,7 +4,7 @@ import "../../styles/global.css"
 import styles from "./mapsidebar.module.css"
 
 export default function MapSidebar(props) {
-	const { data, handleTabClick } = props
+	const { data, handleTabClick, handleItemClick } = props
 
 	const sidebarItems = data.map(entry => (
 		<SidebarItem
@@ -21,7 +21,8 @@ export default function MapSidebar(props) {
 			id={entry.id}
 			path={entry.path}
 			key={entry.id}
-			handleItemClick={props.handleItemClick}
+			handleItemClick={handleItemClick}
+			handleTabClick={handleTabClick}
 		/>
 	))
 
