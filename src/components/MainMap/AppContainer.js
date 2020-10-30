@@ -99,7 +99,7 @@ export default function AppContainer() {
 			obj => obj.id === event.currentTarget.id.split("-")[0]
 		)
 		setClickedItem(item)
-		setMapPosition(clickedItem.coordinates)
+		setMapPosition(item.coordinates)
 		setMapZoom(16)
 	}
 
