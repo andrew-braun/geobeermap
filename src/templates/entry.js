@@ -93,7 +93,7 @@ export default function entryTemplate({ data }) {
 						<MainMap
 							data={entryArray}
 							zoomLevel={13}
-							initialPosition={entry.coordinates}
+							position={entry.coordinates}
 						/>
 					</div>
 				</main>
