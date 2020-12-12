@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown/with-html"
 import Layout from "../components/Layout"
 import SocialButtons from "../components/SocialButtons/SocialButtons"
 import MainMap from "../components/MainMap/MainMap"
+import SEO from "../components/SEO"
 import styles from "./entry.module.css"
 import "./entry.css"
 
@@ -43,9 +44,10 @@ export default function entryTemplate({ data }) {
 		}-${i}`
 	}
 
-	console.log(Array(entry))
+	// console.log(Array(entry))
 	return (
 		<Layout>
+			<SEO title={entry.name} />
 			<div className={styles.entryContainer} tabIndex="-3">
 				<aside className={styles.entrySidebar}>
 					<h1 className={styles.entrySidebarTitle}>{entry.name}</h1>

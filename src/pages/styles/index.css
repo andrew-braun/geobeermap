@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700&display=swap');
+
+html {
+    font-family: 'Recursive', sans-serif, 'Courier New', Courier, monospace;
+    font-size: 10px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: calc(0.75em + 1vmin);
+    background: linear-gradient(90deg, hsla(350, 96%, 20%, .6), hsla(29, 100%, 50%, 1));
+}
+
+/* variables */
+:root {
+    --main-bg: hsla(35, 100%, 91%, 1);
+    --main-text: hsla(0, 0%, 0%, 1);
+    --bright-1: hsla(29, 100%, 50%, 1);
+    --dull-1: hsla(350, 96%, 20%, 1);
+    --dark-1: hsla(205, 100%, 7%, 1);
+    --dark-2: hsla(188, 68%, 25%, 1);
+}
+
+/* MAIN CONTENT */
+
+/* Info bar */
+
+.frontpage-main-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, hsla(205, 100%, 7%, 0.3), hsla(188, 69%, 25%, 0.1));
+}
+
+.info-bar-section {
+    flex: 30%;
+    max-width: 25vw;
+    background: hsla(0, 0%, 0%, 0.4);
+    color: var(--main-bg);
+}
+
+/* Map */
+.map-section {
+    flex: 70%;
+
+}
+
+/* Leaflet map */
+.leaflet-container {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .info-bar-section {
+        flex: 100%;
+        max-width: 100%;
+        order: 2;
+    }
+    .map-section {
+        flex: 100%;
+        order: 1;
+    }
+
+}
+

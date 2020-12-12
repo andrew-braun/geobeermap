@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
+import SEO from "../components/SEO"
 import HamburgerMenu from "./HamburgerMenu/HamburgerMenu/HamburgerMenu"
 import Hamburger from "./HamburgerMenu/Hamburger/Hamburger"
 import "./layout.css"
@@ -22,9 +22,7 @@ const Layout = ({ children }) => {
 	)
 	return (
 		<div className="main-grid">
-			<Helmet>
-				<title>GeoBeerMap</title>
-			</Helmet>
+			<SEO />
 			<header className="main-header">
 				<div className="site-identity">
 					<Link to="/">
