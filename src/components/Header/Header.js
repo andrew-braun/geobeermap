@@ -4,6 +4,7 @@ import "../../styles/global.css"
 import styles from "./header.module.css"
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu/HamburgerMenu"
 import Hamburger from "../HamburgerMenu/Hamburger/Hamburger"
+import Nav from "../Nav/Nav"
 
 const Header = ({ props }) => {
 	const [menuOpen, setMenuOpen] = useState(false)
@@ -30,20 +31,7 @@ const Header = ({ props }) => {
 					{data.site.siteMetadata.description}
 				</div>
 			</div>
-			<nav className={styles.mainNav}>
-				<ul className={styles.navList}>
-					<li className={styles.navListItem}>
-						<Link to="/" className={styles.navListLink}>
-							Home
-						</Link>
-					</li>
-					{/* <li className={styles.navListItem}>
-							<Link to="/blog" className={styles.navListLink}>
-								Blog
-							</Link>
-						</li> */}
-				</ul>
-			</nav>
+			<Nav />
 			<div className={styles.hamburgerMenuGridContainer}>
 				<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 				<HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

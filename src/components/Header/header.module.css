@@ -37,39 +37,6 @@
 	font-size: 0.8rem;
 }
 
-/* Nav */
-.main-nav {
-	display: flex;
-	justify-content: center;
-	flex-grow: 1;
-	padding: 0 2%;
-	text-align: center;
-}
-
-.nav-list {
-	display: flex;
-	justify-content: flex-end;
-	width: 100%;
-	padding: 0 1rem 0 0;
-	margin: auto;
-	text-align: right;
-	list-style: none;
-}
-
-.nav-list-link {
-	display: inline-block;
-	padding: 1em;
-	color: black;
-	font-size: 1.2em;
-	text-decoration: none;
-	transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-.nav-list-link:hover {
-	color: var(--dark-2);
-	transform: scale(1.01);
-}
-
 .hamburger-menu-grid-container {
 	display: none;
 }
