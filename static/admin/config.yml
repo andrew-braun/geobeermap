@@ -1,10 +1,10 @@
 backend:
   name: github
   repo: andrew-braun/geobeermap
-  
+
 media_folder: static/assets
 public_folder: assets
-  
+
 collections:
   - name: blog
     label: Blog
@@ -14,7 +14,13 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: images, label: Images, widget: image, allow_multiple: true, required: false }
+      - {
+          name: images,
+          label: Images,
+          widget: image,
+          allow_multiple: true,
+          required: false,
+        }
       - { name: body, label: Body, widget: markdown }
   - name: entries
     label: Entries
@@ -23,16 +29,52 @@ collections:
     create: true
     fields:
       - { name: name, label: Name }
-      - { name: type, label: Type, widget: select, multiple: true, options: ["Brewery", "Bar", "Retailer", "Other"], default: ["Brewery"] }
-      - { name: open, label: "Currently Operating", widget: boolean, default: true }
+      - {
+          name: type,
+          label: Type,
+          widget: select,
+          multiple: true,
+          options: ["Brewery", "Bar", "Retailer", "Other"],
+          default: ["Brewery"],
+        }
+      - {
+          name: open,
+          label: "Currently Operating",
+          widget: boolean,
+          default: true,
+        }
       - { name: address, label: Address, required: false }
       - { name: city, label: City, required: false }
       - { name: country, label: Country, required: false }
-      - { name: coordinates, label: Coordinates, required: false}
-      - { name: openingdate, label: Opening Date, widget: datetime, required: false }
-      - { name: images, label: Images, widget: image, allow_multiple: true, required: false }
-      - { name: logo, label: Logo, widget: image, allow_multiple: false, required: false }
+      - { name: coordinates, label: Coordinates, required: false }
+      - {
+          name: openingdate,
+          label: Opening Date,
+          widget: datetime,
+          required: false,
+        }
+      - {
+          name: images,
+          label: Images,
+          widget: image,
+          allow_multiple: true,
+          required: false,
+        }
+      - {
+          name: logo,
+          label: Logo,
+          widget: image,
+          allow_multiple: false,
+          required: false,
+        }
       - { name: body, label: Description, widget: markdown, required: false }
+      - { name: beers, label: Beers, widget: list, required: false }
+      - {
+          name: locations,
+          label: "Where to Drink",
+          widget: markdown,
+          required: false,
+        }
       - { name: website, label: Website, required: false }
       - { name: googlemaps, label: "Google Maps", required: false }
       - { name: facebook, label: Facebook, required: false }
@@ -42,4 +84,3 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Publication Date, widget: datetime }
       - { name: title, label: File Name }
-      
