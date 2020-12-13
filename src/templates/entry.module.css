@@ -90,6 +90,11 @@
 	text-decoration: underline;
 }
 
+.entry-content {
+	padding: 0.5rem 1rem;
+	line-height: 1.3;
+}
+
 .entry-image {
 	max-width: 20rem;
 	width: 100px;
