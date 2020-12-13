@@ -85,12 +85,18 @@ export default function entryTemplate({ data }) {
 				</aside>
 				<main className={styles.entryMain} tabIndex="-2">
 					<div className={styles.entryContent}>
+						<h2 className={styles.entryHeading}>About {entry.name}</h2>
 						<ReactMarkdown
 							source={entry.body}
 							className="entry-body"
 							escapeHtml={false}
 						/>
 					</div>
+					{entry.beers && (
+						<div className={styles.entryBeers}>
+							<h2 className={styles.entryHeading}>{entry.name} Beers</h2>
+						</div>
+					)}
 					<div className={styles.entryMap}>
 						<MainMap
 							data={entryArray}

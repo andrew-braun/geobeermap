@@ -84,6 +84,12 @@
 	overflow-y: scroll;
 }
 
+.entry-heading {
+	padding: 0.3rem 2rem;
+	font-size: 1.7rem;
+	text-decoration: underline;
+}
+
 .entry-image {
 	max-width: 20rem;
 	width: 100px;
