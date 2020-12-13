@@ -20,8 +20,9 @@
 }
 
 /* HEADER */
+/*
 .main-header {
-	/* grid-area: header; */
+
 	position: relative;
 	display: flex;
 	flex: 0 1 auto;
@@ -91,7 +92,7 @@
 .hamburger-menu-grid-container {
 	display: none;
 }
-
+*/
 /* MAIN CONTENT */
 
 .main-container {

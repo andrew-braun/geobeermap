@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import "../../styles/global.css"
 import styles from "./header.module.css"
-import SEO from "../SEO"
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu/HamburgerMenu"
 import Hamburger from "../HamburgerMenu/Hamburger/Hamburger"
 
@@ -22,30 +21,30 @@ const Header = ({ props }) => {
 		`
 	)
 	return (
-		<header className="main-header">
-			<div className="site-identity">
+		<header className={styles.mainHeader}>
+			<div className={styles.siteIdentity}>
 				<Link to="/">
-					<div className="site-title">{data.site.siteMetadata.title}</div>
+					<div className={styles.siteTitle}>{data.site.siteMetadata.title}</div>
 				</Link>
-				<div className="site-description">
+				<div className={styles.siteDescription}>
 					{data.site.siteMetadata.description}
 				</div>
 			</div>
-			<nav className="main-nav">
-				<ul className="nav-list">
-					<li className="nav-list-item">
-						<Link to="/" className="nav-list-link">
+			<nav className={styles.mainNav}>
+				<ul className={styles.navList}>
+					<li className={styles.navListItem}>
+						<Link to="/" className={styles.navListLink}>
 							Home
 						</Link>
 					</li>
-					{/* <li className="nav-list-item">
-							<Link to="/blog" className="nav-list-link">
+					{/* <li className={styles.navListItem}>
+							<Link to="/blog" className={styles.navListLink}>
 								Blog
 							</Link>
 						</li> */}
 				</ul>
 			</nav>
-			<div className="hamburger-menu-grid-container">
+			<div className={styles.hamburgerMenuGridContainer}>
 				<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 				<HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 			</div>
