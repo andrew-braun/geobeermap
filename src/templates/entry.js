@@ -97,6 +97,11 @@ export default function entryTemplate({ data }) {
 							<h2 className={styles.entryHeading}>{entry.name} Beers</h2>
 						</div>
 					)}
+					{entry.locations && (
+						<div className={styles.entryLocations}>
+							<h2 className={styles.entryHeading}>Where to Drink</h2>
+						</div>
+					)}
 					<div className={styles.entryMap}>
 						<MainMap
 							data={entryArray}
