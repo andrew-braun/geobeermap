@@ -38,7 +38,7 @@ a {
 }
 
 a:hover {
-	color: var(--dull-1);
+	color: var(--bright-1);
 }
 
 /* MAIN CONTENT */
