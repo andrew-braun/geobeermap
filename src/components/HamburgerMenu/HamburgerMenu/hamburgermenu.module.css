@@ -1,67 +1,66 @@
 .hamburger-menu-container {
-    position: relative;
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: var(--light-1);
-    max-width: 80vw;
-    min-height: 0;
-    max-height: 100%;
-    text-align: left;
-    padding: 5rem 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    opacity: 0.9;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(-100%);
+	position: relative;
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: var(--light-1);
+	max-width: 80vw;
+	height: 100vh;
+	text-align: left;
+	padding: 5rem 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	opacity: 0.9;
+	transition: transform 0.3s ease-in-out;
+	transform: translateX(-100%);
 }
 
 .hamburger-menu-closed {
-    transform: translateX(-100%);
+	transform: translateX(-100%);
 }
 
 .hamburger-menu-open {
-    transform: translateX(0%);
+	transform: translateX(0%);
 }
 
 @media (max-width: 600px) {
-    .hamburger-menu-container {
-        width: 100%;
-    }
+	.hamburger-menu-container {
+		width: 100%;
+	}
 }
 
 .hamburger-element {
-    width: 80%;
+	width: 80%;
 }
 
 .hamburger-menu-container a {
-    display: block;
-    background: var(--bright-1);
-    margin: 1rem 0;
-    min-width: 100%;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: var(--dark-1);
-    text-decoration: none;
-    transition: color 0.2s linear;
-    line-height: 2;
+	display: block;
+	background: var(--bright-1);
+	margin: 1rem 0;
+	min-width: 100%;
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.5rem;
+	color: var(--dark-1);
+	text-decoration: none;
+	transition: color 0.2s linear;
+	line-height: 2;
 }
 
-.hamburger-menu-container a:hover {
-    color: var(--light-1);
+.hamburger-link:hover {
+	color: var(--light-1);
 }
 
 @media (max-width: 600px) {
-    .hamburger-menu-container a {
-        font-size: 2rem;
-        text-align: center;
-    }
-    .hamburger-menu-container:focus {
-        /* color: var(--accent-1); */
-    }
+	.hamburger-menu-container a {
+		font-size: 2rem;
+		text-align: center;
+	}
+	.hamburger-menu-container:focus {
+		/* color: var(--accent-1); */
+	}
 }

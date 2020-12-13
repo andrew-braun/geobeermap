@@ -9,6 +9,7 @@ export default function HamburgerMenu({ menuOpen }) {
 		styles.hamburgerMenuContainer,
 		menuOpen ? styles.hamburgerMenuOpen : styles.hamburgerMenuClosed
 	)
+
 	return (
 		<div className={burgerClassNames}>
 			<div className={styles.hamburgerElement}>
