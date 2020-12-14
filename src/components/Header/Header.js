@@ -4,7 +4,7 @@ import "../../styles/global.css"
 import styles from "./header.module.css"
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu/HamburgerMenu"
 import Hamburger from "../HamburgerMenu/Hamburger/Hamburger"
-import Nav from "../../components/Nav/Nav"
+import Nav from "../Nav/Navbar"
 
 const Header = ({ props }) => {
 	const [menuOpen, setMenuOpen] = useState(false)
