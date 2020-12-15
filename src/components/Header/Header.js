@@ -2,14 +2,10 @@ import React, { useState } from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import "../../styles/global.css"
 import styles from "./header.module.css"
-import HamburgerMenu from "../HamburgerMenu/HamburgerMenu/HamburgerMenu"
-import Hamburger from "../HamburgerMenu/Hamburger/Hamburger"
 import HamburgerContainer from "../HamburgerMenu/HamburgerContainer"
 import Nav from "../Nav/Nav"
 
-const Header = ({ props }) => {
-	const [menuOpen, setMenuOpen] = useState(false)
-
+const Header = () => {
 	const data = useStaticQuery(
 		graphql`
 			query {
@@ -34,10 +30,6 @@ const Header = ({ props }) => {
 			</div>
 			<Nav />
 			<HamburgerContainer />
-			{/* <div className={styles.hamburgerMenuGridContainer}>
-				<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-				<HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-			</div> */}
 		</header>
 	)
 }
