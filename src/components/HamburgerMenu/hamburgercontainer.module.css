@@ -1,0 +1,12 @@
+.hamburger-container {
+	display: none;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 600px) {
+	.hamburger-container {
+		display: block;
+		z-index: 500;
+	}
+}

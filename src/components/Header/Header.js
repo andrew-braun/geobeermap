@@ -4,6 +4,7 @@ import "../../styles/global.css"
 import styles from "./header.module.css"
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu/HamburgerMenu"
 import Hamburger from "../HamburgerMenu/Hamburger/Hamburger"
+import HamburgerContainer from "../HamburgerMenu/HamburgerContainer"
 import Nav from "../Nav/Nav"
 
 const Header = ({ props }) => {
@@ -32,10 +33,11 @@ const Header = ({ props }) => {
 				</div>
 			</div>
 			<Nav />
-			<div className={styles.hamburgerMenuGridContainer}>
+			<HamburgerContainer />
+			{/* <div className={styles.hamburgerMenuGridContainer}>
 				<Hamburger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 				<HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-			</div>
+			</div> */}
 		</header>
 	)
 }
