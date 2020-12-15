@@ -4,7 +4,7 @@ import classNames from "classnames"
 import "../../../styles/global.css"
 import styles from "./hamburgermenu.module.css"
 
-export default function HamburgerMenu({ menuOpen }) {
+export default function HamburgerMenu({ menuOpen, setMenuOpen }) {
 	let burgerClassNames = classNames(
 		styles.hamburgerMenuContainer,
 		menuOpen ? styles.hamburgerMenuOpen : styles.hamburgerMenuClosed
