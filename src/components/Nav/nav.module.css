@@ -2,6 +2,7 @@
 .main-nav {
 	display: flex;
 	justify-content: center;
+
 	flex-grow: 1;
 	padding: 0 2%;
 	text-align: center;
@@ -10,6 +11,7 @@
 .nav-list {
 	display: flex;
 	justify-content: flex-end;
+
 	width: 100%;
 	padding: 0 1rem 0 0;
 	margin: auto;
@@ -29,4 +31,10 @@
 .nav-list-link:hover {
 	color: var(--dark-2);
 	transform: scale(1.01);
+}
+
+@media (max-width: 600px) {
+	.main-nav {
+		display: none;
+	}
 }
