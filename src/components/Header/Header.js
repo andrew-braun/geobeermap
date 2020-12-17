@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import "../../styles/global.css"
+import "../../styles/global.css"
 import styles from "./header.module.css"
 import HamburgerContainer from "../HamburgerMenu/HamburgerContainer"
 import Nav from "../Nav/Nav"

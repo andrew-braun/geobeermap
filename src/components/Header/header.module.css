@@ -10,14 +10,6 @@
 	min-height: min-content;
 }
 
-.main-header a {
-	color: var(--main-text);
-}
-
-.main-header a:hover {
-	color: var(--main-text);
-}
-
 .site-identity {
 	display: flex;
 	flex-grow: 1;
@@ -31,6 +23,7 @@
 
 .site-title {
 	font-size: 1.8rem;
+	color: var(--main-text);
 }
 
 .site-description {
