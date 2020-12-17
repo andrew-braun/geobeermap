@@ -4,15 +4,25 @@ import "../../styles/global.css"
 import styles from "./nav.module.css"
 import HamburgerContainer from "../HamburgerMenu/HamburgerContainer"
 
-const Nav = () => {
+const Nav = ({ navItems }) => {
+	const NavItems = navItems.map(item => {
+		return (
+			<li className={styles.navListItem}>
+				<Link to={item.path} className={styles.navListLink}>
+					{item.name}
+				</Link>
+			</li>
+		)
+	})
 	return (
 		<nav className={styles.mainNav}>
 			<ul className={styles.navList}>
-				<li className={styles.navListItem}>
+				{NavItems}
+				{/* <li className={styles.navListItem}>
 					<Link to="/" className={styles.navListLink}>
 						Home
 					</Link>
-				</li>
+				</li> */}
 				{/* <li className={styles.navListItem}>
 							<Link to="/blog" className={styles.navListLink}>
 								Blog

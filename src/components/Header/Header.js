@@ -1,6 +1,5 @@
-import React, { useState } from "react"
+import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import "../../styles/global.css"
 import "../../styles/global.css"
 import styles from "./header.module.css"
 import HamburgerContainer from "../HamburgerMenu/HamburgerContainer"
@@ -19,18 +18,24 @@ const Header = () => {
 			}
 		`
 	)
+
+	const { title, description } = data.site.siteMetadata
+
+	const navItems = [
+		{ name: "Home", path: "/" },
+		{ name: "Blog", path: "/blog" },
+	]
+
 	return (
 		<header className={styles.mainHeader}>
 			<div className={styles.siteIdentity}>
 				<Link to="/">
-					<div className={styles.siteTitle}>{data.site.siteMetadata.title}</div>
+					<div className={styles.siteTitle}>{title}</div>
 				</Link>
-				<div className={styles.siteDescription}>
-					{data.site.siteMetadata.description}
-				</div>
+				<div className={styles.siteDescription}>{description}</div>
 			</div>
-			<Nav />
-			<HamburgerContainer />
+			<Nav navItems={navItems} />
+			<HamburgerContainer navItems={navItems} />
 		</header>
 	)
 }

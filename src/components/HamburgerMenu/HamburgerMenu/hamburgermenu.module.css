@@ -32,11 +32,22 @@
 	}
 }
 
-.hamburger-element {
+.hamburger-nav-list {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	width: 100%;
+	padding: 0;
+}
+
+.hamburger-menu-item {
 	width: 80%;
 }
 
-.hamburger-menu-container a {
+.hamburger-menu-link {
 	display: block;
 	background: var(--bright-1);
 	margin: 1rem 0;
@@ -51,12 +62,12 @@
 	line-height: 2;
 }
 
-.hamburger-link:hover {
+.hamburger-menu-link:hover {
 	color: var(--light-1);
 }
 
 @media (max-width: 600px) {
-	.hamburger-menu-container a {
+	.hamburger-menu-link {
 		font-size: 2rem;
 		text-align: center;
 	}
