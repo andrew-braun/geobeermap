@@ -9,8 +9,10 @@ import SEO from "../components/SEO"
 export default () => {
 	return (
 		<Layout>
-			<SEO title="Home" />
-			<AppContainer />
+			<div className="index-page">
+				<SEO title="Home" />
+				<AppContainer />
+			</div>
 		</Layout>
 	)
 }

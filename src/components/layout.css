@@ -1,13 +1,3 @@
-:root {
-	--main-bg: hsla(35, 100%, 91%, 1);
-	--main-text: hsla(0, 0%, 0%, 1);
-	--light-1: hsla(35, 100%, 91%, 1);
-	--bright-1: hsla(29, 100%, 50%, 1);
-	--dull-1: hsla(350, 96%, 20%, 1);
-	--dark-1: hsla(205, 100%, 7%, 1);
-	--dark-2: hsla(188, 68%, 25%, 1);
-}
-
 .main-grid {
 	display: flex;
 	flex: 1 1 auto;
@@ -28,12 +18,12 @@
 	justify-content: stretch;
 	align-items: stretch;
 	min-height: 78vh;
-	max-height: 100%;
 }
 
 /* FOOTER */
 .main-footer {
 	/* grid-area: footer; */
+	justify-self: flex-end;
 	display: flex;
 	justify-content: center;
 	align-items: center;
