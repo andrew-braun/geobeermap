@@ -2,7 +2,7 @@ import React from "react"
 import "../styles/global.css"
 import "./styles/index.css"
 import Layout from "../components/Layout.js"
-import AppContainer from "../components/MainMap/AppContainer"
+import MapContainer from "../components/MainMap/MapContainer"
 import SEO from "../components/SEO"
 // import styles from "./index.module.css"
 
@@ -11,7 +11,7 @@ export default () => {
 		<Layout>
 			<div className="index-page">
 				<SEO title="Home" />
-				<AppContainer />
+				<MapContainer />
 			</div>
 		</Layout>
 	)

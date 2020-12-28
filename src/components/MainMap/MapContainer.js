@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import MainMap from "./MainMap"
 import MapSidebar from "./MapSidebar"
-import styles from "./appcontainer.module.css"
+import styles from "./mapcontainer.module.css"
 
-export default function AppContainer() {
+export default function MapContainer() {
 	const [clickedTab, setClickedTab] = useState("")
 	const [clickedItem, setClickedItem] = useState("")
 	const [mapPosition, setMapPosition] = useState([41.689472, 44.79848])
