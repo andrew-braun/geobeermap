@@ -3,16 +3,13 @@ import { Map, TileLayer } from "react-leaflet"
 import MapMarker from "./MapMarker"
 import "../../styles/global.css"
 import styles from "./mainmap.module.css"
-import { marker } from "leaflet"
 
 export default function MainMap(props) {
 	const { data, position, zoomLevel } = props
-	// const [position, setPosition] = useState(initialPosition)
 
 	// Generate map markers using MapMarker component
 	const Markers = data.map((entry, index) => {
 		// console.log(markerClickHandler)
-		const testFunction = "hi"
 		return (
 			<MapMarker
 				name={entry.name}
@@ -38,7 +35,7 @@ export default function MainMap(props) {
 			{typeof window !== "undefined" ? (
 				<Map center={position} zoom={zoomLevel}>
 					<TileLayer
-						url="https://api.mapbox.com/styles/v1/ab-dev/ckdaldm751b6s1ipgqrzoquzj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYWItZGV2IiwiYSI6ImNrZGFjcjFnNjBoM3QydG1oeG01NHg3cm4ifQ.MumpPYqqGqbsFqUJPMxNsg"
+						url="https://api.mapbox.com/styles/v1/ab-dev/ckdaldm751b6s1ipgqrzoquzj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYWItZGV2IiwiYSI6ImNrajh6M3NzZDBhdHczNHBldGliZTlrY28ifQ.sB8QZDJJSr40ekBZnjVsRg"
 						attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
 					/>
 					{Markers}
