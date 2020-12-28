@@ -21,9 +21,10 @@ const Header = () => {
 
 	const { title, description } = data.site.siteMetadata
 
+	/* Comment/uncomment these add/delete nav items here */
 	const navItems = [
-		{ name: "Home", path: "/" },
-		{ name: "Blog", path: "/blog" },
+		// { name: "Home", path: "/" },
+		// { name: "Blog", path: "/blog" },
 	]
 
 	return (
