@@ -1,0 +1,18 @@
+/* CSS file to target Leaflet styles unreachable from CSS module */
+
+.leaflet-popup-content-wrapper {
+	margin: 0;
+	padding: 0;
+	color: black;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+.leaflet-popup-content {
+	margin: 0;
+	padding: 0;
+}
+
+.leaflet-popup-content-wrapper:hover {
+	opacity: 0.92;
+}

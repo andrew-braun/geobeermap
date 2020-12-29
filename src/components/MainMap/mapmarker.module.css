@@ -1,21 +1,39 @@
 .map-marker {
+}
 
+.map-marker-wrapper {
+	background: var(--main-bg);
 }
 
 .popup-name {
-    font-size: 1.2em;
+	padding: 0.5rem 1rem;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 700;
+	background: linear-gradient(to right, var(--bright-1), var(--main-bg));
+}
+
+.popup-name a {
+	color: var(--main-text);
 }
 
 .popup-type {
-    font-size: 0.9em;
+	text-align: center;
 }
 
-.popup-social-buttons {
-    display: flex;
-    justify-content: center;
+.popup-social-box {
+	display: flex;
+	justify-content: center;
+
+	color: var(--main-text);
 }
 
-.popup-social-buttons div a {
-    padding: 0.1em;
-    color: black;
+.popup-social-box div a {
+	display: inline-block;
+	max-height: 2rem;
+	color: black;
+}
+
+.popup-social-box div a:hover {
+	color: var(--bright-1);
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React from "react"
 import { Map, TileLayer } from "react-leaflet"
 import MapMarker from "./MapMarker"
 import "../../styles/global.css"

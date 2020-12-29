@@ -10,7 +10,7 @@ export default function MapContainer() {
 	const [mapPosition, setMapPosition] = useState([41.689472, 44.79848])
 	const [mapZoom, setMapZoom] = useState("11")
 
-	// GraphQL query for data entries
+	// GraphQL query for data entries that will be used to create map markers and sidebar items
 	const data = useStaticQuery(
 		graphql`
 			query MainEntriesQuery {
@@ -37,7 +37,7 @@ export default function MapContainer() {
 		`
 	)
 
-	// Create an array of entry objects
+	// Create an array of map marker/sidebar item objets
 	const entryArray = []
 
 	for (let i = 0; i < data.allEntriesJson.edges.length; i++) {
@@ -50,7 +50,7 @@ export default function MapContainer() {
 				.map(str => parseFloat(str))
 		}
 
-		// Type list to comma-separated string (but only if original Array to avoid rejoin on reload issue)
+		// Convert Type list to comma-separated string (but only if original Array to avoid rejoin on reload issue)
 		if (Array.isArray(entryArray[i].type)) {
 			entryArray[i].type = Object.values(entryArray[i].type).join(", ")
 		}
@@ -62,12 +62,13 @@ export default function MapContainer() {
 			entryArray[i].open = "No"
 		}
 
-		// Create unique ids
+		// Create unique id for use in click events
 		entryArray[i].id = `${entryArray[i].name.toLowerCase()[0]}${
 			entryArray[i].type.toString().toLowerCase()[0]
 		}${i}`
 	}
 
+	// Filter sidebar/markers based on entry type
 	const filteredEntryArray = entryArray
 		.filter(entry => {
 			if (clickedTab.textContent === "All" || clickedTab === "") {
