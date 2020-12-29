@@ -3,18 +3,29 @@
 
 .map-marker-wrapper {
 	background: var(--main-bg);
+	min-width: 10rem;
+	border-radius: 0.5rem;
 }
 
 .popup-name {
-	padding: 0.5rem 1rem;
 	text-align: center;
 	font-size: 1.5em;
 	font-weight: 700;
-	background: linear-gradient(to right, var(--bright-1), var(--main-bg));
 }
 
 .popup-name a {
+	display: block;
+	padding: 0.5rem 2rem 0rem 2rem;
+	border-radius: 0.5rem 0.5rem 0 0;
 	color: var(--main-text);
+	background: linear-gradient(to bottom, var(--bright-1), var(--main-bg));
+	transition-duration: 0.1s;
+	transition-timing-function: ease-in-out;
+}
+
+.popup-name a:hover {
+	color: var(--dark-2);
+	background: linear-gradient(to bottom, var(--bright-1), var(--main-bg) 60%);
 }
 
 .popup-type {

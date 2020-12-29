@@ -24,10 +24,17 @@
 	background: var(--dark-1);
 	color: var(--light-1);
 	transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+	font-size: 1rem;
 }
 
 .sidebar-tab:hover {
 	background: var(--bright-1);
 	cursor: pointer;
 	transform: scaleY(1.1);
+}
+
+@media only screen and (max-width: 720px) {
+	.sidebar-tab {
+		font-size: 0.9rem;
+	}
 }

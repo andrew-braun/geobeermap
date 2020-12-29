@@ -16,3 +16,12 @@
 .leaflet-popup-content-wrapper:hover {
 	opacity: 0.92;
 }
+
+.leaflet-popup {
+	min-width: 10rem;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+	color: var(--dull-1);
+	font-size: 1.2rem;
+}
