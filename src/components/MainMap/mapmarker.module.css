@@ -25,11 +25,13 @@
 
 .popup-name a:hover {
 	color: var(--dark-2);
-	background: linear-gradient(to bottom, var(--bright-1), var(--main-bg) 60%);
+	background: hsla(29, 100%, 50%, 1);
+	/* background: linear-gradient(to bottom, var(--bright-1), var(--main-bg) 60%); */
 }
 
 .popup-type {
 	text-align: center;
+	font-style: italic;
 }
 
 .popup-social-box {

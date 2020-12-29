@@ -7,7 +7,7 @@ import styles from "./mapcontainer.module.css"
 export default function MapContainer() {
 	const [clickedTab, setClickedTab] = useState("")
 	const [clickedItem, setClickedItem] = useState("")
-	const [mapPosition, setMapPosition] = useState([41.689472, 44.79848])
+	const [mapPosition, setMapPosition] = useState([41.726878, 44.781069])
 	const [mapZoom, setMapZoom] = useState("11")
 
 	// GraphQL query for data entries that will be used to create map markers and sidebar items
