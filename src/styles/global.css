@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700&display=swap");
 
+/* variables */
+:root {
+	--main-bg: hsla(35, 100%, 91%, 1);
+	--main-text: hsla(0, 0%, 0%, 1);
+	--light-1: hsla(35, 100%, 91%, 1);
+	--bright-1: hsla(29, 100%, 50%, 1);
+	--dull-1: hsla(350, 96%, 20%, 1);
+	--dark-1: hsla(205, 100%, 7%, 1);
+	--dark-2: hsla(188, 68%, 25%, 1);
+}
+
 html {
 	font-family: "Recursive", sans-serif, "Courier New", Courier, monospace;
 	font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1000 - 300)));
@@ -16,8 +27,8 @@ body {
 	margin: 0;
 	background: linear-gradient(
 		90deg,
-		hsla(350, 96%, 20%, 0.6),
-		hsla(29, 100%, 50%, 1)
+		hsla(29, 100%, 50%, 1),
+		hsla(29, 100%, 50%, 0.7)
 	);
 	width: 100%;
 	height: 100%;
@@ -31,17 +42,6 @@ body {
 #___gatsby {
 	height: 100%;
 	width: 100%;
-}
-
-/* variables */
-:root {
-	--main-bg: hsla(35, 100%, 91%, 1);
-	--main-text: hsla(0, 0%, 0%, 1);
-	--light-1: hsla(35, 100%, 91%, 1);
-	--bright-1: hsla(29, 100%, 50%, 1);
-	--dull-1: hsla(350, 96%, 20%, 1);
-	--dark-1: hsla(205, 100%, 7%, 1);
-	--dark-2: hsla(188, 68%, 25%, 1);
 }
 
 a {
