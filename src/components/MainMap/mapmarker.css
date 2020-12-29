@@ -2,8 +2,8 @@
 
 .leaflet-popup-content-wrapper {
 	margin: 0;
-	padding: 0;
-	color: black;
+	padding: 0 !important;
+	background: transparent;
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in-out;
 }
