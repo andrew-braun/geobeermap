@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import SocialButtons from "../SocialButtons/SocialButtons"
 import styles from "./sidebaritem.module.css"

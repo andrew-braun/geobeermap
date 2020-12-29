@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import "../../styles/global.css"
 import styles from "./nav.module.css"
-import HamburgerContainer from "../HamburgerMenu/HamburgerContainer"
 
 const Nav = ({ navItems }) => {
 	const NavItems = navItems.map(item => {
