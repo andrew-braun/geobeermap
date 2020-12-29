@@ -48,24 +48,28 @@ export default function entryTemplate({ data }) {
 	return (
 		<Layout>
 			<SEO title={entry.name} />
-			<div className={styles.entryContainer} tabIndex="-3">
+			<div className={styles.entryContainer} tabIndex="-1">
 				<aside className={styles.entrySidebar}>
-					<h1 className={styles.entrySidebarTitle}>{entry.name}</h1>
-					<div className={styles.socialBox}>
-						<SocialButtons
-							facebook={entry.facebook}
-							instagram={entry.instagram}
-							twitter={entry.twitter}
-							untappd={entry.untappd}
-							website={entry.website}
-							googlemaps={entry.googlemaps}
-						/>
-					</div>
-					{entry.website ? (
-						<div className={styles.entryWebsite}>
-							<a href={entry.website}>Website</a>
+					<div className={styles.entryLinks}>
+						<h1 className={styles.entrySidebarTitle}>
+							<a href={entry.website}>{entry.name}</a>
+						</h1>
+						<div className={styles.socialBox}>
+							<SocialButtons
+								facebook={entry.facebook}
+								instagram={entry.instagram}
+								twitter={entry.twitter}
+								untappd={entry.untappd}
+								website={entry.website}
+								googlemaps={entry.googlemaps}
+							/>
 						</div>
-					) : null}
+						{entry.website ? (
+							<div className={styles.entryWebsite}>
+								<a href={entry.website}>Website</a>
+							</div>
+						) : null}
+					</div>
 					<table className={styles.infoTable}>
 						<tr className={styles.infoRow}>
 							<td className={styles.infoCell}>Type:</td>
