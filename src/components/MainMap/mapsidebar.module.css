@@ -14,17 +14,19 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	border-bottom: 1px solid var(--bright-1);
 }
 
 .sidebar-tab {
 	flex: 1 0 auto;
-	padding: 0.8em;
+	padding: 0.5em;
 	border: 1px solid var(--dull-1);
 	border-width: 0 1px;
 	background: var(--dark-1);
 	color: var(--light-1);
 	transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
-	font-size: 1rem;
+	font-family: "Expletus Sans";
+	font-size: 1.1rem;
 }
 
 .sidebar-tab:hover {
