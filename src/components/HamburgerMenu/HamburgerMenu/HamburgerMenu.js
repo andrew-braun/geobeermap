@@ -37,7 +37,3 @@ export default function HamburgerMenu({ menuOpen, navItems }) {
 		</div>
 	)
 }
-
-HamburgerMenu.propTypes = {
-	open: Boolean.isRequired,
-}

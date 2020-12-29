@@ -8,15 +8,11 @@ export default function Hamburger({ menuOpen, setMenuOpen }) {
 			onClick={() => setMenuOpen(!menuOpen)}
 			onKeyDown={() => setMenuOpen(!menuOpen)}
 			role="button"
+			tabIndex="0"
 		>
 			<div />
 			<div />
 			<div />
 		</div>
 	)
-}
-
-Hamburger.propTypes = {
-	menuOpen: Boolean.isRequired,
-	setMenuOpen: Function.isRequired,
 }
