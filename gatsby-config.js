@@ -29,6 +29,7 @@ module.exports = {
 				linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
 			},
 		},
+		`gatsby-plugin-mdx`,
 		`gatsby-transformer-remark`,
 		`gatsby-plugin-react-helmet`,
 	],
