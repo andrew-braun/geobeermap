@@ -153,7 +153,7 @@ export const data = graphql`
 						date
 						opening_date
 						images
-						beers
+
 						title
 						type
 					}
