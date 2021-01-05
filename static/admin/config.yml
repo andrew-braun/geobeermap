@@ -25,7 +25,7 @@ collections:
   - name: entries
     label: Entries
     folder: entries
-    extension: "json"
+    extension: "json-frontmatter"
     create: true
     fields:
       - { name: name, label: Name }
