@@ -14,22 +14,24 @@ export default function MapContainer() {
 	const data = useStaticQuery(
 		graphql`
 			query MainEntriesQuery {
-				allEntriesJson {
+				allMdx(filter: { frontmatter: { open: { ne: null } } }) {
 					edges {
 						node {
 							id
-							facebook
-							googlemaps
-							instagram
-							coordinates
-							name
-							open
-							title
-							twitter
-							untappd
-							type
-							website
-							path
+							frontmatter {
+								facebook
+								googlemaps
+								instagram
+								coordinates
+								name
+								open
+								title
+								twitter
+								untappd
+								type
+								website
+								path
+							}
 						}
 					}
 				}
@@ -40,34 +42,41 @@ export default function MapContainer() {
 	// Create an array of map marker/sidebar item objets
 	const entryArray = []
 
-	for (let i = 0; i < data.allEntriesJson.edges.length; i++) {
-		entryArray.push(data.allEntriesJson.edges[i].node)
+	for (let i = 0; i < data.allMdx.edges.length; i++) {
+		entryArray.push(data.allMdx.edges[i].node.frontmatter)
+		const info = entryArray[i]
+
 		// Convert coordinates to floats
-		if (entryArray[i].coordinates !== null) {
-			entryArray[i].coordinates = entryArray[i].coordinates
+		if (info.coordinates !== null) {
+			const coordinates = info.coordinates
 				.toString()
 				.split(",")
 				.map(str => parseFloat(str))
+
+			info.coordinates = coordinates
+		} else {
+			info.coordinates = [0, 0]
 		}
 
 		// Convert Type list to comma-separated string (but only if original Array to avoid rejoin on reload issue)
-		if (Array.isArray(entryArray[i].type)) {
-			entryArray[i].type = Object.values(entryArray[i].type).join(", ")
+		if (Array.isArray(info.type)) {
+			info.type = Object.values(info.type).join(", ")
 		}
 
 		/* Convert boolean to yes/no */
-		if (entryArray[i].open === true) {
-			entryArray[i].open = "Yes"
+		if (info.open === true) {
+			info.open = "Yes"
 		} else {
-			entryArray[i].open = "No"
+			info.open = "No"
 		}
 
 		// Create unique id for use in click events
-		entryArray[i].id = `${entryArray[i].name.toLowerCase()[0]}${
-			entryArray[i].type.toString().toLowerCase()[0]
+		info.id = `${info.name.toLowerCase()[0]}${
+			info.type.toString().toLowerCase()[0]
 		}${i}`
 	}
 
+	console.log(entryArray.map(item => `${item.coordinates}: ${item.name}`))
 	// Filter sidebar/markers based on entry type
 	const filteredEntryArray = entryArray
 		.filter(entry => {

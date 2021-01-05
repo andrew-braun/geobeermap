@@ -10,30 +10,14 @@ import styles from "./entry.module.css"
 import "./entry.css"
 
 export default function entryTemplate({ data }) {
-	console.log(data.allMdx)
 	const body = data.allMdx.edges[0].node.body
 	const entry = data.allMdx.edges[0].node.frontmatter
-
-	if (entry.coordinates !== null) {
-		entry.coordinates = entry.coordinates
-			.toString()
-			.split(",")
-			.map(str => parseFloat(str))
-	} else {
-		entry.coordinates = [0, 0]
-	}
-
-	console.log(entry.coordinates)
-
-	if (Array.isArray(entry.type)) {
-		entry.type = Object.values(entry.type).join(", ")
-	}
 
 	const entryArray = []
 
 	for (let i = 0; i < data.allMdx.edges.length; i++) {
-		entryArray.push(data.allMdx.edges[i].node)
-		const info = entryArray[i].frontmatter
+		entryArray.push(data.allMdx.edges[i].node.frontmatter)
+		const info = entryArray[i]
 
 		// Convert coordinates to floats
 
@@ -133,7 +117,7 @@ export default function entryTemplate({ data }) {
 					)}
 					<div className={styles.entryMap}>
 						<MainMap
-							data={[entryArray[0].frontmatter]}
+							data={entryArray}
 							zoomLevel={13}
 							position={entry.coordinates}
 						/>
