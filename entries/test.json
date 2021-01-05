@@ -1,0 +1,13 @@
+{
+  "body": "Testing body",
+  "path": "/test",
+  "openingdate": "2021-01-05T07:30:06.736Z",
+  "open": true,
+  "name": "Test",
+  "date": "2021-01-05T07:30:06.798Z",
+  "country": "Test",
+  "title": "test",
+  "type": [
+    "Brewery"
+  ]
+}
