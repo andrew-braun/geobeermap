@@ -10,6 +10,8 @@ export default function Template({
 }) {
 	const { Mdx } = data // data.markdownRemark holds your post data
 	const { frontmatter, html } = Mdx
+
+	console.log(data)
 	return (
 		<Layout>
 			<SEO title={frontmatter.title} />
