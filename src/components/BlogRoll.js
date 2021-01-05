@@ -62,13 +62,3 @@ export default function BlogRoll() {
 		</div>
 	)
 }
-
-// BlogRoll.propTypes = {
-// 	data: PropTypes.shape({
-// 		allMarkdownRemark: PropTypes.shape({
-// 			edges: PropTypes.array,
-// 		}),
-// 	}),
-// }
-
-// render={(data, count) => <BlogRoll data={data} count={count} />}
