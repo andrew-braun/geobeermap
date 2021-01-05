@@ -25,8 +25,7 @@ collections:
   - name: entries
     label: Entries
     folder: entries
-    extension: "mdx"
-    format: "frontmatter"
+    extension: "json"
     create: true
     fields:
       - { name: name, label: Name }
