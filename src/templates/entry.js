@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import ReactMarkdown from "react-markdown/with-html"
+// import ReactMarkdown from "react-markdown/with-html"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/Layout"
 import SocialButtons from "../components/SocialButtons/SocialButtons"
@@ -14,10 +14,14 @@ export default function entryTemplate({ data }) {
 	const body = data.allMdx.edges[0].node.body
 	const entry = data.allMdx.edges[0].node.frontmatter
 
-	entry.coordinates = entry.coordinates
-		.toString()
-		.split(",")
-		.map(str => parseFloat(str))
+	if (entry.coordinates !== null) {
+		entry.coordinates = entry.coordinates
+			.toString()
+			.split(",")
+			.map(str => parseFloat(str))
+	} else {
+		entry.coordinates = [0, 0]
+	}
 
 	console.log(entry.coordinates)
 
@@ -89,20 +93,22 @@ export default function entryTemplate({ data }) {
 						) : null}
 					</div>
 					<table className={styles.infoTable}>
-						<tr className={styles.infoRow}>
-							<td className={styles.infoCell}>Type:</td>
-							<td className={styles.infoCell}>{entry.type}</td>
-						</tr>
-						<tr className={styles.infoRow}>
-							<td className={styles.infoCell}>Operational:</td>
-							<td className={styles.infoCell}>{entry.open ? "Yes" : "No"}</td>
-						</tr>
-						<tr className={styles.infoRow}>
-							<td className={styles.infoCell}>City:</td>
-							<td className={styles.infoCell}>
-								{entry.city}, {entry.country}
-							</td>
-						</tr>
+						<tbody>
+							<tr className={styles.infoRow}>
+								<td className={styles.infoCell}>Type:</td>
+								<td className={styles.infoCell}>{entry.type}</td>
+							</tr>
+							<tr className={styles.infoRow}>
+								<td className={styles.infoCell}>Operational:</td>
+								<td className={styles.infoCell}>{entry.open ? "Yes" : "No"}</td>
+							</tr>
+							<tr className={styles.infoRow}>
+								<td className={styles.infoCell}>City:</td>
+								<td className={styles.infoCell}>
+									{entry.city}, {entry.country}
+								</td>
+							</tr>
+						</tbody>
 					</table>
 				</aside>
 				<main className={styles.entryMain} tabIndex="-2">
