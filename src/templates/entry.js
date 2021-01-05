@@ -50,7 +50,6 @@ export default function entryTemplate({ data }) {
 		}-${i}`
 	}
 
-	// console.log(Array(entry))
 	return (
 		<Layout>
 			<SEO title={entry.name} />
