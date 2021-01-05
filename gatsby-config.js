@@ -29,8 +29,27 @@ module.exports = {
 				linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
 			},
 		},
-		`gatsby-plugin-mdx`,
-		`gatsby-transformer-remark`,
+		{
+			resolve: `gatsby-plugin-mdx`,
+			options: {
+				extensions: [".mdx", ".md"],
+				gatsbyRemarkPlugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth: 590,
+						},
+					},
+					{
+						resolve: `gatsby-remark-responsive-iframe`,
+						options: {
+							wrapperStyle: `margin-bottom: 1.0725rem`,
+						},
+					},
+				],
+			},
+		},
+		// `gatsby-transformer-remark`,
 		`gatsby-plugin-react-helmet`,
 	],
 	siteMetadata: {

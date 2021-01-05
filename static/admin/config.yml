@@ -9,6 +9,8 @@ collections:
   - name: blog
     label: Blog
     folder: blog
+    extension: mdx
+    format: frontmatter
     create: true
     fields:
       - { name: path, label: Path }
