@@ -1,13 +1,13 @@
 {
-  "body": "Testing body",
-  "path": "/test",
-  "openingdate": "2021-01-05T07:30:06.736Z",
+"path": "/test",
+  "openingdate": "2021-01-05T07:32:15.373Z",
   "open": true,
   "name": "Test",
-  "date": "2021-01-05T07:30:06.798Z",
-  "country": "Test",
+  "date": "2021-01-05T07:32:15.508Z",
+  "address": "Test",
   "title": "test",
   "type": [
     "Brewery"
   ]
 }
+Testing
