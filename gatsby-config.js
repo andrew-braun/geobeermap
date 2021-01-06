@@ -87,6 +87,7 @@ module.exports = {
 	],
 	siteMetadata: {
 		title: `GeoBeerMap`,
+		subtitle: `Find craft beer in Georgia`,
 		titleTemplate: "%s · Georgian Craft Beer",
 		author: "Andrew Braun",
 		description: `Find craft beer in the country of Georgia! All the best breweries, bars, and retailers in Tbilisi, Batumi, and beyond.`,

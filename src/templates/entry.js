@@ -11,6 +11,7 @@ import "./entry.css"
 
 export default function entryTemplate({ data }) {
 	const body = data.allMdx.edges[0].node.body
+	let excerpt = data.allMdx.edges[0].node.excerpt
 	const entry = data.allMdx.edges[0].node.frontmatter
 
 	const entryArray = []
@@ -50,9 +51,16 @@ export default function entryTemplate({ data }) {
 		}-${i}`
 	}
 
+	if (excerpt === "") {
+		excerpt = `Looking for a craft beer ${entry.type
+			.split(",")[0]
+			.toLowerCase()}? Check out ${entry.name} in ${entry.city}! `
+	}
+
+	console.log(excerpt)
 	return (
 		<Layout>
-			<SEO title={entry.name} />
+			<SEO title={entry.name} description={excerpt} />
 			<div className={styles.entryContainer} tabIndex="-1">
 				<aside className={styles.entrySidebar}>
 					<div className={styles.entryLinks}>
@@ -134,6 +142,7 @@ export const data = graphql`
 				node {
 					id
 					body
+					excerpt
 					frontmatter {
 						name
 						open

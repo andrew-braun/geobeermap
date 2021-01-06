@@ -12,14 +12,14 @@ const Header = () => {
 				site {
 					siteMetadata {
 						title
-						description
+						subtitle
 					}
 				}
 			}
 		`
 	)
 
-	const { title, description } = data.site.siteMetadata
+	const { title, subtitle } = data.site.siteMetadata
 
 	/* Comment/uncomment these add/delete nav items here */
 	const navItems = [
@@ -33,7 +33,7 @@ const Header = () => {
 				<Link to="/">
 					<div className={styles.siteTitle}>{title}</div>
 				</Link>
-				<div className={styles.siteDescription}>{description}</div>
+				<div className={styles.siteDescription}>{subtitle}</div>
 			</div>
 			<Nav navItems={navItems} />
 			<HamburgerContainer navItems={navItems} />
