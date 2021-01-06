@@ -60,5 +60,6 @@ module.exports = {
 		description: `Find craft beer in Georgia`,
 		url: "https://geobeermap.com",
 		image: "/images/logo/square-logo.png",
+		siteUrl: `https://geobeermap.com`,
 	},
 }
