@@ -7,6 +7,7 @@
 	height: 100%;
 	background: hsla(0, 0%, 100%, 0.2);
 }
+
 /* Sidebar */
 .entry-sidebar {
 	position: relative;
@@ -104,6 +105,16 @@
 	width: 100%;
 	min-height: 100%;
 	overflow-y: scroll;
+}
+
+.entry-main a {
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+}
+
+.entry-main a:hover {
+	color: var(--dark-1);
+	text-decoration: underline;
 }
 
 .entry-heading {
