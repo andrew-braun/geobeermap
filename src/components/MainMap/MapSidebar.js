@@ -36,7 +36,7 @@ export default function MapSidebar(props) {
 						tabIndex="-3"
 						onClick={handleTabClick}
 					>
-						All
+						<span className={styles.tabText}>All</span>
 					</button>
 					<button
 						className={styles.sidebarTab}

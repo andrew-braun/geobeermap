@@ -23,7 +23,8 @@ const Header = () => {
 
 	/* Comment/uncomment these add/delete nav items here */
 	const navItems = [
-		// { name: "Home", path: "/" },
+		{ name: "Home", path: "/" },
+		{ name: "Contact", path: "/contact" },
 		// { name: "Blog", path: "/blog" },
 	]
 
