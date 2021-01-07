@@ -81,6 +81,16 @@ module.exports = {
 				},
 			},
 		},
+		{
+			resolve: `gatsby-plugin-google-fonts`,
+			options: {
+				fonts: [
+					`Recursive\:300,400,500,600,700`,
+					`Expletus Sans\:400,500,600,700,400i,500i,600i,700i`,
+				],
+				display: "swap",
+			},
+		},
 		// `gatsby-transformer-remark`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-sitemap`,
