@@ -10,7 +10,7 @@ export default function SearchBox(props) {
 			<input
 				className={styles.searchBoxInput}
 				type="text"
-				placeholder="Search"
+				placeholder="Search by name, city, or type"
 				value={searchValue}
 				onChange={onSearchChange}
 			/>

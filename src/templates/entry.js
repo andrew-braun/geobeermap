@@ -77,7 +77,13 @@ export default function entryTemplate({ data }) {
 						</div>
 						{entry.website ? (
 							<div className={styles.entryWebsite}>
-								<a href={entry.website}>Website</a>
+								<a
+									href={entry.website}
+									target="_blank"
+									rel="noreferrer noopener"
+								>
+									Website
+								</a>
 							</div>
 						) : null}
 					</div>
