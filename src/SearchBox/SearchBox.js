@@ -11,6 +11,7 @@ export default function SearchBox(props) {
 				className={styles.searchBoxInput}
 				type="text"
 				placeholder="Search"
+				value={searchValue}
 				onChange={onSearchChange}
 			/>
 		</div>

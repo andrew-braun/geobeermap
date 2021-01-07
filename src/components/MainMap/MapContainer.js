@@ -12,7 +12,9 @@ export default function MapContainer() {
 	const [mapZoom, setMapZoom] = useState("11")
 
 	const onSearchChange = event => {
-		setSearchState(event.target.value)
+		if (!`${searchState}${event.target.value}`.includes("  ")) {
+			setSearchState(event.target.value)
+		}
 	}
 
 	// GraphQL query for data entries that will be used to create map markers and sidebar items
@@ -136,6 +138,7 @@ export default function MapContainer() {
 					handleItemClick={handleItemClick}
 					handleTabClick={handleTabClick}
 					onSearchChange={onSearchChange}
+					searchValue={searchState}
 				/>
 			</div>
 			<div className={styles.mapContainer}>
