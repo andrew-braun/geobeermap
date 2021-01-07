@@ -64,9 +64,7 @@ export default function entryTemplate({ data }) {
 			<div className={styles.entryContainer} tabIndex="-1">
 				<aside className={styles.entrySidebar}>
 					<div className={styles.entryLinks}>
-						<h1 className={styles.entrySidebarTitle}>
-							<a href={entry.website}>{entry.name}</a>
-						</h1>
+						<h1 className={styles.entrySidebarTitle}>{entry.name}</h1>
 						<div className={styles.socialBox}>
 							<SocialButtons
 								facebook={entry.facebook}

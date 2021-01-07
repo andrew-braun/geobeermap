@@ -5,6 +5,7 @@
 	flex-wrap: wrap;
 	font-size: 1.8rem;
 	text-align: center;
+	width: 100%;
 }
 
 .social-button a {

@@ -38,13 +38,6 @@
 	padding-bottom: 1rem;
 	border-bottom: 2px solid var(--light-1);
 }
-.info-cell:nth-of-type(even) {
-	text-align: center;
-}
-
-.info-cell:nth-of-type(odd) {
-	font-weight: 600;
-}
 
 .social-box {
 	display: flex;
@@ -87,6 +80,20 @@
 	min-width: 50%;
 	margin-top: 1rem;
 }
+
+.info-cell {
+	padding: 0.5rem 0.2rem;
+}
+
+.info-cell:nth-of-type(even) {
+	text-align: center;
+	color: white;
+}
+
+.info-cell:nth-of-type(odd) {
+	font-weight: 700;
+}
+
 /* Main */
 .entry-main {
 	grid-area: main;

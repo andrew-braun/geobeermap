@@ -19,8 +19,7 @@
 .sidebar-info-container {
 	display: flex;
 	flex-direction: column;
-	min-width: 50%;
-	max-width: 80%;
+	width: 70%;
 }
 
 .sidebar-name {
@@ -49,11 +48,8 @@
 /* Social buttons */
 .sidebar-social-buttons {
 	display: flex;
-	flex: 1 0 25%;
+
+	width: 30%;
 	justify-content: flex-end;
 	align-items: center;
-}
-
-.sidebar-social-link {
-	padding: 0.2rem;
 }
