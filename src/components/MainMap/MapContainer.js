@@ -7,8 +7,13 @@ import styles from "./mapcontainer.module.css"
 export default function MapContainer() {
 	const [clickedTab, setClickedTab] = useState("")
 	const [clickedItem, setClickedItem] = useState("")
+	const [searchState, setSearchState] = useState("")
 	const [mapPosition, setMapPosition] = useState([41.726878, 44.781069])
 	const [mapZoom, setMapZoom] = useState("11")
+
+	const onSearchChange = event => {
+		setSearchState(event.target.value)
+	}
 
 	// GraphQL query for data entries that will be used to create map markers and sidebar items
 	const data = useStaticQuery(
@@ -19,6 +24,8 @@ export default function MapContainer() {
 						node {
 							id
 							frontmatter {
+								city
+								country
 								facebook
 								googlemaps
 								instagram
@@ -76,7 +83,6 @@ export default function MapContainer() {
 		}${i}`
 	}
 
-	console.log(entryArray.map(item => `${item.coordinates}: ${item.name}`))
 	// Filter sidebar/markers based on entry type
 	const filteredEntryArray = entryArray
 		.filter(entry => {
@@ -86,6 +92,15 @@ export default function MapContainer() {
 				return entry.type
 					.toLowerCase()
 					.includes(clickedTab.textContent.toLowerCase().slice(0, 3))
+			}
+		})
+		.filter(entry => {
+			const entryInfo = [entry.name, entry.type, entry.city]
+				.filter(item => item !== null)
+				.map(item => item.toLowerCase())
+
+			if (entryInfo.find(item => item.includes(searchState))) {
+				return entry
 			}
 		})
 		.sort((a, b) => {
@@ -120,6 +135,7 @@ export default function MapContainer() {
 					data={filteredEntryArray}
 					handleItemClick={handleItemClick}
 					handleTabClick={handleTabClick}
+					onSearchChange={onSearchChange}
 				/>
 			</div>
 			<div className={styles.mapContainer}>

@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import SidebarItem from "./SidebarItem"
+import SearchBox from "../../SearchBox/SearchBox"
 import "../../styles/global.css"
 import styles from "./mapsidebar.module.css"
 
 export default function MapSidebar(props) {
-	const { data, handleTabClick, handleItemClick } = props
+	const { data, handleTabClick, handleItemClick, onSearchChange } = props
 
 	const sidebarItems = data.map(entry => (
 		<SidebarItem
@@ -64,6 +65,7 @@ export default function MapSidebar(props) {
 					</button>
 				</div>
 			</div>
+			<SearchBox onSearchChange={onSearchChange} />
 			<div className={styles.mapSidebar}>
 				{/* Use generated list of map sidebar items */}
 				{sidebarItems}
