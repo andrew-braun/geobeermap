@@ -3,4 +3,13 @@
 	height: 2rem;
 	padding: 0 0.5rem;
 	font-size: 1.1rem;
+	background: hsla(0, 0%, 100%, 0.15);
+	border: 1px solid white;
+	border-width: 0 0 1px 0;
+	color: white;
+	transition: background 0.2s ease-in;
+}
+
+.search-box-input:hover {
+	background: hsla(0, 0%, 100%, 0.05);
 }
