@@ -101,7 +101,7 @@ export default function MapContainer() {
 				.filter(item => item !== null)
 				.map(item => item.toLowerCase())
 
-			if (entryInfo.find(item => item.includes(searchState))) {
+			if (entryInfo.find(item => item.toLowerCase().includes(searchState))) {
 				return entry
 			}
 		})
