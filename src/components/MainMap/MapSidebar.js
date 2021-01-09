@@ -70,8 +70,8 @@ export default function MapSidebar(props) {
 						Retailers
 					</button>
 				</div>
+				<SearchBox onSearchChange={onSearchChange} searchValue={searchValue} />
 			</div>
-			<SearchBox onSearchChange={onSearchChange} searchValue={searchValue} />
 			<div className={styles.mapSidebar}>
 				{/* Use generated list of map sidebar items */}
 				{sidebarItems}

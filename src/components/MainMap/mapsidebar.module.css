@@ -6,8 +6,7 @@
 	min-height: 40vh;
 	height: 100%;
 	background: black;
-	overflow-y: scroll;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 .sidebar-tabs {
@@ -33,6 +32,11 @@
 	background: var(--bright-1);
 	cursor: pointer;
 	transform: scaleY(1.05);
+}
+
+.map-sidebar {
+	overflow-y: scroll;
+	height: clamp(40vh, 82%, 75vh);
 }
 
 @media only screen and (max-width: 720px) {
