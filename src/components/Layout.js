@@ -1,6 +1,7 @@
 import React from "react"
 import SEO from "./SEO"
 import Header from "./Header/Header"
+import Footer from "./Footer/Footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -9,9 +10,7 @@ const Layout = ({ children }) => {
 			<SEO />
 			<Header />
 			<main className="main-container">{children}</main>
-			<footer className="main-footer">
-				<p>Made by Andrew Braun</p>
-			</footer>
+			<Footer />
 		</div>
 	)
 }
