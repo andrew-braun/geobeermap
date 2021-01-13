@@ -1,7 +1,7 @@
 .contact-container {
 	margin: 3rem auto;
 	max-width: 30rem;
-	height: clamp(15rem, 50%, 80%);
+	height: clamp(15rem, 20rem, 100%);
 	padding: 2rem;
 	border-radius: 1rem;
 	background: hsla(0, 0%, 100%, 0.7);
