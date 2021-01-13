@@ -23,9 +23,9 @@ const Footer = () => {
 	return (
 		<footer className={styles.mainFooter}>
 			<div className={styles.footerInfo}>
-				{title} - made with{" "}
+				<span className={styles.siteTitle}>{title}</span> - made with
 				<span className="emoji">
-					&#128150; and &#127866; by{" "}
+					&#128150; and &#127866; by&nbsp;
 					<a href="https://andrewbraun.dev" target="_blank">
 						Andrew Braun
 					</a>
