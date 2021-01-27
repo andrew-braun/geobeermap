@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import SidebarItem from "./SidebarItem"
-import SearchBox from "../../SearchBox/SearchBox"
+import SearchBox from "../SearchBox/SearchBox"
 import "../../styles/global.css"
 import styles from "./mapsidebar.module.css"
 

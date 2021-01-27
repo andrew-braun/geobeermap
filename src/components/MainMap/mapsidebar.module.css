@@ -13,6 +13,7 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	min-height: 3.5rem;
 	border-bottom: 1px solid var(--bright-1);
 }
 
@@ -21,7 +22,7 @@
 	padding: 0.5em;
 	border: 1px solid var(--dull-1);
 	border-width: 0 1px;
-	background: var(--dark-1);
+	background: black;
 	color: var(--light-1);
 	transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
 	font-family: "Expletus Sans";
@@ -42,5 +43,11 @@
 @media only screen and (max-width: 720px) {
 	.sidebar-tab {
 		font-size: 0.9rem;
+	}
+}
+
+@media only screen and (max-width: 625px) {
+	.sidebar-tab {
+		font-size: 1.3rem;
 	}
 }
