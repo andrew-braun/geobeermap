@@ -10,8 +10,6 @@ import styles from "./entry.module.css"
 import "./entry.css"
 
 export default function entryTemplate({ data: { mdx } }) {
-	console.log(mdx)
-
 	const { body, excerpt, fileAbsolutePath, frontmatter } = mdx
 
 	const {
@@ -20,8 +18,8 @@ export default function entryTemplate({ data: { mdx } }) {
 		open,
 		city,
 		country,
-		coordinates,
 		locations,
+		coordinates,
 		beers,
 		facebook,
 		twitter,
@@ -30,6 +28,33 @@ export default function entryTemplate({ data: { mdx } }) {
 		instagram,
 		website,
 	} = frontmatter
+
+	const infoForMap = {}
+
+	Object.entries(frontmatter).map(item => {
+		let key = item[0]
+		let value = item[1]
+
+		if (key === "coordinates") {
+			let formattedCoordinates = value
+				.toString()
+				.split(",")
+				.map(str => parseFloat(str))
+
+			infoForMap[key] = formattedCoordinates
+		} else {
+			infoForMap[key] = value
+		}
+	})
+
+	console.log(infoForMap.coordinates)
+	console.log(infoForMap)
+	// const coordinates = frontmatter.coordinates
+	// if (info.coordinates !== null) {
+	// 	const coordinates = info.coordinates
+	// 		.toString()
+	// 		.split(",")
+	// 		.map(str => parseFloat(str))
 
 	// const body = data.mdx.body
 	// let excerpt = data.allMdx.edges[0].node.excerpt
@@ -42,12 +67,6 @@ export default function entryTemplate({ data: { mdx } }) {
 	// 	const info = entryArray[i]
 
 	// 	// Convert coordinates to floats
-
-	// 	if (info.coordinates !== null) {
-	// 		const coordinates = info.coordinates
-	// 			.toString()
-	// 			.split(",")
-	// 			.map(str => parseFloat(str))
 
 	// 		info.coordinates = coordinates
 	// 	} else {
@@ -140,7 +159,11 @@ export default function entryTemplate({ data: { mdx } }) {
 						</div>
 					)}
 					<div className={styles.entryMap}>
-						{/* <MainMap data={frontmatter} zoomLevel={13} position={coordinates} /> */}
+						<MainMap
+							data={[infoForMap]}
+							zoomLevel={13}
+							position={infoForMap.coordinates}
+						/>
 					</div>
 				</main>
 			</div>
