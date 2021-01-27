@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import styles from "./blog.module.css"
 import BlogSidebar from "../components/BlogSidebar/BlogSidebar"
-import BlogRoll from "../components/BlogRoll"
+import BlogPostsContainer from "../components/BlogPostsContainer/BlogPostsContainer"
 
 export default class BlogIndexPage extends React.Component {
 	render() {
@@ -19,7 +19,7 @@ export default class BlogIndexPage extends React.Component {
 						<BlogSidebar />
 					</div>
 					<div className={styles.blogFeedContainer}>
-						<BlogRoll />
+						<BlogPostsContainer />
 					</div>
 				</div>
 			</Layout>

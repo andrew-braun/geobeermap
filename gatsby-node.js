@@ -44,6 +44,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 	const result = await graphql(`
 		{
 			blogPosts: allMdx(
+				filter: { fileAbsolutePath: { regex: "/blog/" } }
 				sort: { order: DESC, fields: [frontmatter___date] }
 				limit: 1000
 			) {
@@ -55,35 +56,45 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 					}
 				}
 			}
-			entries: allMdx(filter: { frontmatter: { open: { ne: null } } }) {
+			entries: allMdx(
+				filter: {
+					fileAbsolutePath: { regex: "/entries/" }
+					frontmatter: { open: { ne: null } }
+				}
+			) {
 				edges {
 					node {
 						id
+						excerpt
+						slug
 						body
+						fileAbsolutePath
 						frontmatter {
-							name
-							open
-							address
-							city
-							country
-							coordinates
-							openingdate
-							locations
-							website
-							googlemaps
-							facebook
-							instagram
-							twitter
-							untappd
+							title
 							path
 							date
-							opening_date
-							images
+							open
+							address
 							beers
-							title
+							city
+							coordinates
+							country
+							facebook
+							googlemaps
+							images
+							instagram
+							name
+							opening_date
+							twitter
 							type
+							untappd
+							website
+							location {
+								coordinates
+							}
 						}
-						fileAbsolutePath
+
+						rawBody
 					}
 				}
 			}
@@ -98,7 +109,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 	result.data.blogPosts.edges.forEach(({ node }) => {
 		createPage({
-			path: node.frontmatter.path,
+			path: `blog/${node.frontmatter.path}`,
 			component: blogPostTemplate,
 			context: {}, // additional data can be passed via context
 		})
@@ -106,9 +117,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 	result.data.entries.edges.forEach(({ node }) => {
 		createPage({
-			path: node.frontmatter.path,
+			path: node.slug,
 			component: entryPostTemplate,
-			context: {}, // additional data can be passed via context
+			context: { id: node.id }, // additional data can be passed via context
 		})
 	})
 }

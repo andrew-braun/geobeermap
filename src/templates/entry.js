@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 // import ReactMarkdown from "react-markdown/with-html"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/Layout"
@@ -9,79 +9,96 @@ import SEO from "../components/SEO"
 import styles from "./entry.module.css"
 import "./entry.css"
 
-export default function entryTemplate({ data }) {
-	const body = data.allMdx.edges[0].node.body
-	let excerpt = data.allMdx.edges[0].node.excerpt
-	const entry = data.allMdx.edges[0].node.frontmatter
+export default function entryTemplate({ data: { mdx } }) {
+	console.log(mdx)
 
-	const entryArray = []
+	const { body, excerpt, fileAbsolutePath, frontmatter } = mdx
 
-	for (let i = 0; i < data.allMdx.edges.length; i++) {
-		entryArray.push(data.allMdx.edges[i].node.frontmatter)
-		const info = entryArray[i]
+	const {
+		name,
+		type,
+		open,
+		city,
+		country,
+		coordinates,
+		locations,
+		beers,
+		facebook,
+		twitter,
+		googlemaps,
+		untappd,
+		instagram,
+		website,
+	} = frontmatter
 
-		// Convert coordinates to floats
+	// const body = data.mdx.body
+	// let excerpt = data.allMdx.edges[0].node.excerpt
+	// const entry = data.allMdx.edges[0].node.frontmatter
 
-		if (info.coordinates !== null) {
-			const coordinates = info.coordinates
-				.toString()
-				.split(",")
-				.map(str => parseFloat(str))
+	// const entryArray = []
 
-			info.coordinates = coordinates
-		} else {
-			info.coordinates = [0, 0]
-		}
+	// for (let i = 0; i < data.allMdx.edges.length; i++) {
+	// 	entryArray.push(data.allMdx.edges[i].node.frontmatter)
+	// 	const info = entryArray[i]
 
-		// Type list to comma-separated string (but only if original Array to avoid rejoin on reload issue)
-		if (Array.isArray(info.type)) {
-			info.type = Object.values(info.type).join(", ")
-		}
+	// 	// Convert coordinates to floats
 
-		/* Convert boolean to yes/no */
-		if (info.open === true) {
-			info.open = "Yes"
-		} else {
-			info.open = "No"
-		}
+	// 	if (info.coordinates !== null) {
+	// 		const coordinates = info.coordinates
+	// 			.toString()
+	// 			.split(",")
+	// 			.map(str => parseFloat(str))
 
-		// Create unique ids
-		info.id = `${info.name.toLowerCase()[0]}${
-			info.type.toString().toLowerCase()[0]
-		}-${i}`
-	}
+	// 		info.coordinates = coordinates
+	// 	} else {
+	// 		info.coordinates = [0, 0]
+	// 	}
 
-	if (excerpt === "") {
-		excerpt = `Looking for a craft beer ${entry.type
-			.split(",")[0]
-			.toLowerCase()}? Check out ${entry.name} in ${entry.city}! `
-	}
+	// 	// Type list to comma-separated string (but only if original Array to avoid rejoin on reload issue)
+	// 	if (Array.isArray(info.type)) {
+	// 		info.type = Object.values(info.type).join(", ")
+	// 	}
 
-	console.log(excerpt)
+	// 	/* Convert boolean to yes/no */
+	// 	if (info.open === true) {
+	// 		info.open = "Yes"
+	// 	} else {
+	// 		info.open = "No"
+	// 	}
+
+	// 	// Create unique ids
+	// 	info.id = `${info.name.toLowerCase()[0]}${
+	// 		info.type.toString().toLowerCase()[0]
+	// 	}-${i}`
+	// }
+
+	// if (excerpt === "") {
+	// 	excerpt = `Looking for a craft beer ${entry.type
+	// 		.split(",")[0]
+	// 		.toLowerCase()}? Check out ${entry.name} in ${entry.city}! `
+	// }
+
+	// console.log(excerpt)
 	return (
 		<Layout>
-			<SEO title={entry.name} description={excerpt} />
+			<SEO title={name} description={excerpt} />
 			<div className={styles.entryContainer} tabIndex="-1">
 				<aside className={styles.entrySidebar}>
 					<div className={styles.entryLinks}>
-						<h1 className={styles.entrySidebarTitle}>{entry.name}</h1>
+						<h1 className={styles.entrySidebarTitle}>{name}</h1>
 						<div className={styles.socialBox}>
 							<SocialButtons
-								facebook={entry.facebook}
-								instagram={entry.instagram}
-								twitter={entry.twitter}
-								untappd={entry.untappd}
-								website={entry.website}
-								googlemaps={entry.googlemaps}
+								facebook={facebook}
+								instagram={instagram}
+								twitter={twitter}
+								untappd={untappd}
+								website={website}
+								googlemaps={googlemaps}
 							/>
 						</div>
-						{entry.website ? (
+						{website ? (
 							<div className={styles.entryWebsite}>
-								<a
-									href={entry.website}
-									target="_blank"
-									rel="noreferrer noopener"
-								>
+								<a href={website} target="_blank" rel="noreferrer noopener">
 									Website
 								</a>
 							</div>
@@ -91,16 +108,16 @@ export default function entryTemplate({ data }) {
 						<tbody>
 							<tr className={styles.infoRow}>
 								<td className={styles.infoCell}>Type:</td>
-								<td className={styles.infoCell}>{entry.type}</td>
+								<td className={styles.infoCell}>{type}</td>
 							</tr>
 							<tr className={styles.infoRow}>
 								<td className={styles.infoCell}>Operational:</td>
-								<td className={styles.infoCell}>{entry.open ? "Yes" : "No"}</td>
+								<td className={styles.infoCell}>{open ? "Yes" : "No"}</td>
 							</tr>
 							<tr className={styles.infoRow}>
 								<td className={styles.infoCell}>City:</td>
 								<td className={styles.infoCell}>
-									{entry.city}, {entry.country}
+									{city}, {country}
 								</td>
 							</tr>
 						</tbody>
@@ -108,71 +125,101 @@ export default function entryTemplate({ data }) {
 				</aside>
 				<main className={styles.entryMain} tabIndex="-2">
 					<div className={styles.entryContent}>
-						<h2 className={styles.entryHeading}>About {entry.name}</h2>
-						{/* <ReactMarkdown
-							source={entry.body}
-							className="entry-body"
-							escapeHtml={false}
-						/> */}
+						<h2 className={styles.entryHeading}>About {name}</h2>
+
 						<MDXRenderer>{body}</MDXRenderer>
 					</div>
-					{entry.beers && (
+					{beers && (
 						<div className={styles.entryBeers}>
-							<h2 className={styles.entryHeading}>{entry.name} Beers</h2>
+							<h2 className={styles.entryHeading}>{name} Beers</h2>
 						</div>
 					)}
-					{entry.locations && (
+					{locations && (
 						<div className={styles.entryLocations}>
 							<h2 className={styles.entryHeading}>Where to Drink</h2>
 						</div>
 					)}
 					<div className={styles.entryMap}>
-						<MainMap
-							data={entryArray}
-							zoomLevel={13}
-							position={entry.coordinates}
-						/>
+						{/* <MainMap data={frontmatter} zoomLevel={13} position={coordinates} /> */}
 					</div>
 				</main>
 			</div>
 		</Layout>
 	)
 }
+// ($id: String!)
+// "6aa2e561-05ea-5b5b-97f4-64debcb2296b"
 
 export const data = graphql`
-	query entryQuery($path: String!) {
-		allMdx(filter: { frontmatter: { path: { eq: $path } } }) {
-			edges {
-				node {
-					id
-					body
-					excerpt
-					frontmatter {
-						name
-						open
-						address
-						city
-						country
-						coordinates
-						openingdate
-						locations
-						website
-						googlemaps
-						facebook
-						instagram
-						twitter
-						untappd
-						path
-						date
-						opening_date
-						images
+	query entryQuery($id: String!) {
+		mdx(id: { eq: $id }) {
+			body
+			excerpt
+			fileAbsolutePath
+			frontmatter {
+				address
+				beers
+				city
+				coordinates
+				country
+				date
+				facebook
+				googlemaps
+				images
+				instagram
 
-						title
-						type
-					}
-					fileAbsolutePath
-				}
+				name
+				open
+				path
+				title
+				twitter
+				type
+				untappd
+				website
 			}
+
+			rawBody
+			mdxAST
+			slug
+			id
 		}
 	}
 `
+
+// export const data = graphql`
+// 	query entryQuery($path: String!) {
+// 		allMdx(filter: { frontmatter: { path: { eq: $path } } }) {
+// 			edges {
+// 				node {
+// 					id
+// 					body
+// 					excerpt
+// 					frontmatter {
+// 						name
+// 						open
+// 						address
+// 						city
+// 						country
+// 						coordinates
+// 						openingdate
+// 						locations
+// 						website
+// 						googlemaps
+// 						facebook
+// 						instagram
+// 						twitter
+// 						untappd
+// 						path
+// 						date
+// 						opening_date
+// 						images
+
+// 						title
+// 						type
+// 					}
+// 					fileAbsolutePath
+// 				}
+// 			}
+// 		}
+// 	}
+// `

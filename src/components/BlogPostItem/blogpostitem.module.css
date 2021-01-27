@@ -1,0 +1,27 @@
+.post-container {
+	flex: 1 1 auto;
+	margin: 0.5rem;
+	padding: 0.7rem;
+	border: 1px solid black;
+	border-radius: 0.1rem;
+	background: hsla(0, 0%, 0%, 0.2);
+	transition: background 0.3s ease-in-out, border-radius 0.4s ease-in-out;
+}
+
+.post-container:hover {
+	background: hsla(0, 0%, 0%, 0.17);
+}
+
+.post-title {
+	font-size: 1.4rem;
+	color: var(--dark-1);
+}
+
+.post-data {
+	opacity: 0.5;
+}
+
+.post-link {
+	color: var(--dark-2);
+	font-weight: bold;
+}
