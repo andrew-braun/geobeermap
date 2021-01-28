@@ -25,7 +25,7 @@ export default function MapMarker(props) {
 				<div
 					className={styles.mapMarker}
 					id={`${id}-marker`}
-					key={`${key}-marker-div`}
+					key={`${id}-marker-div-key`}
 				>
 					<Marker position={props.position}>
 						<Popup>

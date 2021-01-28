@@ -24,7 +24,6 @@ export default function MainMap(props) {
 					position={entry.coordinates}
 					open={entry.open}
 					id={entry.id}
-					key={entry.id}
 					path={entry.path}
 					index={index}
 				/>
