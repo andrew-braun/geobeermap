@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import SidebarItem from "./SidebarItem"
 import SearchBox from "../SearchBox/SearchBox"
 import "../../styles/global.css"
@@ -28,6 +28,7 @@ export default function MapSidebar(props) {
 			id={entry.id}
 			path={entry.path}
 			key={entry.id}
+			slug={entry.slug}
 			handleItemClick={handleItemClick}
 			handleTabClick={handleTabClick}
 		/>

@@ -7,10 +7,12 @@ export default function SidebarItem(props) {
 	return (
 		<div
 			className={styles.mapSidebarItem}
-			id={`${props.id}-sidebar`}
+			id={`${props.id}-sidebar-item`}
 			onClick={props.handleItemClick}
+			onKeyDown={props.handleItemClick}
 			role="button"
-			tabIndex={"-" + props.index}
+			tabIndex="0"
+			key={props.id}
 		>
 			<div className={styles.sidebarInfoContainer}>
 				<div className={styles.sidebarName}>

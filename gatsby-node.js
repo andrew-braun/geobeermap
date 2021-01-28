@@ -38,8 +38,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
 	const { createPage } = actions
 
-	const blogPostTemplate = path.resolve(`src/templates/blog.js`)
-	const entryPostTemplate = path.resolve(`src/templates/entry.js`)
+	const blogPostTemplate = path.resolve(`src/templates/BlogPostTemplate.js`)
+	const entryPostTemplate = path.resolve(`src/templates/Entry.js`)
 
 	const result = await graphql(`
 		{

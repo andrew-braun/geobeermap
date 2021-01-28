@@ -4,13 +4,13 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import "../styles/global.css"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
-import styles from "./blog.module.css"
+import styles from "./blogposttemplate.module.css"
 
 export default function Template({
 	data: { mdx }, // this prop will be injected by the GraphQL query below.
 }) {
 	const { frontmatter, body } = mdx
-	const { title, date, path } = frontmatter
+	const { title, date } = frontmatter
 
 	return (
 		<Layout>

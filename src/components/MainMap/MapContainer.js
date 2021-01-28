@@ -25,6 +25,7 @@ export default function MapContainer() {
 					edges {
 						node {
 							id
+							slug
 							frontmatter {
 								city
 								country
@@ -104,6 +105,7 @@ export default function MapContainer() {
 			if (entryInfo.find(item => item.includes(searchState.toLowerCase()))) {
 				return entry
 			}
+			return null
 		})
 		.sort((a, b) => {
 			const nameA = a.name.toLowerCase()
@@ -125,11 +127,13 @@ export default function MapContainer() {
 		const item = filteredEntryArray.find(
 			obj => obj.id === event.currentTarget.id.split("-")[0]
 		)
+
 		setClickedItem(item)
 		setMapPosition(item.coordinates)
 		setMapZoom(16)
 	}
 
+	console.log(filteredEntryArray[0].slug)
 	return (
 		<div className={styles.mainAppContainer}>
 			<div className={styles.sidebarContainer}>
