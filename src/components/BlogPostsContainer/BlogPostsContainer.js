@@ -1,6 +1,5 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import BlogPostItem from "../BlogPostItem/BlogPostItem"
 import styles from "./blogpostscontainer.module.css"
 

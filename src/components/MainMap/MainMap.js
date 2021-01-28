@@ -6,7 +6,7 @@ import styles from "./mainmap.module.css"
 
 export default function MainMap(props) {
 	const { data, position, zoomLevel } = props
-	const infoArray = data
+
 	// Generate map markers using MapMarker component
 	const Markers = data.map((entry, index) => {
 		// console.log(markerClickHandler)
