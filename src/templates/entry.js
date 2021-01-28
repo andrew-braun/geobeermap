@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 // import ReactMarkdown from "react-markdown/with-html"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/Layout"
@@ -10,14 +10,15 @@ import styles from "./entry.module.css"
 import "./entry.css"
 
 export default function entryTemplate({ data: { mdx } }) {
-	const { body, excerpt, fileAbsolutePath, frontmatter } = mdx
+	const { body, excerpt, frontmatter } = mdx
 
 	// Replace null with "none" to avoid build errors
-	Object.entries(frontmatter).map(arr => {
-		if (arr[1] === null) {
+	Object.entries(frontmatter)
+		.filter(arr => arr[1] === null)
+		.map(arr => {
 			frontmatter[arr[0]] = "none"
-		}
-	})
+			return null
+		})
 
 	// Process coordinates to format LeafletJS understands
 	frontmatter.coordinates !== "none"
@@ -34,7 +35,6 @@ export default function entryTemplate({ data: { mdx } }) {
 		city,
 		country,
 		locations,
-		coordinates,
 		beers,
 		facebook,
 		twitter,

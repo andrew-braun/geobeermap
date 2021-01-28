@@ -31,9 +31,14 @@ export default function Template({
 export const pageQuery = graphql`
 	query blogPostQuery($id: String!) {
 		mdx(id: { eq: $id }) {
+			id
 			body
+			excerpt
+			mdxAST
+			slug
 			frontmatter {
 				date(formatString: "MMMM DD, YYYY")
+				images
 				path
 				title
 			}

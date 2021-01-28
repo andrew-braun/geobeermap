@@ -51,9 +51,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 				edges {
 					node {
 						id
+						body
+						excerpt
+						mdxAST
 						slug
 						frontmatter {
+							date
+							images
 							path
+							title
 						}
 					}
 				}
