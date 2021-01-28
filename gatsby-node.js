@@ -50,6 +50,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 			) {
 				edges {
 					node {
+						id
+						slug
 						frontmatter {
 							path
 						}
@@ -109,9 +111,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 	result.data.blogPosts.edges.forEach(({ node }) => {
 		createPage({
-			path: `blog/${node.frontmatter.path}`,
+			path: `blog/${node.slug}`,
 			component: blogPostTemplate,
-			context: {}, // additional data can be passed via context
+			context: { id: node.id }, // additional data can be passed via context
 		})
 	})
 
