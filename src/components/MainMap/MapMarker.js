@@ -16,12 +16,17 @@ export default function MapMarker(props) {
 		untappd,
 		googlemaps,
 		twitter,
+		key,
 	} = props
 
 	return (
 		<React.Fragment>
 			{props.position !== null ? (
-				<div className={styles.mapMarker} id={`${id}-marker`}>
+				<div
+					className={styles.mapMarker}
+					id={`${id}-marker`}
+					key={`${key}-marker-div`}
+				>
 					<Marker position={props.position}>
 						<Popup>
 							<div className={styles.mapMarkerWrapper}>

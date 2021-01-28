@@ -6,7 +6,12 @@ import styles from "./nav.module.css"
 const Nav = ({ navItems }) => {
 	const NavItems = navItems.map(item => {
 		return (
-			<li className={styles.navListItem}>
+			<li
+				className={styles.navListItem}
+				key={`${item.name.split(" ").join("-")}-${Math.floor(
+					Math.random() * 1000
+				)}`}
+			>
 				<Link to={item.path} className={styles.navListLink}>
 					{item.name}
 				</Link>

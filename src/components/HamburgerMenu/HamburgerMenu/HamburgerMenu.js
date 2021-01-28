@@ -7,7 +7,12 @@ import styles from "./hamburgermenu.module.css"
 export default function HamburgerMenu({ menuOpen, navItems }) {
 	const HamburgerMenuItems = navItems.map(item => {
 		return (
-			<li className={styles.hamburgerMenuItem}>
+			<li
+				className={styles.hamburgerMenuItem}
+				key={`${item.name.split(" ").join("-")}-${Math.floor(
+					Math.random() * 1000
+				)}`}
+			>
 				<Link to={item.path} className={styles.hamburgerMenuLink}>
 					{item.name}
 				</Link>

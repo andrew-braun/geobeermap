@@ -133,7 +133,6 @@ export default function MapContainer() {
 		setMapZoom(16)
 	}
 
-	console.log(filteredEntryArray[0].slug)
 	return (
 		<div className={styles.mainAppContainer}>
 			<div className={styles.sidebarContainer}>

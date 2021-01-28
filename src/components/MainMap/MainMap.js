@@ -12,21 +12,23 @@ export default function MainMap(props) {
 		// console.log(markerClickHandler)
 
 		return (
-			<MapMarker
-				name={entry.name}
-				type={entry.type}
-				googlemaps={entry.googlemaps}
-				facebook={entry.facebook}
-				twitter={entry.twitter}
-				instagram={entry.instagram}
-				website={entry.website}
-				position={entry.coordinates}
-				open={entry.open}
-				id={entry.id}
-				key={entry.id}
-				path={entry.path}
-				index={index}
-			/>
+			<React.Fragment key={`${entry.name}-${entry.type}-${entry.id}`}>
+				<MapMarker
+					name={entry.name}
+					type={entry.type}
+					googlemaps={entry.googlemaps}
+					facebook={entry.facebook}
+					twitter={entry.twitter}
+					instagram={entry.instagram}
+					website={entry.website}
+					position={entry.coordinates}
+					open={entry.open}
+					id={entry.id}
+					key={entry.id}
+					path={entry.path}
+					index={index}
+				/>
+			</React.Fragment>
 		)
 	})
 
