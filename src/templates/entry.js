@@ -37,13 +37,15 @@ export default function entryTemplate({ data: { mdx } }) {
 
 		if (key === "coordinates") {
 			let formattedCoordinates = value
-				.toString()
-				.split(",")
-				.map(str => parseFloat(str))
+				? value
+						.toString()
+						.split(",")
+						.map(str => parseFloat(str))
+				: [0, 0]
 
 			infoForMap[key] = formattedCoordinates
 		} else {
-			infoForMap[key] = value
+			infoForMap[key] = value ?? "Not Found"
 		}
 	})
 
