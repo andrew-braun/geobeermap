@@ -12,6 +12,21 @@ import "./entry.css"
 export default function entryTemplate({ data: { mdx } }) {
 	const { body, excerpt, fileAbsolutePath, frontmatter } = mdx
 
+	// Replace null with "none" to avoid build errors
+	Object.entries(frontmatter).map(arr => {
+		if (arr[1] === null) {
+			frontmatter[arr[0]] = "none"
+		}
+	})
+
+	// Process coordinates to format LeafletJS understands
+	frontmatter.coordinates !== "none"
+		? (frontmatter.coordinates = frontmatter.coordinates
+				.toString()
+				.split(",")
+				.map(str => parseFloat(str)))
+		: (frontmatter.coordinates = [0, 0])
+
 	const {
 		name,
 		type,
@@ -29,77 +44,6 @@ export default function entryTemplate({ data: { mdx } }) {
 		website,
 	} = frontmatter
 
-	const infoForMap = {}
-
-	Object.entries(frontmatter).map(item => {
-		let key = item[0]
-		let value = item[1]
-
-		if (key === "coordinates") {
-			let formattedCoordinates = value
-				? value
-						.toString()
-						.split(",")
-						.map(str => parseFloat(str))
-				: [0, 0]
-
-			infoForMap[key] = formattedCoordinates
-		} else {
-			infoForMap[key] = value ?? "Not Found"
-		}
-	})
-
-	console.log(infoForMap.coordinates)
-	console.log(infoForMap)
-	// const coordinates = frontmatter.coordinates
-	// if (info.coordinates !== null) {
-	// 	const coordinates = info.coordinates
-	// 		.toString()
-	// 		.split(",")
-	// 		.map(str => parseFloat(str))
-
-	// const body = data.mdx.body
-	// let excerpt = data.allMdx.edges[0].node.excerpt
-	// const entry = data.allMdx.edges[0].node.frontmatter
-
-	// const entryArray = []
-
-	// for (let i = 0; i < data.allMdx.edges.length; i++) {
-	// 	entryArray.push(data.allMdx.edges[i].node.frontmatter)
-	// 	const info = entryArray[i]
-
-	// 	// Convert coordinates to floats
-
-	// 		info.coordinates = coordinates
-	// 	} else {
-	// 		info.coordinates = [0, 0]
-	// 	}
-
-	// 	// Type list to comma-separated string (but only if original Array to avoid rejoin on reload issue)
-	// 	if (Array.isArray(info.type)) {
-	// 		info.type = Object.values(info.type).join(", ")
-	// 	}
-
-	// 	/* Convert boolean to yes/no */
-	// 	if (info.open === true) {
-	// 		info.open = "Yes"
-	// 	} else {
-	// 		info.open = "No"
-	// 	}
-
-	// 	// Create unique ids
-	// 	info.id = `${info.name.toLowerCase()[0]}${
-	// 		info.type.toString().toLowerCase()[0]
-	// 	}-${i}`
-	// }
-
-	// if (excerpt === "") {
-	// 	excerpt = `Looking for a craft beer ${entry.type
-	// 		.split(",")[0]
-	// 		.toLowerCase()}? Check out ${entry.name} in ${entry.city}! `
-	// }
-
-	// console.log(excerpt)
 	return (
 		<Layout>
 			<SEO title={name} description={excerpt} />
@@ -162,9 +106,9 @@ export default function entryTemplate({ data: { mdx } }) {
 					)}
 					<div className={styles.entryMap}>
 						<MainMap
-							data={[infoForMap]}
+							data={[frontmatter]}
 							zoomLevel={13}
-							position={infoForMap.coordinates}
+							position={frontmatter.coordinates}
 						/>
 					</div>
 				</main>
@@ -172,8 +116,6 @@ export default function entryTemplate({ data: { mdx } }) {
 		</Layout>
 	)
 }
-// ($id: String!)
-// "6aa2e561-05ea-5b5b-97f4-64debcb2296b"
 
 export const data = graphql`
 	query entryQuery($id: String!) {
@@ -210,41 +152,3 @@ export const data = graphql`
 		}
 	}
 `
-
-// export const data = graphql`
-// 	query entryQuery($path: String!) {
-// 		allMdx(filter: { frontmatter: { path: { eq: $path } } }) {
-// 			edges {
-// 				node {
-// 					id
-// 					body
-// 					excerpt
-// 					frontmatter {
-// 						name
-// 						open
-// 						address
-// 						city
-// 						country
-// 						coordinates
-// 						openingdate
-// 						locations
-// 						website
-// 						googlemaps
-// 						facebook
-// 						instagram
-// 						twitter
-// 						untappd
-// 						path
-// 						date
-// 						opening_date
-// 						images
-
-// 						title
-// 						type
-// 					}
-// 					fileAbsolutePath
-// 				}
-// 			}
-// 		}
-// 	}
-// `
