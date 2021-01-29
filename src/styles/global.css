@@ -11,12 +11,17 @@
 	--main-bg-gradient: linear-gradient(
 		90deg,
 		hsla(29, 100%, 50%, 1),
-		hsla(29, 100%, 50%, 0.7)
+		hsla(29, 100%, 50%, 0.65)
 	);
-	--main-text-gradient: linear-gradient(
+	--text-gradient-1: linear-gradient(
 		90deg,
 		hsla(0, 0%, 0%, 0.5),
 		hsla(35, 100%, 91%, 1)
+	);
+	--text-gradient-2: linear-gradient(
+		90deg,
+		var(--bright-1) 30%,
+		hsla(0, 0%, 0%, 0.8) 80%
 	);
 }
 

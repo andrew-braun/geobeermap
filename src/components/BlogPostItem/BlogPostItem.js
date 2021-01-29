@@ -19,11 +19,13 @@ export default function BlogPostItem(props) {
 					</p>
 				</header>
 				<p className={styles.postExcerpt}>{excerpt}</p>
-				<footer>
+				<footer className={styles.postFooter}>
 					<p className={styles.postDate}>{date}</p>
-					<Link className={styles.postLink} to={path}>
-						Keep Reading →
-					</Link>
+					<div className={styles.postLinkButton}>
+						<Link className={styles.postLink} to={path}>
+							Keep Reading →
+						</Link>
+					</div>
 				</footer>
 			</article>
 		</div>
