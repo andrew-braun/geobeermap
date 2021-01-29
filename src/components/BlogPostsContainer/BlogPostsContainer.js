@@ -11,10 +11,15 @@ export default function BlogPostsContainer() {
 					node {
 						excerpt(pruneLength: 400)
 						id
+						body
+						mdxAST
+						slug
 						frontmatter {
+							date(formatString: "MMMM DD, YYYY")
+							images
 							path
 							title
-							date(formatString: "MMMM DD, YYYY")
+							name
 						}
 					}
 				}

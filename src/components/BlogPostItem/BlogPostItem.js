@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import styles from "./blogpostitem.module.css"
 
 export default function BlogPostItem(props) {
-	const { excerpt, id, frontmatter } = props.postData.node
-	const { path, title, date } = frontmatter
+	const { excerpt, id, frontmatter, slug } = props.postData.node
+	const { path, title, date, name } = frontmatter
 
 	console.log(title)
 
@@ -13,12 +13,11 @@ export default function BlogPostItem(props) {
 			<article className={styles.post}>
 				<header>
 					<p className={styles.postMeta}>
-						<Link className={styles.postTitle} to={path}>
-							{title}
+						<Link className={styles.postTitle} to={slug}>
+							{name ?? title}
 						</Link>
-						<span> &bull; </span>
-						<span className={styles.postData}>{date}</span>
 					</p>
+					<p className={styles.postData}>{date}</p>
 				</header>
 				<p>
 					{excerpt}
