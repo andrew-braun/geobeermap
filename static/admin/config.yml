@@ -14,7 +14,14 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
+      - {
+          name: date,
+          label: Date,
+          widget: datetime,
+          default: "",
+          date_format: "MMMM DD, YYYY",
+          format: "MMMM DD, YYYY",
+        }
       - { name: title, label: Title }
       - {
           name: images,
@@ -31,10 +38,18 @@ collections:
     format: frontmatter
     create: true
     fields:
-      - { name: name, label: Name }
+      - {
+          name: date,
+          label: Entry Publication Date,
+          widget: datetime,
+          default: "",
+          date_format: "MMMM DD, YYYY",
+          format: "MMMM DD, YYYY HH:mm",
+        }
+      - { name: name, label: Business Name }
       - {
           name: type,
-          label: Type,
+          label: Business Type,
           widget: select,
           multiple: true,
           options: ["Brewery", "Bar", "Retailer", "Other"],
@@ -54,6 +69,9 @@ collections:
           name: openingdate,
           label: Opening Date,
           widget: datetime,
+          default: "",
+          date_format: "MMMM DD, YYYY",
+          format: "MMMM DD, YYYY",
           required: false,
         }
       - {
@@ -85,5 +103,4 @@ collections:
       - { name: twitter, label: Twitter, required: false }
       - { name: untappd, label: Untappd, required: false }
       - { name: path, label: Path }
-      - { name: date, label: Publication Date, widget: datetime }
       - { name: title, label: File Name }
