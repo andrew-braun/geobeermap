@@ -11,22 +11,20 @@ export default function BlogPostItem(props) {
 	return (
 		<div className={styles.postContainer} key={id}>
 			<article className={styles.post}>
-				<header>
-					<p className={styles.postMeta}>
-						<Link className={styles.postTitle} to={slug}>
+				<header className={styles.postHeader}>
+					<p className={styles.postTitle}>
+						<Link className={styles.postTitleLink} to={slug}>
 							{name ?? title}
 						</Link>
 					</p>
-					<p className={styles.postData}>{date}</p>
 				</header>
-				<p>
-					{excerpt}
-					<br />
-					<br />
+				<p className={styles.postExcerpt}>{excerpt}</p>
+				<footer>
+					<p className={styles.postDate}>{date}</p>
 					<Link className={styles.postLink} to={path}>
 						Keep Reading →
 					</Link>
-				</p>
+				</footer>
 			</article>
 		</div>
 	)
