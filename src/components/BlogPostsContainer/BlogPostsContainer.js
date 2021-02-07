@@ -1,5 +1,5 @@
-import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import React from "react"
 import BlogPostItem from "../BlogPostItem/BlogPostItem"
 import styles from "./blogpostscontainer.module.css"
 
@@ -33,5 +33,9 @@ export default function BlogPostsContainer() {
 		posts.map(post => <BlogPostItem postData={post} />) ??
 		"Where has all the beer gone?"
 
-	return <div className={styles.feedContainer}>{postItems}</div>
+	return (
+		<div className={styles.feedContainer} tabIndx="-1">
+			{postItems}
+		</div>
+	)
 }

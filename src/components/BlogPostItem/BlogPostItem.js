@@ -1,5 +1,5 @@
-import React from "react"
 import { Link } from "gatsby"
+import React from "react"
 import styles from "./blogpostitem.module.css"
 
 export default function BlogPostItem(props) {
@@ -18,13 +18,15 @@ export default function BlogPostItem(props) {
 						</Link>
 					</p>
 				</header>
-				<p className={styles.postExcerpt}>{excerpt}</p>
+				<Link className={styles.postBodyLink} to={slug}>
+					<p className={styles.postExcerpt}>{excerpt}</p>
+				</Link>
 				<footer className={styles.postFooter}>
 					<p className={styles.postDate}>{date}</p>
 					<div className={styles.postLinkButton}>
-						<Link className={styles.postLink} to={path}>
-							Keep Reading →
-						</Link>
+						{/* <Link className={styles.postLink} to={path}>
+							→
+						</Link> */}
 					</div>
 				</footer>
 			</article>
