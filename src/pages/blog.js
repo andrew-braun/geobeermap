@@ -12,9 +12,9 @@ export default class BlogIndexPage extends React.Component {
 				<SEO title="Blog" />
 				<div className={styles.blogPageContainer}>
 					<div className={styles.blogFeedContainer}>
-						{/* <div className={styles.blogPageHeading}>
+						<div className={styles.blogPageHeading}>
 							<h1>Latest Posts</h1>
-						</div> */}
+						</div>
 						<BlogPostsContainer />
 					</div>
 				</div>

@@ -9,3 +9,8 @@
 
 	/* overflow-y: scroll; */
 }
+
+.blog-page-heading {
+	padding: 0;
+	margin: 0;
+}

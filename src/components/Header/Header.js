@@ -1,9 +1,9 @@
+import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
 import "../../styles/global.css"
-import styles from "./header.module.css"
 import HamburgerContainer from "../HamburgerMenu/HamburgerContainer"
 import Nav from "../Nav/Nav"
+import styles from "./header.module.css"
 
 const Header = () => {
 	const data = useStaticQuery(
@@ -36,6 +36,7 @@ const Header = () => {
 				</Link>
 				<div className={styles.siteDescription}>{subtitle}</div>
 			</div>
+
 			<Nav navItems={navItems} />
 			<HamburgerContainer navItems={navItems} />
 		</header>
