@@ -14,6 +14,7 @@ export default function BlogPostsContainer() {
 						body
 						mdxAST
 						slug
+						fileAbsolutePath
 						frontmatter {
 							date(formatString: "DD MM, YYYY")
 							images
@@ -34,7 +35,7 @@ export default function BlogPostsContainer() {
 		"Where has all the beer gone?"
 
 	return (
-		<div className={styles.feedContainer} tabIndx="-1">
+		<div className={styles.feedContainer} tabIndex="-1">
 			{postItems}
 		</div>
 	)
