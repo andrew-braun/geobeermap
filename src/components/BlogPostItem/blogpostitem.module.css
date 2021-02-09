@@ -1,7 +1,6 @@
 .post-container {
 	position: relative;
 	/* flex: 1 1 23%; */
-
 	background: hsla(0, 0%, 0%, 0.2);
 	transition-timing-function: ease-in-out;
 	transition-duration: 0.2s;
@@ -10,15 +9,6 @@
 .post-container:hover {
 	opacity: 0.9;
 	transform: scale(0.96);
-}
-
-.post-container:nth-child(even) {
-	background: hsla(0, 0%, 100%, 0.2);
-}
-
-.post-container:nth-child(odd) {
-	background: hsla(0, 0%, 5%, 0.95);
-	color: hsla(0, 0%, 95%, 0.92);
 }
 
 .post-container p {
@@ -49,21 +39,15 @@
 	padding: 1rem;
 }
 
-.post-container:nth-child(odd) .post-title-link {
-	background: hsla(0, 0%, 5%, 0.8);
-}
-
-.post-container:nth-child(even) .post-title-link {
-	background: hsla(0, 0%, 5%, 0.8);
-}
-
 .post-title-link:hover {
 	color: var(--bright-1);
 }
 
 .post-excerpt {
+	display: flex;
 	height: 100%;
 	padding: 1rem;
+	align-items: center;
 }
 
 .post-body-link {
@@ -131,4 +115,31 @@
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-moz-fill-color: transparent;
+}
+
+/* Apply alternate styles to post items */
+
+.post-container:nth-child(even) {
+	background: hsla(0, 0%, 100%, 0.2);
+}
+
+.post-container:nth-child(odd) {
+	background: hsla(0, 0%, 5%, 0.95);
+	color: hsla(0, 0%, 95%, 0.92);
+}
+
+.post-container:nth-child(odd) .post-title-link {
+	background: hsla(0, 0%, 5%, 0.8);
+}
+
+.post-container:nth-child(even) .post-title-link {
+	background: hsla(0, 0%, 5%, 0.8);
+}
+
+.post-container:nth-of-type(3n) {
+	grid-column: span 2;
+}
+
+.post-container:nth-of-type(5n) {
+	grid-row: span 2;
 }
