@@ -1,7 +1,7 @@
 .feed-container {
 	display: grid;
 	grid-gap: 0.2rem;
-	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr) 17rem);
+	grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr) 20rem);
 	/*grid-auto-rows: 22rem;*/
 	grid-auto-rows: 22rem;
 	grid-auto-flow: dense;
