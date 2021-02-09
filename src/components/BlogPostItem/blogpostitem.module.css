@@ -1,9 +1,7 @@
 .post-container {
 	position: relative;
-	flex: 1 1 23%;
+	/* flex: 1 1 23%; */
 
-	min-width: 15rem;
-	min-height: 15rem;
 	background: hsla(0, 0%, 0%, 0.2);
 	transition-timing-function: ease-in-out;
 	transition-duration: 0.2s;
