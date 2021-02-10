@@ -1,6 +1,6 @@
 .blog-post-page-container {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: wrap-reverse;
 	width: 100%;
 	min-height: 100vh;
 }

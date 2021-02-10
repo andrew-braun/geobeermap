@@ -3,13 +3,12 @@
 	grid-gap: 0.2rem;
 	grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr) 20rem);
 	/*grid-auto-rows: 22rem;*/
-	grid-auto-rows: 22rem;
+
 	grid-auto-flow: dense;
 	width: 100%;
 	min-height: 0;
 	max-height: 100%;
 	padding: 0.2rem;
-	/* overflow-y: scroll; */
 }
 
 .blog-page-heading {

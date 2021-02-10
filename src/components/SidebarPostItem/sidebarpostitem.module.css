@@ -1,0 +1,114 @@
+.sidebar-item-container {
+	position: relative;
+	flex: 1 1 80%;
+	width: clamp(15rem, 80%, 25rem);
+	margin: 0.5rem 0;
+	background: hsla(0, 0%, 0%, 0.2);
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+}
+
+.sidebar-item-container:hover {
+	opacity: 0.9;
+	transform: scale(0.96);
+}
+
+.sidebar-item-container p {
+	margin: 0;
+}
+
+.sidebar-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+}
+
+.sidebar-item-header {
+	width: 100%;
+}
+
+.sidebar-item-title {
+	width: 100%;
+	font-size: 1.6rem;
+	text-align: center;
+	color: white;
+}
+
+.sidebar-item-title-link {
+	display: block;
+	padding: 1rem;
+}
+
+.sidebar-item-title-link:hover {
+	color: var(--bright-1);
+}
+
+.sidebar-item-excerpt {
+	display: flex;
+	height: 100%;
+	padding: 1rem;
+	align-items: center;
+}
+
+.sidebar-item-body-link {
+	display: block;
+	height: 100%;
+	width: 100%;
+	color: unset;
+}
+
+.sidebar-item-body-link:hover {
+	color: unset;
+}
+
+.sidebar-item-footer {
+	display: flex;
+	justify-content: center;
+	padding: 0.5rem 0.5rem;
+	background: hsla(0, 0%, 0%, 0.4);
+}
+
+.sidebar-item-date {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.5rem 1rem 0.5rem 0;
+	font-size: 0.9rem;
+	opacity: 0.8;
+	color: white;
+	text-align: center;
+}
+
+.sidebar-item-link-button {
+	background-color: var(--light-1);
+	border-radius: 0.2rem;
+	transition: filter 0.3s ease-in-out, border-radius 0.3s ease-in-out,
+		transform 0.3s ease-in-out;
+}
+
+.sidebar-item-link-button:hover {
+	filter: brightness(1.1);
+	border-radius: 0.3rem;
+	transform: scale(0.99);
+}
+
+.sidebar-item-link {
+	display: block;
+	padding: 1.2rem;
+	background: var(--main-bg-gradient);
+	color: transparent;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-fill-color: transparent;
+	text-align: center;
+	font-size: 1.4rem;
+	font-weight: bold;
+	transition: background 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+}
+
+.sidebar-item-link:hover {
+	background: var(--text-gradient-2);
+}

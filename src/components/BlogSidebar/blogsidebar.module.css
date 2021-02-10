@@ -1,7 +1,13 @@
 .blog-sidebar {
-    flex: 1 1 auto;
-    min-width: 0;
-    max-width: 100%;
-    color: var(--light-1);
-    text-align: center;
+	flex: 1 1 auto;
+	min-width: 0;
+	max-width: 100%;
+	color: var(--light-1);
+	text-align: center;
+}
+
+.blog-sidebar-posts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
