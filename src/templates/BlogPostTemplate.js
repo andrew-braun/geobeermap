@@ -1,9 +1,10 @@
-import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import "../styles/global.css"
+import React from "react"
+import BlogSidebar from "../components/BlogSidebar/BlogSidebar"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import "../styles/global.css"
 import styles from "./blogposttemplate.module.css"
 
 export default function Template({
@@ -15,10 +16,15 @@ export default function Template({
 	return (
 		<Layout>
 			<SEO title={title} />
-			<div className={styles.blogFeedContainer}>
-				<div className={styles.blogPostFrontMatter}>
-					<h1>{title}</h1>
-					<h2>{date}</h2>
+			<div className={styles.blogPostPageContainer}>
+				<div className={styles.blogPostSidebarContainer}>
+					<BlogSidebar />
+				</div>
+				<div className={styles.blogPostContainer}>
+					<div className={styles.blogPostFrontMatter}>
+						<h1>{title}</h1>
+						<h2>{date}</h2>
+					</div>
 					<div className={styles.blogPostDescription}>
 						<MDXRenderer>{body}</MDXRenderer>
 					</div>
