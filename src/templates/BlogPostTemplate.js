@@ -21,9 +21,9 @@ export default function Template({
 					<BlogSidebar />
 				</div>
 				<div className={styles.blogPostContainer}>
-					<div className={styles.blogPostFrontMatter}>
-						<h1>{title}</h1>
-						<h2>{date}</h2>
+					<div className={styles.blogPostFrontmatter}>
+						<h1 className={styles.blogPostTitle}>{title}</h1>
+						<div className={styles.blogPostFrontmatterDate}>{date}</div>
 					</div>
 					<div className={styles.blogPostDescription}>
 						<MDXRenderer>{body}</MDXRenderer>

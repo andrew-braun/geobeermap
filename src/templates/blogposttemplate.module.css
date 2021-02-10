@@ -16,4 +16,19 @@
 	display: flex;
 	flex-direction: column;
 	min-width: 40rem;
+	padding: 0 2rem;
+}
+
+.blog-post-frontmatter {
+	margin-bottom: 0.5rem;
+}
+.blog-post-title {
+	font-size: 3rem;
+	margin-bottom: 0.2rem;
+}
+
+.blog-post-frontmatter-date {
+	font-size: 1.1rem;
+	font-style: italic;
+	opacity: 0.8;
 }
