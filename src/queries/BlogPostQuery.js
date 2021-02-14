@@ -1,4 +1,4 @@
-import { useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 export default function BlogPostQuery() {
 	const data = useStaticQuery(graphql`

@@ -2,20 +2,22 @@
 	display: flex;
 	flex-wrap: wrap-reverse;
 	width: 100%;
+	max-width: 100vw;
 	min-height: 100vh;
 }
 
 .blog-post-sidebar-container {
 	flex: 1 1 25%;
 	display: flex;
-	width: clamp(18rem, 25%, 20rem);
+	width: clamp(18rem, 25%, 100%);
+	padding-top: 5rem;
 }
 
 .blog-post-container {
 	flex: 1 1 70%;
 	display: flex;
 	flex-direction: column;
-	min-width: 40rem;
+
 	padding: 0 2rem;
 }
 
@@ -31,4 +33,14 @@
 	font-size: 1.1rem;
 	font-style: italic;
 	opacity: 0.8;
+}
+
+.blog-post-content p {
+	word-wrap: break-word;
+}
+
+@media (max-width: 920px) {
+	.blog-post-sidebar-container {
+		padding-top: 0.5rem;
+	}
 }

@@ -25,7 +25,7 @@ export default function Template({
 						<h1 className={styles.blogPostTitle}>{title}</h1>
 						<div className={styles.blogPostFrontmatterDate}>{date}</div>
 					</div>
-					<div className={styles.blogPostDescription}>
+					<div className={styles.blogPostContent}>
 						<MDXRenderer>{body}</MDXRenderer>
 					</div>
 				</div>
