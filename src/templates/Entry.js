@@ -1,4 +1,3 @@
-import { graphql } from "gatsby"
 // import ReactMarkdown from "react-markdown/with-html"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
@@ -53,6 +52,17 @@ export default function entryTemplate({ data: { mdx } }) {
 			<div className={styles.entryContainer} tabIndex="-1">
 				<aside className={styles.entrySidebar}>
 					<div className={styles.entryLinks}>
+						{logo !== "none" ? (
+							<div className={styles.entryLogo}>
+								<img
+									className={styles.entryLogoImage}
+									src={`/${logo}`}
+									alt={`${name} logo`}
+								/>
+							</div>
+						) : (
+							""
+						)}
 						<h1 className={styles.entrySidebarTitle}>{name}</h1>
 						<div className={styles.socialBox}>
 							<SocialButtons

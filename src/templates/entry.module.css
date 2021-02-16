@@ -122,6 +122,17 @@
 	text-decoration: underline;
 }
 
+.entry-logo {
+	max-width: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.entry-logo-image {
+	max-width: 100%;
+	border-radius: 50%;
+}
+
 .entry-content {
 	padding: 0.5rem 1rem;
 	line-height: 1.3;

@@ -25,7 +25,14 @@ module.exports = {
 				path: `${__dirname}/blog`,
 				name: `markdown-pages`,
 			},
-		},
+		} /*
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/static/assets`,
+				name: `assets`,
+			},
+		},*/,
 		`gatsby-transformer-json`,
 		{
 			resolve: `gatsby-source-filesystem`,
@@ -94,6 +101,8 @@ module.exports = {
 		// `gatsby-transformer-remark`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-sitemap`,
+		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
 	],
 	siteMetadata: {
 		title: `GeoBeerMap`,
