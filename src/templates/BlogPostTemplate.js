@@ -11,7 +11,9 @@ export default function Template({
 	data: { mdx }, // this prop will be injected by the GraphQL query below.
 }) {
 	const { frontmatter, body } = mdx
-	const { title, date } = frontmatter
+	const { title, date, logo } = frontmatter
+
+	console.log(logo)
 
 	return (
 		<Layout>

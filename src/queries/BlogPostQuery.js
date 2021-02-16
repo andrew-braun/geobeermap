@@ -18,6 +18,7 @@ export default function BlogPostQuery() {
 							path
 							title
 							name
+							logo
 						}
 					}
 				}

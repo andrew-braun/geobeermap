@@ -1,13 +1,13 @@
-import React from "react"
 import { graphql } from "gatsby"
 // import ReactMarkdown from "react-markdown/with-html"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import React from "react"
 import Layout from "../components/Layout"
-import SocialButtons from "../components/SocialButtons/SocialButtons"
 import MainMap from "../components/MainMap/MainMap"
 import SEO from "../components/SEO"
-import styles from "./entry.module.css"
+import SocialButtons from "../components/SocialButtons/SocialButtons"
 import "./entry.css"
+import styles from "./entry.module.css"
 
 export default function entryTemplate({ data: { mdx } }) {
 	const { body, excerpt, frontmatter } = mdx
@@ -42,7 +42,10 @@ export default function entryTemplate({ data: { mdx } }) {
 		untappd,
 		instagram,
 		website,
+		logo,
 	} = frontmatter
+
+	console.log(logo)
 
 	return (
 		<Layout>
@@ -134,7 +137,7 @@ export const data = graphql`
 				googlemaps
 				images
 				instagram
-
+				logo
 				name
 				open
 				path
