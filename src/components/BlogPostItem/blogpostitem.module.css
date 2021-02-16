@@ -1,6 +1,5 @@
 .post-container {
 	position: relative;
-	/* flex: 1 1 23%; */
 	background: hsla(0, 0%, 0%, 0.2);
 	transition-timing-function: ease-in-out;
 	transition-duration: 0.2s;
@@ -43,13 +42,6 @@
 	color: var(--bright-1);
 }
 
-.post-excerpt {
-	display: flex;
-	height: 100%;
-	padding: 1rem;
-	align-items: center;
-}
-
 .post-body-link {
 	display: block;
 	height: 100%;
@@ -59,6 +51,20 @@
 
 .post-body-link:hover {
 	color: unset;
+}
+
+.post-image {
+	min-width: 100%;
+	width: 100%;
+	min-height: 100%;
+}
+
+.post-excerpt {
+	flex: 1 1 auto;
+	display: flex;
+	height: 100%;
+	padding: 1rem;
+	align-items: center;
 }
 
 .post-footer {
@@ -142,4 +148,11 @@
 
 .post-container:nth-of-type(5n) {
 	grid-row: span 2;
+}
+
+@media (max-width: 620px) {
+	.post-container {
+		flex: 1 1 15rem;
+		width: clamp(15rem, 47%, 100%);
+	}
 }

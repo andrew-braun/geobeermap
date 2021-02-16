@@ -10,10 +10,11 @@ export default function BlogPostItem(props) {
 		slug,
 		fileAbsolutePath,
 	} = props.postData.node
-	const { path, title, date, name } = frontmatter
+	const { path, title, date, name, logo } = frontmatter
 
 	const postLink = fileAbsolutePath.includes("blog") ? slug : path
 
+	console.log(logo)
 	return (
 		<div className={styles.postContainer} key={id}>
 			<article className={styles.post}>
@@ -25,7 +26,19 @@ export default function BlogPostItem(props) {
 					</p>
 				</header>
 				<Link className={styles.postBodyLink} to={postLink}>
-					<p className={styles.postExcerpt}>{excerpt}</p>
+					{logo ? (
+						<div
+							className={styles.postImage}
+							style={{
+								backgroundImage: `url(/${logo})`,
+								backgroundPosition: "center",
+								backgroundSize: "contain",
+								backgroundRepeat: "repeat",
+							}}
+						></div>
+					) : (
+						<p className={styles.postExcerpt}>{excerpt}</p>
+					)}
 				</Link>
 				<footer className={styles.postFooter}>
 					<p className={styles.postDate}>{date}</p>
