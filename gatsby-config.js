@@ -25,14 +25,14 @@ module.exports = {
 				path: `${__dirname}/blog`,
 				name: `markdown-pages`,
 			},
-		} /*
+		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				path: `${__dirname}/static/assets`,
 				name: `assets`,
 			},
-		},*/,
+		},
 		`gatsby-transformer-json`,
 		{
 			resolve: `gatsby-source-filesystem`,

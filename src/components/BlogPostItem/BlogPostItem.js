@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import React from "react"
 import styles from "./blogpostitem.module.css"
 
@@ -11,6 +11,21 @@ export default function BlogPostItem(props) {
 		fileAbsolutePath,
 	} = props.postData.node
 	const { path, title, date, name, logo } = frontmatter
+
+	/*
+	const LogoQuery = useStaticQuery(graphql`
+		query LogoQuery {
+			logo: file(
+				extension: { regex: "/(jpg)|(jpeg)|(png)|(svg)|(webp)/" }
+				name: { eq: "geobeermap-megobrebi" }
+			) {
+				childImageSharp {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+	`)
+	*/
 
 	const postLink = fileAbsolutePath.includes("blog") ? slug : path
 
@@ -32,8 +47,8 @@ export default function BlogPostItem(props) {
 							style={{
 								backgroundImage: `url(/${logo})`,
 								backgroundPosition: "center",
-								backgroundSize: "contain",
-								backgroundRepeat: "repeat",
+								backgroundSize: "cover",
+								backgroundRepeat: "no-repeat",
 							}}
 						></div>
 					) : (
