@@ -31,7 +31,16 @@ export default function BlogPostItem(props) {
 
 	console.log(logo)
 	return (
-		<div className={styles.postContainer} key={id}>
+		<div
+			className={styles.postContainer}
+			key={id}
+			style={{
+				backgroundImage: `url(/${logo})`,
+				backgroundPosition: "center",
+				backgroundSize: "cover",
+				backgroundRepeat: "no-repeat",
+			}}
+		>
 			<article className={styles.post}>
 				<header className={styles.postHeader}>
 					<p className={styles.postTitle}>
@@ -41,19 +50,7 @@ export default function BlogPostItem(props) {
 					</p>
 				</header>
 				<Link className={styles.postBodyLink} to={postLink}>
-					{logo ? (
-						<div
-							className={styles.postImage}
-							style={{
-								backgroundImage: `url(/${logo})`,
-								backgroundPosition: "center",
-								backgroundSize: "cover",
-								backgroundRepeat: "no-repeat",
-							}}
-						></div>
-					) : (
-						<p className={styles.postExcerpt}>{excerpt}</p>
-					)}
+					{/* <p className={styles.postExcerpt}>{excerpt}</p> */}
 				</Link>
 				<footer className={styles.postFooter}>
 					<p className={styles.postDate}>{date}</p>
