@@ -5,6 +5,7 @@
 	flex: 1 1 auto;
 	min-height: 40vh;
 	height: 100%;
+	padding-bottom: 10%;
 	background: black;
 	overflow: hidden;
 }

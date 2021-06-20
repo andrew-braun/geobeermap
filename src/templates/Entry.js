@@ -48,8 +48,6 @@ export default function entryTemplate({ data: { mdx } }) {
 		logo,
 	} = frontmatter
 
-	console.log(`Beers: ${frontmatter.beers}`)
-
 	return (
 		<Layout>
 			<SEO title={name} description={excerpt} />
