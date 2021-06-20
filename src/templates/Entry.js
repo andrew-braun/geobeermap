@@ -27,6 +27,10 @@ export default function entryTemplate({ data: { mdx } }) {
 				.map(str => parseFloat(str)))
 		: (frontmatter.coordinates = [0, 0])
 
+	if (!frontmatter.beers[0]) {
+		frontmatter.beers = ""
+	}
+
 	const {
 		name,
 		type,
@@ -44,7 +48,7 @@ export default function entryTemplate({ data: { mdx } }) {
 		logo,
 	} = frontmatter
 
-	console.log(logo)
+	console.log(`Beers: ${frontmatter.beers}`)
 
 	return (
 		<Layout>
