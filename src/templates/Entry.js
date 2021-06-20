@@ -48,6 +48,7 @@ export default function entryTemplate({ data: { mdx } }) {
 		logo,
 	} = frontmatter
 
+	console.log(type)
 	return (
 		<Layout>
 			<SEO title={name} description={excerpt} />
@@ -88,7 +89,7 @@ export default function entryTemplate({ data: { mdx } }) {
 						<tbody>
 							<tr className={styles.infoRow}>
 								<td className={styles.infoCell}>Type:</td>
-								<td className={styles.infoCell}>{type}</td>
+								<td className={styles.infoCell}>{type.join(", ")}</td>
 							</tr>
 							<tr className={styles.infoRow}>
 								<td className={styles.infoCell}>Operational:</td>
