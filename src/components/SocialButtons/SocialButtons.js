@@ -5,7 +5,7 @@ import { FaUntappd, FaMapMarkerAlt } from "react-icons/fa"
 import styles from "./socialbuttons.module.css"
 
 export default function SocialButtons(props) {
-	console.log(props)
+	// console.log(props)
 	return (
 		<div className={styles.socialButtonsContainer}>
 			<div className={styles.socialButton}>

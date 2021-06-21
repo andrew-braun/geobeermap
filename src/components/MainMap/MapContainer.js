@@ -31,6 +31,7 @@ export default function MapContainer() {
 								country
 								facebook
 								googlemaps
+								twitter
 								instagram
 								coordinates
 								name
@@ -55,6 +56,24 @@ export default function MapContainer() {
 	for (let i = 0; i < data.allMdx.edges.length; i++) {
 		entryArray.push(data.allMdx.edges[i].node.frontmatter)
 		const info = entryArray[i]
+
+		const socialArray = [
+			"twitter",
+			"facebook",
+			"instagram",
+			"googlemaps",
+			"untappd",
+		]
+		socialArray.forEach(item => {
+			if (info[item] === null) {
+				info[item] = "none"
+			}
+		})
+		console.log(info.twitter)
+
+		// if (twitter === null) {
+		// 	info.twitter = "none"
+		// }
 
 		// Convert coordinates to floats
 		if (info.coordinates !== null) {
