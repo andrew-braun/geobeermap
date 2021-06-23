@@ -22,6 +22,7 @@
     "gatsby": "^2.30.0",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-google-gtag": "^3.8.0",
     "gatsby-plugin-json-remark": "^1.1.5",
     "gatsby-plugin-mdx": "^1.8.0",
     "gatsby-plugin-netlify-cms": "^4.10.1",
