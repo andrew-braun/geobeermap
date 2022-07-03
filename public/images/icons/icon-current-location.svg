@@ -1,0 +1,7 @@
+<svg id="Icon-Current_Location" data-name="Icon-Current Location" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <circle id="Ellipse-Location" cx="6" cy="6" r="6" transform="translate(4 4)" fill="#ffb81f"/>
+  <g id="Ellipse-Location-2" data-name="Ellipse-Location" fill="none" stroke="#e6b449" stroke-width="2">
+    <circle cx="10" cy="10" r="10" stroke="none"/>
+    <circle cx="10" cy="10" r="9" fill="none"/>
+  </g>
+</svg>

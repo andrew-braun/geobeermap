@@ -1,0 +1,22 @@
+.header {
+	padding: 2rem var(--side-padding);
+	.brand {
+		display: flex;
+		align-items: center;
+		&:hover {
+			text-decoration: none;
+		}
+		.logo {
+			position: relative;
+			width: 40px;
+			height: 40px;
+			object-fit: contain;
+			color: blue;
+		}
+		.title {
+			font-size: 2rem;
+			font-weight: 600;
+			color: var(--accent-1);
+		}
+	}
+}

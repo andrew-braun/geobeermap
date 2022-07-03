@@ -1,0 +1,40 @@
+:root {
+	--primary-background: #{#010e28};
+	--accent-1: #{hsla(41, 77, 60, 1)};
+	--accent-2: #{hsla(180, 100, 29)};
+	--primary-text: #{hsla(218, 22, 93)};
+
+	--side-padding: 5vw;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	color: var(--primary-text);
+	background: var(--primary-background);
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: 17px;
+
+	a {
+		color: var(--accent-2);
+		text-decoration: none;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			color: var(--primary-text);
+			text-decoration: underline;
+		}
+	}
+}
+
+* {
+	box-sizing: border-box;
+}

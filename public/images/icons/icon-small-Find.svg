@@ -1,0 +1,82 @@
+<svg id="IconSmall-Find" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="8.671" height="21.668" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Icon-Map">
+    <path id="Union_2" data-name="Union 2" d="M105,26h0a1,1,0,0,1-.318-.052h0l-.019-.007-.007,0-.013,0-.014-.005-.007,0-.037-.016h0l-.023-.011h0l0,0,0,0L97,22.118l-7.544,3.773h0l-.006,0,0,0-.013.006-.017.008h0A.992.992,0,0,1,89,26h-.04a1,1,0,0,1-.564-.2l-.009-.007-.007-.005-.016-.013h0a.994.994,0,0,1-.192-.211h0l-.012-.018,0-.007-.006-.01-.007-.011,0,0-.024-.044h0l-.008-.015h0a.992.992,0,0,1-.04-.092v0l-.007-.02,0-.005-.005-.015,0-.01,0-.01,0-.016v0A.994.994,0,0,1,88,24.978V4.024a1,1,0,0,1,.1-.45v0l.008-.016,0-.008,0-.009.008-.015v0a.992.992,0,0,1,.378-.388l0,0,.012-.007.012-.006.006,0,.019-.01h0l8-4L96.564-.9l.007,0,.016-.007.01,0,.014-.006.015-.006.022-.009.01,0,.017-.006.007,0L96.7-.954h0A.994.994,0,0,1,96.978-1h.044a.993.993,0,0,1,.273.044h0l.019.006.007,0,.017.006.01,0,.022.008.016.007.013.006.011,0L97.43-.9l.007,0,.011.005L105,2.882l7.553-3.777.011-.005.007,0,.016-.007.01,0,.014-.006.015-.006.022-.009.01,0,.017-.006.007,0,.019-.006h0a1,1,0,0,1,.471-.029h0l.018,0h.007l.017,0,.013,0h.006l.046.012h0l.046.015h0l.014.005.006,0,.017.007.014.006,0,0a1,1,0,0,1,.5.473A1,1,0,0,1,114,.022V20.977a1,1,0,0,1-.084.425l0,.006-.006.012-.005.012,0,.006a1.005,1.005,0,0,1-.481.471l-7.963,3.982h0l-.006,0h0l-.023.011h0l-.038.017-.007,0-.014.006-.013,0-.007,0-.019.007h0A1,1,0,0,1,105,26Zm1-2.618,6-3V1.618l-6,3Zm-2,0V4.619l-6-3V20.382Zm-14,0,6-3V1.618l-6,3Z" transform="translate(-74 15)" fill="#e9edf2"/>
+    <g id="Repeat_Grid_3" data-name="Repeat Grid 3" transform="translate(22.165 17)" clip-path="url(#clip-path)">
+      <g transform="translate(-14.665 -18.665)">
+        <line id="Line_29" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -17.665)">
+        <line id="Line_29-2" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -16.665)">
+        <line id="Line_29-3" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -15.665)">
+        <line id="Line_29-4" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -14.665)">
+        <line id="Line_29-5" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -13.665)">
+        <line id="Line_29-6" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -12.665)">
+        <line id="Line_29-7" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -11.665)">
+        <line id="Line_29-8" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -10.665)">
+        <line id="Line_29-9" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -9.665)">
+        <line id="Line_29-10" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -8.665)">
+        <line id="Line_29-11" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -7.665)">
+        <line id="Line_29-12" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -6.665)">
+        <line id="Line_29-13" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -5.665)">
+        <line id="Line_29-14" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -4.665)">
+        <line id="Line_29-15" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -3.665)">
+        <line id="Line_29-16" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -2.665)">
+        <line id="Line_29-17" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -1.665)">
+        <line id="Line_29-18" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -0.665)">
+        <line id="Line_29-19" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 0.335)">
+        <line id="Line_29-20" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 1.335)">
+        <line id="Line_29-21" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 2.335)">
+        <line id="Line_29-22" data-name="Line 29" x2="8" transform="matrix(0.891, 0.454, -0.454, 0.891, 15.779, 17.752)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+    </g>
+  </g>
+  <g id="Path_51" data-name="Path 51" fill="none">
+    <path d="M27,0A27,27,0,1,1,0,27,27,27,0,0,1,27,0Z" stroke="none"/>
+    <path d="M 27 1 C 23.48958015441895 1 20.08470153808594 1.687301635742188 16.87992858886719 3.042800903320312 C 13.78398895263672 4.352268218994141 11.00334167480469 6.22711181640625 8.615219116210938 8.615219116210938 C 6.22711181640625 11.00334167480469 4.352268218994141 13.78398895263672 3.042800903320312 16.87992858886719 C 1.687301635742188 20.08470153808594 1 23.48958015441895 1 27 C 1 30.51041984558105 1.687301635742188 33.91529846191406 3.042800903320312 37.12007141113281 C 4.352268218994141 40.21601104736328 6.22711181640625 42.99665832519531 8.615219116210938 45.38478088378906 C 11.00334167480469 47.77288818359375 13.78398895263672 49.64772796630859 16.87992858886719 50.95719909667969 C 20.08470153808594 52.31269836425781 23.48958015441895 53 27 53 C 30.51041984558105 53 33.91529846191406 52.31269836425781 37.12007141113281 50.95719909667969 C 40.21601104736328 49.64772796630859 42.99665832519531 47.77288818359375 45.38478088378906 45.38478088378906 C 47.77288818359375 42.99665832519531 49.64772796630859 40.21601104736328 50.95719909667969 37.12007141113281 C 52.31269836425781 33.91529846191406 53 30.51041984558105 53 27 C 53 23.48958015441895 52.31269836425781 20.08470153808594 50.95719909667969 16.87992858886719 C 49.64772796630859 13.78398895263672 47.77288818359375 11.00334167480469 45.38478088378906 8.615219116210938 C 42.99665832519531 6.22711181640625 40.21601104736328 4.352268218994141 37.12007141113281 3.042800903320312 C 33.91529846191406 1.687301635742188 30.51041984558105 1 27 1 M 27 0 C 41.91168975830078 0 54 12.08831024169922 54 27 C 54 41.91168975830078 41.91168975830078 54 27 54 C 12.08831024169922 54 0 41.91168975830078 0 27 C 0 12.08831024169922 12.08831024169922 0 27 0 Z" stroke="none" fill="#e9edf2"/>
+  </g>
+</svg>

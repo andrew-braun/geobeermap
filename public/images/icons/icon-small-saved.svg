@@ -1,0 +1,67 @@
+<svg id="IconSmall-Saved" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="4" height="17" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Path_52" data-name="Path 52" fill="none">
+    <path d="M27,0A27,27,0,1,1,0,27,27,27,0,0,1,27,0Z" stroke="none"/>
+    <path d="M 27 1 C 23.48958015441895 1 20.08470153808594 1.687301635742188 16.87992858886719 3.042800903320312 C 13.78398895263672 4.352268218994141 11.00334167480469 6.22711181640625 8.615219116210938 8.615219116210938 C 6.22711181640625 11.00334167480469 4.352268218994141 13.78398895263672 3.042800903320312 16.87992858886719 C 1.687301635742188 20.08470153808594 1 23.48958015441895 1 27 C 1 30.51041984558105 1.687301635742188 33.91529846191406 3.042800903320312 37.12007141113281 C 4.352268218994141 40.21601104736328 6.22711181640625 42.99665832519531 8.615219116210938 45.38478088378906 C 11.00334167480469 47.77288818359375 13.78398895263672 49.64772796630859 16.87992858886719 50.95719909667969 C 20.08470153808594 52.31269836425781 23.48958015441895 53 27 53 C 30.51041984558105 53 33.91529846191406 52.31269836425781 37.12007141113281 50.95719909667969 C 40.21601104736328 49.64772796630859 42.99665832519531 47.77288818359375 45.38478088378906 45.38478088378906 C 47.77288818359375 42.99665832519531 49.64772796630859 40.21601104736328 50.95719909667969 37.12007141113281 C 52.31269836425781 33.91529846191406 53 30.51041984558105 53 27 C 53 23.48958015441895 52.31269836425781 20.08470153808594 50.95719909667969 16.87992858886719 C 49.64772796630859 13.78398895263672 47.77288818359375 11.00334167480469 45.38478088378906 8.615219116210938 C 42.99665832519531 6.22711181640625 40.21601104736328 4.352268218994141 37.12007141113281 3.042800903320312 C 33.91529846191406 1.687301635742188 30.51041984558105 1 27 1 M 27 0 C 41.91168975830078 0 54 12.08831024169922 54 27 C 54 41.91168975830078 41.91168975830078 54 27 54 C 12.08831024169922 54 0 41.91168975830078 0 27 C 0 12.08831024169922 12.08831024169922 0 27 0 Z" stroke="none" fill="#e9edf2"/>
+  </g>
+  <g id="Group_24" data-name="Group 24" transform="translate(0 1)">
+    <path id="Union_1" data-name="Union 1" d="M17,27h-.09l-.023,0h0a1.046,1.046,0,0,1-.365-.108L9,23.386l-7.521,3.5a1.046,1.046,0,0,1-.363.108h0l-.021,0H.962a1.047,1.047,0,0,1-.49-.14l-.007,0-.006,0a.954.954,0,0,1-.353-.366l-.017-.033h0l-.009-.019v0L.07,26.411v0l-.008-.019h0a.869.869,0,0,1-.06-.34V.931A.967.967,0,0,1,1,0H17a.967.967,0,0,1,1,.931V26.049a.869.869,0,0,1-.06.339v0l-.008.019v0l-.008.019v0l-.009.019h0l-.017.033a.954.954,0,0,1-.353.366l-.006,0-.008,0a1.047,1.047,0,0,1-.49.14H17ZM9.448,21.512,16,24.562V6.517H2V24.562l6.553-3.051a1.057,1.057,0,0,1,.425-.1h.044A1.057,1.057,0,0,1,9.448,21.512ZM16,4.655V1.862H2V4.655Z" transform="translate(18 13)" fill="#e9edf2"/>
+    <g id="Repeat_Grid_4" data-name="Repeat Grid 4" transform="translate(36 14) rotate(90)" clip-path="url(#clip-path)">
+      <g transform="translate(-14.665 -18.665)">
+        <path id="Path_39" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -17.665)">
+        <path id="Path_39-2" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -16.665)">
+        <path id="Path_39-3" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -15.665)">
+        <path id="Path_39-4" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -14.665)">
+        <path id="Path_39-5" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -13.665)">
+        <path id="Path_39-6" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -12.665)">
+        <path id="Path_39-7" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -11.665)">
+        <path id="Path_39-8" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -10.665)">
+        <path id="Path_39-9" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -9.665)">
+        <path id="Path_39-10" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -8.665)">
+        <path id="Path_39-11" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -7.665)">
+        <path id="Path_39-12" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -6.665)">
+        <path id="Path_39-13" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -5.665)">
+        <path id="Path_39-14" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -4.665)">
+        <path id="Path_39-15" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -3.665)">
+        <path id="Path_39-16" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+      <g transform="translate(-14.665 -2.665)">
+        <path id="Path_39-17" data-name="Path 39" d="M0,0H3.5" transform="translate(15 21)" fill="none" stroke="#e9edf2" stroke-linecap="round" stroke-width="0.25"/>
+      </g>
+    </g>
+  </g>
+</svg>

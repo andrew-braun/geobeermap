@@ -9,16 +9,14 @@ export default function Home() {
 		<Layout>
 			<div className={styles.container}>
 				<Head>
-					<title>Create Next App</title>
+					<title>GeoBeerMap</title>
 					<meta
 						name="description"
 						content="A website for finding craft beer in the country of Georgia"
 					/>
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
-				<main>
-					<h1>GeoBeerMap</h1>
-				</main>
+				<main></main>
 			</div>
 		</Layout>
 	)

@@ -1,0 +1,9 @@
+<svg id="IconSmall-Time_Large_" data-name="IconSmall-Time (Large)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Icon-Time">
+    <g id="Ellipse_14" data-name="Ellipse 14" fill="none" stroke="#e9edf2" stroke-width="1">
+      <circle cx="12" cy="12" r="12" stroke="none"/>
+      <circle cx="12" cy="12" r="11.5" fill="none"/>
+    </g>
+    <path id="Union_5" data-name="Union 5" d="M5.722,11.206.8,8.4a1.4,1.4,0,0,1-.592-.654A1.383,1.383,0,0,1,0,7.01V1.4A1.41,1.41,0,0,1,1.419,0a1.411,1.411,0,0,1,1.42,1.4V6.325l4.3,2.452a1.393,1.393,0,0,1,.519,1.915,1.43,1.43,0,0,1-1.94.514Z" transform="translate(9 6)" fill="#e9edf2"/>
+  </g>
+</svg>
