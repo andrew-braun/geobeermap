@@ -1,7 +1,8 @@
 import Head from "next/head"
 import Layout from "components/layout/Layout"
+import HomeContent from "components/HomeContent"
 
-import { fetchAllVenues, getStrapiJWT } from "/lib/helpers/api/strapi"
+import { fetchAllVenues } from "/lib/helpers/api/strapi"
 import styles from "./Home.module.scss"
 
 export default function Home({ venues }) {
@@ -17,7 +18,7 @@ export default function Home({ venues }) {
 					/>
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
-				<main></main>
+				<HomeContent venues={venues} />
 			</div>
 		</Layout>
 	)
