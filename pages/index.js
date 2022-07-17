@@ -1,10 +1,11 @@
 import Head from "next/head"
-
 import Layout from "components/layout/Layout"
 
+import { fetchAllVenues, getStrapiJWT } from "/lib/helpers/api/strapi"
 import styles from "./Home.module.scss"
 
-export default function Home() {
+export default function Home({ venues }) {
+	console.log(venues)
 	return (
 		<Layout>
 			<div className={styles.container}>
@@ -20,4 +21,14 @@ export default function Home() {
 			</div>
 		</Layout>
 	)
+}
+
+export async function getStaticProps() {
+	const venues = await fetchAllVenues()
+
+	return {
+		props: {
+			venues,
+		},
+	}
 }
