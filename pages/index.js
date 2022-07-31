@@ -9,7 +9,7 @@ export default function Home({ venues }) {
 	console.log(venues)
 	return (
 		<Layout>
-			<div className={styles.container}>
+			<div className={`${styles.container}`}>
 				<Head>
 					<title>GeoBeerMap</title>
 					<meta

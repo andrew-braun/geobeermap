@@ -5,7 +5,6 @@ export default function HomeContent({ venues }) {
 	return (
 		<main>
 			<section className={`${styles.venueCards}`}>
-				<h2>Venues</h2>
 				<VenueList venues={venues} />
 			</section>
 		</main>

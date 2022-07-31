@@ -1,4 +1,6 @@
 import { Fragment } from "react"
+import { MdOutlineLocationOn } from "react-icons/md"
+
 import VenueCard from "components/cards/PrimaryCard/PrimaryCard"
 import styles from "./VenueList.module.scss"
 
@@ -17,7 +19,10 @@ export default function VenueList({ venues }) {
 
 		const locationList = locations.map((loc, index) => (
 			<Fragment key={`${loc.name}-${index}`}>
-				<span>{loc.neighborhood.name}, </span>
+				<span style={{ position: "relative", top: "1.5px" }}>
+					<MdOutlineLocationOn />
+				</span>
+				<span>{loc.neighborhood.name},&nbsp;</span>
 				<span>{loc.city.name}</span>
 				{location_count > 1 && <span>+{location_count} more</span>}
 			</Fragment>

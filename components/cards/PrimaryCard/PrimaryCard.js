@@ -6,7 +6,7 @@ export default function PrimaryCard({ title, slug, image, data1 }) {
 	return (
 		<article className={`${styles.card}`}>
 			<Link href={`${slug}`}>
-				<div>
+				<a className={`${styles.link}`}>
 					<div className={`${styles.image}`}>
 						<Image
 							src={`${image.url}`}
@@ -17,11 +17,15 @@ export default function PrimaryCard({ title, slug, image, data1 }) {
 							objectFit="cover"
 						/>
 					</div>
-					<div className={`${styles.row1}`}>
-						<span>{title}</span>
-						{data1 && <span>{data1}</span>}
+					<div className={`${styles.content}`}>
+						<div className={`${styles.row1}`}>
+							<span className={`${styles.title}`}>{title}</span>
+						</div>
+						<div className={`${styles.row2}`}>
+							{data1 && <span className={`${styles.data1}`}>{data1}</span>}
+						</div>
 					</div>
-				</div>
+				</a>
 			</Link>
 		</article>
 	)

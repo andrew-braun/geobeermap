@@ -3,24 +3,49 @@
 	display: flex;
 	flex-direction: column;
 	width: clamp(250px, 33%, 100%);
-	transition: var(--normal-transition-speed);
+	height: 100%;
 	margin: var(--normal-element-spacing);
+	border-radius: var(--normal-border-radius);
 	overflow: hidden;
-	border-radius: var(--normal-border-radius) var(--normal-border-radius) 0 0;
-
+	transition: var(--normal-transition-speed);
+	background: var(--light-transparent);
 	&:hover {
 		cursor: pointer;
 		opacity: 0.9;
-		transform: translate3d(0, -5px, 0);
-	}
-	.image {
-		display: block;
-		width: 100%;
-		height: 100%;
 	}
 
-	.row1 {
-		display: flex;
-		justify-content: space-between;
+	.link {
+		display: block;
+		color: inherit;
+		&:hover {
+			text-decoration: none;
+		}
+
+		.image {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		.content {
+			padding: var(--small-element-padding);
+
+			border-radius: 0 0 var(--normal-border-radius) var(--normal-border-radius);
+
+			.row1 {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.title {
+					font-size: var(--font-size-large);
+				}
+			}
+			.row2 {
+				.data1 {
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
 	}
 }
