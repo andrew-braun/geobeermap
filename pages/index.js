@@ -2,7 +2,7 @@ import Head from "next/head"
 import Layout from "components/layout/Layout"
 import HomeContent from "components/HomeContent"
 
-import { fetchAllVenues } from "/lib/helpers/api/strapi"
+import { fetchAllVenues } from "/lib/helpers/api/strapi/strapi"
 import styles from "./Home.module.scss"
 
 export default function Home({ venues }) {
