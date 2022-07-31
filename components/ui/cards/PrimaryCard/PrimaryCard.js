@@ -1,8 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
+
+import PrimaryTag from "components/ui/tags/PrimaryTag"
+
 import styles from "./PrimaryCard.module.scss"
 
-export default function PrimaryCard({ title, slug, image, data1 }) {
+export default function PrimaryCard({ title, slug, image, tag, data1 }) {
+	console.log(tag)
 	return (
 		<article className={`${styles.card}`}>
 			<Link href={`${slug}`}>
@@ -16,6 +20,9 @@ export default function PrimaryCard({ title, slug, image, data1 }) {
 							height={400}
 							objectFit="cover"
 						/>
+						<span className={`${styles.tagWrapper}`}>
+							<PrimaryTag text={tag.text} url={tag.url} color="dark" />
+						</span>
 					</div>
 					<div className={`${styles.content}`}>
 						<div className={`${styles.row1}`}>

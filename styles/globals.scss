@@ -35,20 +35,24 @@ body {
 	--primary-background-translucent: #{hsla(220, 95%, 8%, 0.75)};
 	--accent-1: #{hsla(41, 77, 60, 1)};
 	--accent-2: #{hsla(180, 60, 49, 1)};
-	--primary-text: #{hsla(218, 22, 93, 1)};
+	--accent-2-translucent: #{hsla(180, 60, 49, 0.75)};
 	--light-transparent: #{hsla(0, 0%, 95%, 0.2)};
+
+	--primary-text: #{hsla(218, 22, 93, 1)};
+	--dark-text: #{hsla(0, 90%, 5%, 1)};
 
 	--font-size-normal: 1.7rem;
 	--font-size-large: 2.8rem;
 
 	--side-padding: 5vw;
 
+	--small-element-margin: 0.5rem;
+	--normal-element-margin: 1rem;
+
 	--small-element-padding: 0.5rem;
 	--normal-element-padding: 0.75rem;
 
 	--normal-transition-speed: 0.3s;
-
-	--normal-element-spacing: 1rem;
 
 	--normal-border-radius: 4px;
 }

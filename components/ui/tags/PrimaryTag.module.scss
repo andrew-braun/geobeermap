@@ -1,0 +1,12 @@
+.tag {
+	margin: var(--small-element-margin);
+	padding: var(--small-element-padding);
+	border-radius: var(--normal-border-radius);
+	text-transform: capitalize;
+	&.light {
+		background: var(--accent-2-translucent);
+	}
+	&.dark {
+		background: var(--primary-background-translucent);
+	}
+}

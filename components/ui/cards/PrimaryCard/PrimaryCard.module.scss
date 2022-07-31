@@ -1,10 +1,11 @@
 .card {
+	position: relative;
 	flex: 1 1 300px;
 	display: flex;
 	flex-direction: column;
 	width: clamp(250px, 33%, 100%);
 	height: 100%;
-	margin: var(--normal-element-spacing);
+	margin: var(--normal-element-margin);
 	border-radius: var(--normal-border-radius);
 	overflow: hidden;
 	transition: var(--normal-transition-speed);
@@ -25,6 +26,11 @@
 			display: block;
 			width: 100%;
 			height: 100%;
+			.tagWrapper {
+				position: absolute;
+				top: var(--normal-element-margin);
+				left: var(--small-element-margin);
+			}
 		}
 
 		.content {
