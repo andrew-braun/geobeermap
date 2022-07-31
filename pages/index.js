@@ -25,7 +25,7 @@ export default function Home({ venues }) {
 }
 
 export async function getStaticProps() {
-	const venues = await fetchAllVenues()
+	const venues = await fetchAllVenues(true)
 
 	return {
 		props: {
