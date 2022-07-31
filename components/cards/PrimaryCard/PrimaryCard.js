@@ -12,8 +12,8 @@ export default function PrimaryCard({ title, slug, image, data1 }) {
 							src={`${image.url}`}
 							alt={image.alternativeText}
 							layout="responsive"
-							width={300}
-							height={250}
+							width={400}
+							height={400}
 							objectFit="cover"
 						/>
 					</div>

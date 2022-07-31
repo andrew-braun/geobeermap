@@ -1,6 +1,8 @@
 import { Fragment } from "react"
 import { MdOutlineLocationOn } from "react-icons/md"
 
+import { insertCloudinaryParams } from "lib/helpers/images/cloudinary"
+
 import VenueCard from "components/cards/PrimaryCard/PrimaryCard"
 import styles from "./VenueList.module.scss"
 
@@ -15,6 +17,8 @@ export default function VenueList({ venues }) {
 			social_info,
 		} = venue
 		const logo = business_information.logo
+		const logoURL = insertCloudinaryParams(logo.url, "c_fill,h_500,w_500")
+		console.log(logoURL)
 		const { locations, location_count } = location
 
 		const locationList = locations.map((loc, index) => (
@@ -32,7 +36,7 @@ export default function VenueList({ venues }) {
 			<VenueCard
 				title={name}
 				slug={`/venues/${slug}`}
-				image={logo}
+				image={{ url: logoURL, alternativeText: logo.alternativeText }}
 				tag={business_type}
 				data1={locationList}
 				key={venue.id}
