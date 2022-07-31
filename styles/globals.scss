@@ -1,12 +1,3 @@
-:root {
-	--primary-background: #{#010e28};
-	--accent-1: #{hsla(41, 77, 60, 1)};
-	--accent-2: #{hsla(180, 100, 29)};
-	--primary-text: #{hsla(218, 22, 93)};
-
-	--side-padding: 5vw;
-}
-
 html,
 body {
 	padding: 0;
@@ -37,4 +28,19 @@ body {
 
 * {
 	box-sizing: border-box;
+}
+
+:root {
+	--primary-background: #{#010e28};
+	--accent-1: #{hsla(41, 77, 60, 1)};
+	--accent-2: #{hsla(180, 100, 29)};
+	--primary-text: #{hsla(218, 22, 93)};
+
+	--side-padding: 5vw;
+
+	--normal-transition-speed: 0.3s;
+
+	--normal-element-spacing: 1rem;
+
+	--normal-border-radius: 4px;
 }

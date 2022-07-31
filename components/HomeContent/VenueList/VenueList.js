@@ -4,7 +4,14 @@ import styles from "./VenueList.module.scss"
 
 export default function VenueList({ venues }) {
 	const venueItems = venues.map((venue) => {
-		const { name, business_information, location, social_info } = venue
+		const {
+			slug,
+			name,
+			business_information,
+			location,
+			business_type,
+			social_info,
+		} = venue
 		const logo = business_information.logo
 		const { locations, location_count } = location
 
@@ -18,9 +25,10 @@ export default function VenueList({ venues }) {
 
 		return (
 			<VenueCard
-				venue={venue}
 				title={name}
+				slug={`/venues/${slug}`}
 				image={logo}
+				tag={business_type}
 				data1={locationList}
 				key={venue.id}
 			/>
