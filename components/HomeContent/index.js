@@ -1,13 +1,24 @@
-import VenueList from "components/VenueList/VenueList"
-import MainMap from "components/maps/MainMap/MainMap"
+import dynamic from "next/dynamic"
+import { Suspense } from "react"
+
+const VenueList = dynamic(() => import("/components/VenueList/VenueList"), {
+	suspense: true,
+})
+const MainMap = dynamic(() => import("/components/maps/MainMap/MainMap"), {
+	suspense: true,
+})
 import styles from "./index.module.scss"
 
 export default function HomeContent({ venues }) {
 	return (
 		<main>
-			<section className={`${styles.venueCards}`}>
-				<VenueList venues={venues} />
+			<Suspense fallback={`Loading map...`}>
 				<MainMap />
+			</Suspense>
+			<section className={`${styles.venueCards}`}>
+				<Suspense fallback={`Loading venues...`}>
+					<VenueList venues={venues} />
+				</Suspense>
 			</section>
 		</main>
 	)
