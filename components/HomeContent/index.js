@@ -1,4 +1,5 @@
-import VenueList from "./VenueList/VenueList"
+import VenueList from "components/VenueList/VenueList"
+import MainMap from "components/maps/MainMap/MainMap"
 import styles from "./index.module.scss"
 
 export default function HomeContent({ venues }) {
@@ -6,6 +7,7 @@ export default function HomeContent({ venues }) {
 		<main>
 			<section className={`${styles.venueCards}`}>
 				<VenueList venues={venues} />
+				<MainMap />
 			</section>
 		</main>
 	)
