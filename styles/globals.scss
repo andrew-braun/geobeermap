@@ -38,8 +38,12 @@ body {
 	--accent-2-translucent: #{hsla(180, 60, 49, 0.75)};
 	--light-transparent: #{hsla(0, 0%, 95%, 0.3)};
 
+	--primary-heading-color: hsla(180, 100%, 29%, 1);
 	--primary-text: #{hsla(218, 22, 93, 1)};
 	--dark-text: #{hsla(0, 90%, 5%, 1)};
+
+	--primary-button-color: #006b6b;
+	--primary-button-hover-color: #004f58;
 
 	--font-size-medium: 1.7rem;
 	--font-size-large: 2.8rem;
