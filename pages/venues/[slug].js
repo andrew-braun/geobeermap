@@ -3,7 +3,6 @@ import { fetchAllVenues } from "lib/helpers/api/strapi/strapi"
 import { fetchVenue } from "lib/helpers/api/strapi/strapi"
 
 export default function Venue({ venue }) {
-	console.log(venue)
 	return (
 		<main>
 			<h2>{venue.name}</h2>
@@ -31,7 +30,6 @@ export async function getStaticProps({ params }) {
 	const slug = params.slug
 
 	const venue = await fetchVenue(slug)
-	console.log(venue)
 
 	return {
 		props: {

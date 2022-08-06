@@ -1,14 +1,14 @@
 .card {
 	position: relative;
-	flex: 1 1 300px;
+	flex: 1 1 200px;
 	display: flex;
 	flex-direction: column;
-	width: clamp(250px, 33%, 100%);
+	max-width: 500px;
 	height: 100%;
-	margin: var(--normal-element-margin);
-	border-radius: var(--normal-border-radius);
+	margin: var(--margin-medium);
+	border-radius: var(--border-radius-medium);
 	overflow: hidden;
-	transition: var(--normal-transition-speed);
+	transition: var(--transition-speed-medium);
 	background: var(--light-transparent);
 	&:hover {
 		cursor: pointer;
@@ -28,15 +28,15 @@
 			height: 100%;
 			.tagWrapper {
 				position: absolute;
-				top: var(--normal-element-margin);
-				left: var(--small-element-margin);
+				top: var(--margin-medium);
+				left: var(--margin-small);
 			}
 		}
 
 		.content {
-			padding: var(--small-element-padding);
+			padding: var(--padding-small);
 
-			border-radius: 0 0 var(--normal-border-radius) var(--normal-border-radius);
+			border-radius: 0 0 var(--border-radius-medium) var(--border-radius-medium);
 
 			.row1 {
 				display: flex;
@@ -44,6 +44,7 @@
 				align-items: center;
 				.title {
 					font-size: var(--font-size-large);
+					padding-bottom: var(--padding-small);
 				}
 			}
 			.row2 {

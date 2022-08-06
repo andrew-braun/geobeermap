@@ -36,23 +36,23 @@ body {
 	--accent-1: #{hsla(41, 77, 60, 1)};
 	--accent-2: #{hsla(180, 60, 49, 1)};
 	--accent-2-translucent: #{hsla(180, 60, 49, 0.75)};
-	--light-transparent: #{hsla(0, 0%, 95%, 0.2)};
+	--light-transparent: #{hsla(0, 0%, 95%, 0.3)};
 
 	--primary-text: #{hsla(218, 22, 93, 1)};
 	--dark-text: #{hsla(0, 90%, 5%, 1)};
 
-	--font-size-normal: 1.7rem;
+	--font-size-medium: 1.7rem;
 	--font-size-large: 2.8rem;
 
 	--side-padding: 5vw;
 
-	--small-element-margin: 0.5rem;
-	--normal-element-margin: 1rem;
+	--margin-small: 0.5rem;
+	--margin-medium: 1rem;
 
-	--small-element-padding: 0.5rem;
-	--normal-element-padding: 0.75rem;
+	--padding-small: 0.5rem;
+	--padding-medium: 0.75rem;
 
-	--normal-transition-speed: 0.3s;
+	--transition-speed-medium: 0.3s;
 
-	--normal-border-radius: 4px;
+	--border-radius-medium: 4px;
 }

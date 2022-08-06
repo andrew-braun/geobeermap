@@ -3,6 +3,7 @@ import { MdOutlineLocationOn } from "react-icons/md"
 
 import { insertCloudinaryParams } from "lib/helpers/images/cloudinary"
 
+import CardRow from "components/ui/cards/CardRow/CardRow"
 import VenueCard from "components/ui/cards/PrimaryCard/PrimaryCard"
 import styles from "./VenueList.module.scss"
 
@@ -36,5 +37,9 @@ export default function VenueList({ venues }) {
 			/>
 		)
 	})
-	return <section className={`${styles.venues}`}>{venueItems}</section>
+	return (
+		<section>
+			<CardRow>{venueItems}</CardRow>
+		</section>
+	)
 }

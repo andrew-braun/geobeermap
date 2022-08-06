@@ -6,7 +6,6 @@ import PrimaryTag from "components/ui/tags/PrimaryTag"
 import styles from "./PrimaryCard.module.scss"
 
 export default function PrimaryCard({ title, slug, image, tag, data1 }) {
-	console.log(tag)
 	return (
 		<article className={`${styles.card}`}>
 			<Link href={`${slug}`}>

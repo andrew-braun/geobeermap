@@ -1,7 +1,7 @@
 .tag {
-	margin: var(--small-element-margin);
-	padding: var(--small-element-padding);
-	border-radius: var(--normal-border-radius);
+	margin: var(--margin-small);
+	padding: var(--padding-small);
+	border-radius: var(--border-radius-medium);
 	text-transform: capitalize;
 	&.light {
 		background: var(--accent-2-translucent);

@@ -6,7 +6,6 @@ import { fetchAllVenues } from "/lib/helpers/api/strapi/strapi"
 import styles from "./Home.module.scss"
 
 export default function Home({ venues }) {
-	console.log(venues)
 	return (
 		<Layout>
 			<div className={`${styles.container}`}>
