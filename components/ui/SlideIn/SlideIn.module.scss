@@ -16,13 +16,26 @@
 
 	.arrow {
 		position: absolute;
+		right: var(--margin-small);
 		z-index: 100;
-		right: var(--margin-medium);
 		display: block;
-		padding: var(--padding-small);
+		width: max-content;
+		padding: 0 var(--padding-small);
 		border-radius: var(--border-radius-medium);
-		background: var(--primary-button-color);
+		background: var(transparent);
 		transition: all var(--transition-speed-medium) ease-in-out;
+		svg:global() {
+			display: flex;
+			align-items: center;
+		}
+		&.arrowOutside {
+			right: -35px;
+			// border: 1px solid var(--accent-2);
+			border-width: 1px 1px 1px 0;
+			border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0;
+			background: var(--primary-button-color);
+			color: black;
+		}
 		&:hover {
 			background: var(--primary-button-hover-color);
 		}

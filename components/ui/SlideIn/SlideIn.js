@@ -1,4 +1,4 @@
-import { CgArrowLongLeftR } from "react-icons/cg"
+import { HiArrowNarrowLeft } from "react-icons/hi"
 
 import { iconSizes } from "styles/style-variables"
 import styles from "./SlideIn.module.scss"
@@ -7,6 +7,7 @@ export default function SlideIn({
 	onClick,
 	hidden = false,
 	direction = "right",
+	arrowOutside = false,
 	children,
 }) {
 	return (
@@ -15,8 +16,11 @@ export default function SlideIn({
 				hidden ? styles.hide : ""
 			}`}
 		>
-			<div className={`${styles.arrow}`} onClick={onClick}>
-				<CgArrowLongLeftR size={iconSizes.medium} />
+			<div
+				className={`${styles.arrow} ${arrowOutside ? styles.arrowOutside : ""}`}
+				onClick={onClick}
+			>
+				<HiArrowNarrowLeft size={iconSizes.medium} />
 			</div>
 			<div>{children}</div>
 		</aside>

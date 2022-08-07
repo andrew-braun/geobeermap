@@ -16,7 +16,7 @@ export default function SocialLinks({
 	size = iconSizes.small,
 }) {
 	return (
-		<div>
+		<>
 			{facebook && (
 				<SocialLink
 					link={facebook}
@@ -27,14 +27,14 @@ export default function SocialLinks({
 			{instagram && (
 				<SocialLink
 					link={instagram}
-					icon={<FaTwitter size={size} />}
+					icon={<FaInstagram size={size} />}
 					size={size}
 				/>
 			)}
 			{twitter && (
 				<SocialLink
 					link={twitter}
-					icon={<FaInstagram size={size} />}
+					icon={<FaTwitter size={size} />}
 					size={size}
 				/>
 			)}
@@ -55,6 +55,6 @@ export default function SocialLinks({
 					size={size}
 				/>
 			)}
-		</div>
+		</>
 	)
 }

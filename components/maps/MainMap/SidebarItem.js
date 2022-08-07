@@ -27,7 +27,7 @@ export default function SidebarItem({ venue, key }) {
 				</Link>
 				<div className={`${styles.type}`}> {business_type}</div>
 			</div>
-			<div>
+			<div className={`${styles.socialColumn}`}>
 				<SocialLinks
 					facebook={facebook}
 					instagram={instagram}
