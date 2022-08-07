@@ -8,7 +8,7 @@ import styles from "./Home.module.scss"
 export default function Home({ venues }) {
 	return (
 		<Layout>
-			<div className={`${styles.container}`}>
+			<div>
 				<Head>
 					<title>GeoBeerMap</title>
 					<meta

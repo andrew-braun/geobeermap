@@ -11,7 +11,7 @@ import "mapbox-gl/dist/mapbox-gl.css"
 import styles from "./MainMap.module.scss"
 
 // https://blog.logrocket.com/using-mapbox-gl-js-react/
-export default function MainMap({}) {
+export default function MainMap({ venues }) {
 	// Set initial map properties--initialViewport indicates first load, pre useEffect update
 	const [viewport, setViewport] = useState({
 		latitude: 41.704202197992004,
@@ -43,7 +43,7 @@ export default function MainMap({}) {
 	return (
 		<div className={`${styles.mainMap}`}>
 			<SlideIn onClick={handleSidebarButtonClick} hidden={isSidebarHidden}>
-				<MapSidebar />
+				<MapSidebar venues={venues} />
 			</SlideIn>
 			{isSidebarHidden && (
 				<div className={`${styles.openSidebarArrow}`}>

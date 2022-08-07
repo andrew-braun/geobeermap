@@ -15,7 +15,7 @@ export default function HomeContent({ venues }) {
 			<Suspense fallback={`Loading map...`}>
 				<MainMap venues={venues} />
 			</Suspense>
-			<section className={`${styles.venueCards}`}>
+			<section>
 				<Suspense fallback={`Loading venues...`}>
 					<VenueList venues={venues} />
 				</Suspense>
