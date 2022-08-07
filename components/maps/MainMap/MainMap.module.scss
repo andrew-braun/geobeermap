@@ -4,9 +4,14 @@
 	.openSidebarArrow {
 		position: absolute;
 		left: var(--margin-medium);
-		z-index: 50;
+		z-index: 100;
+		padding: var(--padding-small);
+		border-radius: var(--border-radius-medium);
+		transition: all var(--transition-speed-medium) ease-in-out;
+		background: var(--primary-button-color);
 		&:hover {
 			cursor: pointer;
+			background: var(--primary-button-hover-color);
 		}
 	}
 	.mapWrapper {

@@ -3,7 +3,7 @@ import { CgArrowLongRightL } from "react-icons/cg"
 import dynamic from "next/dynamic"
 import Map, { Marker } from "react-map-gl"
 
-const MapSidebar = dynamic(() => import("./MapSidebar.jsx"))
+const MapSidebar = dynamic(() => import("./MapSidebar"))
 const SlideIn = dynamic(() => import("components/ui/SlideIn/SlideIn"))
 
 import { iconSizes } from "styles/style-variables"

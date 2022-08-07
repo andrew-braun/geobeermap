@@ -19,6 +19,13 @@
 		z-index: 100;
 		right: var(--margin-medium);
 		display: block;
+		padding: var(--padding-small);
+		border-radius: var(--border-radius-medium);
+		background: var(--primary-button-color);
+		transition: all var(--transition-speed-medium) ease-in-out;
+		&:hover {
+			background: var(--primary-button-hover-color);
+		}
 	}
 	&:hover {
 		cursor: pointer;
