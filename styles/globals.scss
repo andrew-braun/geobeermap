@@ -42,21 +42,23 @@ body {
 	--primary-text: #{hsla(218, 22, 93, 1)};
 	--dark-text: #{hsla(0, 90%, 5%, 1)};
 
-	--primary-button-color: #006b6b;
-	--primary-button-hover-color: #004f58;
+	--primary-button-color: #{#006b6b};
+	--primary-button-hover-color: #{#004f58};
 
-	--font-size-medium: 1.7rem;
-	--font-size-large: 2.8rem;
+	--font-size-medium: #{1.7rem};
+	--font-size-large: #{2.8rem};
 
-	--side-padding: 5vw;
+	--side-padding: #{5vw};
 
-	--margin-small: 0.5rem;
-	--margin-medium: 1rem;
+	--margin-small: #{0.5rem};
+	--margin-medium: #{1rem};
 
-	--padding-small: 0.5rem;
-	--padding-medium: 0.75rem;
+	--padding-small: #{0.5rem};
+	--padding-medium: #{0.75rem};
 
-	--transition-speed-medium: 0.3s;
+	--transition-speed-medium: #{0.3s};
 
-	--border-radius-medium: 4px;
+	--border-radius-medium: #{4px};
+
+	--icon-size-medium: #{30px};
 }

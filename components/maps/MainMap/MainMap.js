@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react"
-import Map, { GeolocateControl, Marker } from "react-map-gl"
+import { CgArrowLongRightL } from "react-icons/cg"
+import dynamic from "next/dynamic"
+import Map, { Marker } from "react-map-gl"
 
+const MapSidebar = dynamic(() => import("./MapSidebar.jsx"))
+const SlideIn = dynamic(() => import("components/ui/SlideIn/SlideIn"))
+
+import { iconSizes } from "styles/style-variables"
 import "mapbox-gl/dist/mapbox-gl.css"
 import styles from "./MainMap.module.scss"
 
@@ -13,6 +19,7 @@ export default function MainMap({}) {
 		zoom: 11,
 		initialViewport: true,
 	})
+	const [isSidebarHidden, setIsSidebarHidden] = useState(false)
 
 	// Run only on first page load when location request is made; when permission is granted, move and zoom
 	useEffect(() => {
@@ -29,8 +36,23 @@ export default function MainMap({}) {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
+	const handleSidebarButtonClick = () => {
+		setIsSidebarHidden(!isSidebarHidden)
+	}
+
 	return (
 		<div className={`${styles.mainMap}`}>
+			<SlideIn onClick={handleSidebarButtonClick} hidden={isSidebarHidden}>
+				<MapSidebar />
+			</SlideIn>
+			{isSidebarHidden && (
+				<div className={`${styles.openSidebarArrow}`}>
+					<CgArrowLongRightL
+						size={iconSizes.medium}
+						onClick={handleSidebarButtonClick}
+					/>
+				</div>
+			)}
 			<div className={`${styles.mapWrapper}`}>
 				<Map
 					initialViewState={{

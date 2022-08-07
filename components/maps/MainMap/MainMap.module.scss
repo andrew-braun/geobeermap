@@ -1,6 +1,14 @@
 .mainMap {
 	position: relative;
 	height: 100%;
+	.openSidebarArrow {
+		position: absolute;
+		left: var(--margin-medium);
+		z-index: 50;
+		&:hover {
+			cursor: pointer;
+		}
+	}
 	.mapWrapper {
 		position: relative;
 		width: 100% !important;

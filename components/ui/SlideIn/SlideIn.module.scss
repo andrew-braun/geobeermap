@@ -1,0 +1,26 @@
+.slideIn {
+	position: absolute;
+	z-index: 80;
+	width: clamp(250px, 350px, 80vw);
+	height: 100%;
+	transition: all var(--transition-speed-medium);
+	&.right.hide {
+		transform: translate3d(-80vw, 0, 0);
+	}
+	&.left {
+		right: 0;
+		&.hide {
+			transform: translate3d(80vw, 0, 0);
+		}
+	}
+
+	.arrow {
+		position: absolute;
+		z-index: 100;
+		right: var(--margin-medium);
+		display: block;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
