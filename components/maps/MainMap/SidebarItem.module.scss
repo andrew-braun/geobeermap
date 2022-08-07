@@ -1,0 +1,31 @@
+.sidebarItem {
+	display: flex;
+	width: 100%;
+	transition: all var(--transition-speed-medium) ease-in-out;
+	padding: var(--padding-medium);
+
+	&:hover {
+		background: var(--light-transparent);
+	}
+	.link {
+		display: block;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.infoColumn {
+		width: 50%;
+		.title {
+			margin: 0;
+			max-width: max-content;
+		}
+		.type {
+			text-transform: capitalize;
+		}
+	}
+	.socialColumn {
+		display: flex;
+		flex-wrap: wrap;
+		width: 50%;
+	}
+}

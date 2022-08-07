@@ -3,6 +3,7 @@
 	.brand {
 		display: flex;
 		align-items: center;
+		max-width: 200px;
 		&:hover {
 			text-decoration: none;
 		}

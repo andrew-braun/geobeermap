@@ -1,19 +1,41 @@
 import Link from "next/link"
+
+import SocialLinks from "components/ui/SocialLinks/SocialLinks"
+
 import styles from "./SidebarItem.module.scss"
 
-export default function SidebarItem({ venue }) {
-	const { id, name, slug, logo, currently_operating, location, socal_links } =
-		venue
+export default function SidebarItem({ venue, key }) {
+	const { id, name, slug, location, social_links, business_information } = venue
+	const { business_type, currently_operating, logo } = business_information
+	const {
+		facebook,
+		instagram,
+		twitter,
+		website,
+		untappd,
+		youtube,
+		google_maps,
+	} = social_links
+	console.log(venue)
 	return (
-		<article>
-			<Link href={`/venues/${slug}`}>
-				<a>
-					<div>
-						<span>{name}</span>
-					</div>
-					<div></div>
-				</a>
-			</Link>
+		<article id={`${slug}-${id}`} className={`${styles.sidebarItem}`}>
+			<div className={`${styles.infoColumn}`}>
+				<Link href={`/venues/${slug}`}>
+					<a className={`${styles.link}`}>
+						<h3 className={`${styles.title}`}>{name}</h3>
+					</a>
+				</Link>
+				<div className={`${styles.type}`}> {business_type}</div>
+			</div>
+			<div>
+				<SocialLinks
+					facebook={facebook}
+					instagram={instagram}
+					twitter={twitter}
+					untappd={untappd}
+					website={website}
+				/>
+			</div>
 		</article>
 	)
 }
