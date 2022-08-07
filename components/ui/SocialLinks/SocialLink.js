@@ -1,10 +1,12 @@
 import Link from "next/link"
 
-export default function SocialLink({ link, icon }) {
+import styles from "./SocialLink.module.scss"
+
+export default function SocialLink({ link, icon, size }) {
 	return (
 		<Link href={link}>
-			<a>
-				<span>{icon}</span>
+			<a target="_blank" className={`${styles.link}`}>
+				{icon}
 			</a>
 		</Link>
 	)

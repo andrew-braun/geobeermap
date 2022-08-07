@@ -16,7 +16,7 @@ export default function SidebarItem({ venue, key }) {
 		youtube,
 		google_maps,
 	} = social_links
-	console.log(venue)
+
 	return (
 		<article id={`${slug}-${id}`} className={`${styles.sidebarItem}`}>
 			<div className={`${styles.infoColumn}`}>
@@ -34,6 +34,7 @@ export default function SidebarItem({ venue, key }) {
 					twitter={twitter}
 					untappd={untappd}
 					website={website}
+					googleMaps={google_maps}
 				/>
 			</div>
 		</article>
