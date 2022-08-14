@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { CgArrowLongRightL } from "react-icons/cg"
 import dynamic from "next/dynamic"
 import Map, { Marker } from "react-map-gl"
+import PrimaryMarker from "components/maps/markers/PrimaryMarker"
 
 const MapSidebar = dynamic(() => import("./MapSidebar"))
 const SlideIn = dynamic(() => import("components/ui/SlideIn/SlideIn"))
@@ -36,6 +37,29 @@ export default function MainMap({ venues }) {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
+	const handleMarkerClick = (event) => {
+		console.log(event)
+	}
+	const mapMarkers = venues
+		.map((venue) => {
+			const locationMarkers = venue.location.locations.map(
+				(location, index) => {
+					return (
+						<Marker
+							longitude={location.longitude}
+							latitude={location.latitude}
+							onClick={handleMarkerClick}
+							key={index}
+						>
+							<PrimaryMarker />
+						</Marker>
+					)
+				}
+			)
+			return locationMarkers
+		})
+		.flat()
+
 	const handleSidebarButtonClick = () => {
 		setIsSidebarHidden(!isSidebarHidden)
 	}
@@ -65,11 +89,12 @@ export default function MainMap({ venues }) {
 					mapStyle="mapbox://styles/andrew-braun/cl6hv3y3z003d15o9ktycfewt"
 					mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
 				>
+					{mapMarkers}
 					{!viewport.initialViewport && (
 						<Marker
 							longitude={viewport.longitude}
 							latitude={viewport.latitude}
-						/>
+						></Marker>
 					)}
 				</Map>
 			</div>
