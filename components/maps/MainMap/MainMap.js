@@ -21,6 +21,7 @@ export default function MainMap({ venues }) {
 		initialViewport: true,
 	})
 	const [isSidebarHidden, setIsSidebarHidden] = useState(false)
+	const [activeVenue, setActiveVenue] = useState(null)
 
 	// Run only on first page load when location request is made; when permission is granted, move and zoom
 	useEffect(() => {
@@ -37,25 +38,25 @@ export default function MainMap({ venues }) {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
-	const handleMarkerClick = (event) => {
-		console.log(event)
+	const handleMarkerClick = (venueSlug) => {
+		console.log(venueSlug)
+		setActiveVenue(venueSlug)
 	}
 	const mapMarkers = venues
-		.map((venue) => {
-			const locationMarkers = venue.location.locations.map(
-				(location, index) => {
-					return (
-						<Marker
-							longitude={location.longitude}
-							latitude={location.latitude}
-							onClick={handleMarkerClick}
-							key={index}
-						>
-							<PrimaryMarker />
-						</Marker>
-					)
-				}
-			)
+		.map((venue, venueIndex) => {
+			const locationMarkers = venue.location.locations.map((location) => {
+				console.log(location)
+				return (
+					<PrimaryMarker
+						longitude={location.longitude}
+						latitude={location.latitude}
+						onClick={handleMarkerClick}
+						venueSlug={venue.slug}
+						active={activeVenue === venue.slug}
+						key={`${venue.slug}-${location.location_id}`}
+					/>
+				)
+			})
 			return locationMarkers
 		})
 		.flat()
@@ -67,7 +68,7 @@ export default function MainMap({ venues }) {
 	return (
 		<div className={`${styles.mainMap}`}>
 			<SlideIn onClick={handleSidebarButtonClick} hidden={isSidebarHidden}>
-				<MapSidebar venues={venues} />
+				<MapSidebar venues={venues} activeVenue={activeVenue} />
 			</SlideIn>
 			{isSidebarHidden && (
 				<div className={`${styles.openSidebarArrow}`}>
@@ -91,10 +92,11 @@ export default function MainMap({ venues }) {
 				>
 					{mapMarkers}
 					{!viewport.initialViewport && (
-						<Marker
+						<PrimaryMarker
+							markerColor="var(--accent-2)"
 							longitude={viewport.longitude}
 							latitude={viewport.latitude}
-						></Marker>
+						/>
 					)}
 				</Map>
 			</div>
