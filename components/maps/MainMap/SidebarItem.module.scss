@@ -7,6 +7,10 @@
 	&:hover {
 		background: var(--light-transparent);
 	}
+
+	&.active {
+		background: var(--light-transparent);
+	}
 	.link {
 		display: block;
 		&:hover {

@@ -4,7 +4,7 @@ import SocialLinks from "components/ui/SocialLinks/SocialLinks"
 
 import styles from "./SidebarItem.module.scss"
 
-export default function SidebarItem({ venue, key }) {
+export default function SidebarItem({ venue, active }) {
 	const { id, name, slug, location, social_links, business_information } = venue
 	const { business_type, currently_operating, logo } = business_information
 	const {
@@ -18,7 +18,10 @@ export default function SidebarItem({ venue, key }) {
 	} = social_links
 
 	return (
-		<article id={`${slug}-${id}`} className={`${styles.sidebarItem}`}>
+		<article
+			id={`${slug}-${id}`}
+			className={`${styles.sidebarItem} ${active ? styles.active : ""}`}
+		>
 			<div className={`${styles.infoColumn}`}>
 				<Link href={`/venues/${slug}`}>
 					<a className={`${styles.link}`}>
