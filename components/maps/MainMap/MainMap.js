@@ -39,7 +39,10 @@ export default function MainMap({ venues }) {
 	}, [])
 
 	const handleMarkerClick = (venueSlug) => {
-		console.log(venueSlug)
+		if (activeVenue === venueSlug) {
+			setActiveVenue(null)
+			return
+		}
 		setActiveVenue(venueSlug)
 	}
 	const mapMarkers = venues
