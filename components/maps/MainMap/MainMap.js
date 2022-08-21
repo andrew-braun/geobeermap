@@ -38,7 +38,8 @@ export default function MainMap({ venues }) {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
-	const handleMarkerClick = (venueSlug) => {
+	const handleVenueClick = (venueSlug) => {
+		console.log(venueSlug)
 		if (activeVenue === venueSlug) {
 			setActiveVenue(null)
 			return
@@ -53,7 +54,7 @@ export default function MainMap({ venues }) {
 					<PrimaryMarker
 						longitude={location.longitude}
 						latitude={location.latitude}
-						onClick={handleMarkerClick}
+						onClick={handleVenueClick}
 						venueSlug={venue.slug}
 						active={activeVenue === venue.slug}
 						key={`${venue.slug}-${location.location_id}`}
@@ -71,7 +72,11 @@ export default function MainMap({ venues }) {
 	return (
 		<div className={`${styles.mainMap}`}>
 			<SlideIn onClick={handleSidebarButtonClick} hidden={isSidebarHidden}>
-				<MapSidebar venues={venues} activeVenue={activeVenue} />
+				<MapSidebar
+					venues={venues}
+					activeVenue={activeVenue}
+					handleVenueClick={handleVenueClick}
+				/>
 			</SlideIn>
 			{isSidebarHidden && (
 				<div className={`${styles.openSidebarArrow}`}>

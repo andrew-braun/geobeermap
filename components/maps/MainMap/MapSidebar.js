@@ -3,7 +3,7 @@ import dynamic from "next/dynamic"
 const SidebarItem = dynamic(() => import("./SidebarItem"))
 import styles from "./MapSidebar.module.scss"
 
-export default function MapSidebar({ venues, activeVenue }) {
+export default function MapSidebar({ venues, activeVenue, handleVenueClick }) {
 	console.log(venues)
 	const venueList = venues.map((venue) => {
 		if (!venue.business_information.currently_operating) {
@@ -13,6 +13,7 @@ export default function MapSidebar({ venues, activeVenue }) {
 			<SidebarItem
 				venue={venue}
 				active={venue.slug === activeVenue}
+				onClick={handleVenueClick}
 				key={`${venue.slug}-${venue.id}`}
 			/>
 		)
