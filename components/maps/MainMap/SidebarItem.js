@@ -21,7 +21,7 @@ export default function SidebarItem({ venue, active, onClick }) {
 		<article
 			id={`${slug}-${id}`}
 			className={`${styles.sidebarItem} ${active ? styles.active : ""}`}
-			onClick={onClick ? () => onClick(venue.slug) : ""}
+			onClick={onClick ? (event) => onClick(event, venue.slug) : ""}
 		>
 			<div className={`${styles.infoColumn}`}>
 				<Link href={`/venues/${slug}`}>

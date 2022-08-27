@@ -8,7 +8,13 @@ import Map, {
 	ScaleControl,
 	GeolocateControl,
 } from "react-map-gl"
-import PrimaryMarker from "components/maps/markers/PrimaryMarker"
+
+const PrimaryMarker = dynamic(() =>
+	import("components/maps/markers/PrimaryMarker")
+)
+const VenuePopup = dynamic(() =>
+	import("components/maps/popups/VenuePopup/VenuePopup")
+)
 
 const MapSidebar = dynamic(() => import("./MapSidebar"))
 const SlideIn = dynamic(() => import("components/ui/SlideIn/SlideIn"))
@@ -47,7 +53,7 @@ export default function MainMap({ venues }) {
 
 	const handleVenueClick = useCallback(
 		(event, venueSlug) => {
-			event.originalEvent.stopPropagation()
+			event?.originalEvent?.stopPropagation()
 			console.log(event)
 			console.log(venueSlug)
 			if (activeVenue === venueSlug) {
@@ -60,12 +66,18 @@ export default function MainMap({ venues }) {
 		},
 		[venues, activeVenue]
 	)
+
+	const handlePopupClose = () => {
+		setPopupInfo(null)
+	}
+
 	const mapMarkers = useMemo(
 		() =>
 			venues
 				.map((venue, venueIndex) => {
 					const locationMarkers = venue.location.locations.map((location) => {
-						// console.log(location)
+						// console.log(venue)
+						console.log("rerender")
 						return (
 							<PrimaryMarker
 								longitude={location.longitude}
@@ -128,6 +140,7 @@ export default function MainMap({ venues }) {
 							latitude={viewport.latitude}
 						/>
 					)}
+					{/* {popupInfo && <VenuePopup venue={popupInfo} />} */}
 				</Map>
 			</div>
 		</div>
