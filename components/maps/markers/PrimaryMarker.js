@@ -18,7 +18,7 @@ function PrimaryMarker({
 			<Marker
 				latitude={latitude}
 				longitude={longitude}
-				onClick={venueSlug ? () => onClick(venueSlug) : onClick}
+				onClick={venueSlug ? (event) => onClick(event, venueSlug) : onClick}
 			>
 				<div className={`${styles.primaryMarker}`}>
 					<FaMapMarkerAlt

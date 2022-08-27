@@ -1,7 +1,13 @@
 import { useState, useEffect, useMemo, useCallback } from "react"
 import { CgArrowLongRightL } from "react-icons/cg"
 import dynamic from "next/dynamic"
-import Map from "react-map-gl"
+import Map, {
+	Popup,
+	NavigationControl,
+	FullscreenControl,
+	ScaleControl,
+	GeolocateControl,
+} from "react-map-gl"
 import PrimaryMarker from "components/maps/markers/PrimaryMarker"
 
 const MapSidebar = dynamic(() => import("./MapSidebar"))
@@ -22,6 +28,7 @@ export default function MainMap({ venues }) {
 	})
 	const [isSidebarHidden, setIsSidebarHidden] = useState(false)
 	const [activeVenue, setActiveVenue] = useState(null)
+	const [popupInfo, setPopupInfo] = useState(null)
 
 	// Run only on first page load when location request is made; when permission is granted, move and zoom
 	useEffect(() => {
@@ -39,22 +46,26 @@ export default function MainMap({ venues }) {
 	}, [])
 
 	const handleVenueClick = useCallback(
-		(venueSlug) => {
+		(event, venueSlug) => {
+			event.originalEvent.stopPropagation()
+			console.log(event)
 			console.log(venueSlug)
 			if (activeVenue === venueSlug) {
 				setActiveVenue(null)
+				setPopupInfo(null)
 				return
 			}
 			setActiveVenue(venueSlug)
+			setPopupInfo(venues.find((venue) => venue.slug === venueSlug))
 		},
-		[activeVenue]
+		[venues, activeVenue]
 	)
 	const mapMarkers = useMemo(
 		() =>
 			venues
 				.map((venue, venueIndex) => {
 					const locationMarkers = venue.location.locations.map((location) => {
-						console.log(location)
+						// console.log(location)
 						return (
 							<PrimaryMarker
 								longitude={location.longitude}
@@ -105,6 +116,10 @@ export default function MainMap({ venues }) {
 					mapStyle="mapbox://styles/andrew-braun/cl6hv3y3z003d15o9ktycfewt"
 					mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
 				>
+					<GeolocateControl position="top-right" />
+					<FullscreenControl position="top-right" />
+					<NavigationControl position="top-right" />
+					<ScaleControl />
 					{mapMarkers}
 					{!viewport.initialViewport && (
 						<PrimaryMarker

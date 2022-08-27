@@ -4,7 +4,7 @@ const SidebarItem = dynamic(() => import("./SidebarItem"))
 import styles from "./MapSidebar.module.scss"
 
 export default function MapSidebar({ venues, activeVenue, handleVenueClick }) {
-	console.log(venues)
+	// console.log(venues)
 	const venueList = venues.map((venue) => {
 		if (!venue.business_information.currently_operating) {
 			return
