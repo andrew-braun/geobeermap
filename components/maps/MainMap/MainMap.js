@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo, useCallback } from "react"
 import { CgArrowLongRightL } from "react-icons/cg"
 import dynamic from "next/dynamic"
-import Map, { Marker } from "react-map-gl"
+import Map from "react-map-gl"
 import PrimaryMarker from "components/maps/markers/PrimaryMarker"
 
 const MapSidebar = dynamic(() => import("./MapSidebar"))
@@ -38,32 +38,39 @@ export default function MainMap({ venues }) {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
-	const handleVenueClick = (venueSlug) => {
-		console.log(venueSlug)
-		if (activeVenue === venueSlug) {
-			setActiveVenue(null)
-			return
-		}
-		setActiveVenue(venueSlug)
-	}
-	const mapMarkers = venues
-		.map((venue, venueIndex) => {
-			const locationMarkers = venue.location.locations.map((location) => {
-				console.log(location)
-				return (
-					<PrimaryMarker
-						longitude={location.longitude}
-						latitude={location.latitude}
-						onClick={handleVenueClick}
-						venueSlug={venue.slug}
-						active={activeVenue === venue.slug}
-						key={`${venue.slug}-${location.location_id}`}
-					/>
-				)
-			})
-			return locationMarkers
-		})
-		.flat()
+	const handleVenueClick = useCallback(
+		(venueSlug) => {
+			console.log(venueSlug)
+			if (activeVenue === venueSlug) {
+				setActiveVenue(null)
+				return
+			}
+			setActiveVenue(venueSlug)
+		},
+		[activeVenue]
+	)
+	const mapMarkers = useMemo(
+		() =>
+			venues
+				.map((venue, venueIndex) => {
+					const locationMarkers = venue.location.locations.map((location) => {
+						console.log(location)
+						return (
+							<PrimaryMarker
+								longitude={location.longitude}
+								latitude={location.latitude}
+								onClick={handleVenueClick}
+								venueSlug={venue.slug}
+								active={activeVenue === venue.slug}
+								key={`${venue.slug}-${location.location_id}`}
+							/>
+						)
+					})
+					return locationMarkers
+				})
+				.flat(),
+		[venues, activeVenue, handleVenueClick]
+	)
 
 	const handleSidebarButtonClick = () => {
 		setIsSidebarHidden(!isSidebarHidden)

@@ -13,6 +13,7 @@
 	}
 	.link {
 		display: block;
+		max-width: max-content;
 		&:hover {
 			text-decoration: none;
 		}

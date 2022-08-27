@@ -14,18 +14,21 @@ function PrimaryMarker({
 	active,
 }) {
 	return (
-		<Marker
-			latitude={latitude}
-			longitude={longitude}
-			onClick={venueSlug ? () => onClick(venueSlug) : onClick}
-		>
-			<div className={`${styles.primaryMarker}`}>
-				<FaMapMarkerAlt
-					color={active ? highlightColor : markerColor}
-					size={active ? 70 : 50}
-				/>
-			</div>
-		</Marker>
+		<>
+			<Marker
+				latitude={latitude}
+				longitude={longitude}
+				onClick={venueSlug ? () => onClick(venueSlug) : onClick}
+			>
+				<div className={`${styles.primaryMarker}`}>
+					<FaMapMarkerAlt
+						color={active ? highlightColor : markerColor}
+						size={active ? 70 : 50}
+					/>
+				</div>
+				{/* <div className={`${styles.popup}`}>GeoBeerMap</div> */}
+			</Marker>
+		</>
 	)
 }
 
