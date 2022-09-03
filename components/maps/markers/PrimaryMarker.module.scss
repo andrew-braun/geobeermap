@@ -1,9 +1,13 @@
 .primaryMarker {
 	position: relative;
 	font-size: 50px;
-	transition: all 0.2s ease-in-out;
+	transition: all 0.3s ease-in-out;
 	&:hover {
 		cursor: pointer;
 		transform: translate3d(0, -3px, 0);
+	}
+
+	.icon {
+		transition: all 0.3s ease-in-out;
 	}
 }

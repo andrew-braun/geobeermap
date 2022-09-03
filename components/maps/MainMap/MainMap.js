@@ -62,9 +62,10 @@ export default function MainMap({ venues }) {
 				return
 			}
 			setActiveVenue(venueSlug)
+			console.log(venues.find((venue) => venue.slug === venueSlug))
 			setPopupInfo(venues.find((venue) => venue.slug === venueSlug))
 		},
-		[venues, activeVenue]
+		[venues, activeVenue, setPopupInfo]
 	)
 
 	const handlePopupClose = () => {
@@ -77,7 +78,7 @@ export default function MainMap({ venues }) {
 				.map((venue, venueIndex) => {
 					const locationMarkers = venue.location.locations.map((location) => {
 						// console.log(venue)
-						console.log("rerender")
+
 						return (
 							<PrimaryMarker
 								longitude={location.longitude}
@@ -133,14 +134,10 @@ export default function MainMap({ venues }) {
 					<NavigationControl position="top-right" />
 					<ScaleControl />
 					{mapMarkers}
-					{!viewport.initialViewport && (
-						<PrimaryMarker
-							markerColor="var(--accent-2)"
-							longitude={viewport.longitude}
-							latitude={viewport.latitude}
-						/>
+
+					{popupInfo && (
+						<VenuePopup venue={popupInfo} onClose={handlePopupClose} />
 					)}
-					{/* {popupInfo && <VenuePopup venue={popupInfo} />} */}
 				</Map>
 			</div>
 		</div>

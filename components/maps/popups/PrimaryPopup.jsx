@@ -11,7 +11,6 @@ export default function PrimaryPopup({
 			anchor={anchor}
 			longitude={Number(longitude)}
 			latitude={Number(latitude)}
-			onClose={() => setPopupInfo(null)}
 		>
 			<div>{children}</div>
 		</Popup>

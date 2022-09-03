@@ -24,6 +24,7 @@ function PrimaryMarker({
 					<FaMapMarkerAlt
 						color={active ? highlightColor : markerColor}
 						size={active ? 70 : 50}
+						className={`${styles.icon}`}
 					/>
 				</div>
 				{/* <div className={`${styles.popup}`}>GeoBeerMap</div> */}

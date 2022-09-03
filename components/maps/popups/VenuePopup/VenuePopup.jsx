@@ -1,14 +1,17 @@
 import PrimaryPopup from "../PrimaryPopup.jsx"
 
 export default function VenuePopup({ venue, onClose }) {
-	return (
-		<PrimaryPopup
-			anchor="top"
-			longitude={Number(venue.location.longitude)}
-			latitude={Number(venue.location.latitude)}
-			onClose={onClose}
-		>
-			<p>Popup</p>
-		</PrimaryPopup>
-	)
+	return venue.location.locations.map((location, index) => {
+		return (
+			<PrimaryPopup
+				anchor="top"
+				longitude={Number(location.longitude)}
+				latitude={Number(location.latitude)}
+				onClose={onClose}
+				key={index}
+			>
+				<h2>{venue.name}</h2>
+			</PrimaryPopup>
+		)
+	})
 }
