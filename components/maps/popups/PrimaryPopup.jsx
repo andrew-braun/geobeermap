@@ -6,6 +6,7 @@ export default function PrimaryPopup({
 	latitude,
 	longitude,
 	children,
+	onClose,
 }) {
 	return (
 		<Popup
@@ -13,6 +14,7 @@ export default function PrimaryPopup({
 			longitude={Number(longitude)}
 			latitude={Number(latitude)}
 			className={`${styles.primaryPopup}`}
+			onClose={onClose}
 		>
 			{children}
 		</Popup>

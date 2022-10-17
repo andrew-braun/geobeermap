@@ -48,27 +48,27 @@ export default function MainMap({ venues }) {
 				initialViewport: false,
 			})
 		})
+
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	const handleVenueClick = useCallback(
 		(event, venueSlug) => {
 			event?.originalEvent?.stopPropagation()
-			console.log(event)
-			console.log(venueSlug)
 			if (activeVenue === venueSlug) {
 				setActiveVenue(null)
 				setPopupInfo(null)
 				return
 			}
 			setActiveVenue(venueSlug)
-			console.log(venues.find((venue) => venue.slug === venueSlug))
+
 			setPopupInfo(venues.find((venue) => venue.slug === venueSlug))
 		},
 		[venues, activeVenue, setPopupInfo]
 	)
 
-	const handlePopupClose = () => {
+	const handlePopupClose = (event) => {
+		setActiveVenue(null)
 		setPopupInfo(null)
 	}
 
@@ -77,8 +77,6 @@ export default function MainMap({ venues }) {
 			venues
 				.map((venue, venueIndex) => {
 					const locationMarkers = venue.location.locations.map((location) => {
-						// console.log(venue)
-
 						return (
 							<PrimaryMarker
 								longitude={location.longitude}
@@ -134,7 +132,6 @@ export default function MainMap({ venues }) {
 					<NavigationControl position="top-right" />
 					<ScaleControl />
 					{mapMarkers}
-
 					{popupInfo && (
 						<VenuePopup venue={popupInfo} onClose={handlePopupClose} />
 					)}
