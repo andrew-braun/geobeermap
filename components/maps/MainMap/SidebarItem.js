@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import SocialLinks from "components/ui/SocialLinks/SocialLinks"
+import SocialLinks from "components/SocialLinks/SocialLinks"
 
 import styles from "./SidebarItem.module.scss"
 
