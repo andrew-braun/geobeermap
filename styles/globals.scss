@@ -13,19 +13,21 @@
 	--primary-button-color: #{#006b6b};
 	--primary-button-hover-color: #{#004f58};
 
+	--font-size-small: #{1.2rem};
 	--font-size-medium: #{1.7rem};
-	--font-size-large: #{2.8rem};
+	--font-size-large: #{2.2rem};
+	--font-size-extra-large: #{2.7rem};
 
 	--side-padding: #{5vw};
 
 	--margin-small: #{0.5rem};
 	--margin-medium: #{1rem};
 
-	--padding-small: #{0.5rem};
-	--padding-medium: #{0.75rem};
-	--padding-large: #{1.25rem};
-	--padding-large-2: #{1.75rem};
-	--padding-large-3: #{2.5rem};
+	--spacing-small: #{0.5rem};
+	--spacing-medium: #{0.75rem};
+	--spacing-large: #{1.25rem};
+	--spacing-large-2: #{1.75rem};
+	--spacing-large-3: #{2.5rem};
 
 	--transition-speed-medium: #{0.3s};
 
@@ -49,7 +51,10 @@ html {
 }
 
 body {
-	font-size: 17px;
+	font-size: var(--font-size-medium);
+
+	h1 {
+	}
 
 	a {
 		color: var(--accent-2);

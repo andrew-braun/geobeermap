@@ -1,5 +1,6 @@
 import Link from "next/link"
 import PrimaryPopup from "../PrimaryPopup.jsx"
+import { FaStoreAlt, FaMapMarkerAlt } from "react-icons/fa"
 
 import styles from "./VenuePopup.module.scss"
 
@@ -26,8 +27,20 @@ export default function VenuePopup({ venue, onClose }) {
 						</a>
 					</Link>
 					<div className={`${styles.venueInfo}`}>
-						<p>{venueBusinessTypes.join(", ")}</p>
-						<p>{location.name}</p>
+						<span className={`${styles.infoContainer}`}>
+							<span className={`${styles.infoIcon}`}>
+								<FaStoreAlt />
+							</span>
+							<p className={`${styles.infoText}`}>
+								{venueBusinessTypes.join(", ")}
+							</p>
+						</span>
+						<span className={`${styles.infoContainer}`}>
+							<span className={`${styles.infoIcon}`}>
+								<FaMapMarkerAlt />
+							</span>
+							<p className={`${styles.infoText}`}>{location.name}</p>
+						</span>
 					</div>
 				</div>
 			</PrimaryPopup>

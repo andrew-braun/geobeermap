@@ -2,8 +2,8 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	margin: var(--margin-small);
-	padding: var(--padding-medium);
+	margin: var(--spacing-small);
+	padding: var(--spacing-medium);
 	border: 1px solid var(--accent-2);
 	border-radius: 50%;
 }

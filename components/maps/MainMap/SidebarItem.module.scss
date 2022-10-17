@@ -2,7 +2,7 @@
 	display: flex;
 	width: 100%;
 	transition: all var(--transition-speed-medium) ease-in-out;
-	padding: var(--padding-medium);
+	padding: var(--spacing-medium);
 
 	&:hover {
 		background: var(--light-transparent);

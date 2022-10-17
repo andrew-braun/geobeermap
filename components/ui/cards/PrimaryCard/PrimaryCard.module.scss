@@ -5,7 +5,7 @@
 	flex-direction: column;
 	max-width: 500px;
 	height: 100%;
-	margin: var(--margin-medium);
+	margin: var(--spacing-medium);
 	border-radius: var(--border-radius-medium);
 	overflow: hidden;
 	transition: var(--transition-speed-medium);
@@ -28,13 +28,13 @@
 			height: 100%;
 			.tagWrapper {
 				position: absolute;
-				top: var(--margin-medium);
-				left: var(--margin-small);
+				top: var(--spacing-medium);
+				left: var(--spacing-small);
 			}
 		}
 
 		.content {
-			padding: var(--padding-small);
+			padding: var(--spacing-small);
 
 			border-radius: 0 0 var(--border-radius-medium) var(--border-radius-medium);
 
@@ -44,7 +44,7 @@
 				align-items: center;
 				.title {
 					font-size: var(--font-size-large);
-					padding-bottom: var(--padding-small);
+					padding-bottom: var(--spacing-small);
 				}
 			}
 			.row2 {

@@ -16,11 +16,11 @@
 
 	.arrow {
 		position: absolute;
-		right: var(--margin-small);
+		right: var(--spacing-small);
 		z-index: 100;
 		display: block;
 		width: max-content;
-		padding: 0 var(--padding-small);
+		padding: 0 var(--spacing-small);
 		border-radius: var(--border-radius-medium);
 		background: var(transparent);
 		transition: all var(--transition-speed-medium) ease-in-out;

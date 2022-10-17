@@ -9,4 +9,21 @@
 	height: 100%;
 	background: var(--primary-background);
 	color: var(--light-text);
+	font-size: var(--font-size-medium);
+
+	.venueInfo {
+		.infoContainer {
+			display: flex;
+			align-items: center;
+			margin: var(--spacing-small);
+			.infoIcon {
+				display: flex;
+				align-items: center;
+			}
+			.infoText {
+				margin: 0 1rem;
+				text-transform: capitalize;
+			}
+		}
+	}
 }
