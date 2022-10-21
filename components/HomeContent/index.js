@@ -15,8 +15,10 @@ export default function HomeContent({ venues }) {
 			<Suspense fallback={`Loading map...`}>
 				<MainMap venues={venues} />
 			</Suspense>
-			<section>
+			<section className={`section`}>
 				<Suspense fallback={`Loading venues...`}>
+					<h2 className={`sectionHeading`}>Venues</h2>
+
 					<VenueList venues={venues} />
 				</Suspense>
 			</section>

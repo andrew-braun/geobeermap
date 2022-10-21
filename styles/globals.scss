@@ -70,3 +70,17 @@ body {
 * {
 	box-sizing: border-box;
 }
+
+/* Typograph */
+.sectionHeading {
+	min-width: 200px;
+	max-width: max-content;
+	border-image: linear-gradient(to right, var(--accent-1), transparent) 30;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+}
+
+/* Global content styles */
+.section {
+	padding: 0 var(--side-padding);
+}
