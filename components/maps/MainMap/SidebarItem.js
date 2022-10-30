@@ -18,17 +18,17 @@ export default function SidebarItem({ venue, active, onClick }) {
 	} = social_links
 
 	return (
-		<article
+        <article
 			id={`${slug}-${id}`}
 			className={`${styles.sidebarItem} ${active ? styles.active : ""}`}
 			onClick={onClick ? (event) => onClick(event, venue.slug) : ""}
 		>
 			<div className={`${styles.infoColumn}`}>
-				<Link href={`/venues/${slug}`}>
-					<a className={`${styles.link}`}>
-						<h3 className={`${styles.title}`}>{name}</h3>
-					</a>
-				</Link>
+				<Link href={`/venues/${slug}`} className={`${styles.link}`}>
+
+                    <h3 className={`${styles.title}`}>{name}</h3>
+
+                </Link>
 				<div className={`${styles.type}`}> {business_type}</div>
 			</div>
 			<div className={`${styles.socialColumn}`}>
@@ -42,5 +42,5 @@ export default function SidebarItem({ venue, active, onClick }) {
 				/>
 			</div>
 		</article>
-	)
+    );
 }

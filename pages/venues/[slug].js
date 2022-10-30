@@ -13,8 +13,8 @@ export default function Venue({ venue }) {
 					<Image
 						src={venue.business_information.logo.data.attributes.url}
 						alt={`${venue.name} logo`}
-						layout="fill"
-						objectFit="cover"
+						fill
+						style={{ objectFit: "cover" }}
 					/>
 				</div>
 			</aside>

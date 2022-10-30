@@ -8,30 +8,26 @@ import styles from "./PrimaryCard.module.scss"
 export default function PrimaryCard({ title, slug, image, tag, data1 }) {
 	return (
 		<article className={`${styles.card}`}>
-			<Link href={`${slug}`}>
-				<a className={`${styles.link}`}>
-					<div className={`${styles.image}`}>
-						<Image
-							src={`${image.url}`}
-							alt={image.alternativeText}
-							layout="responsive"
-							width={400}
-							height={400}
-							objectFit="cover"
-						/>
-						<span className={`${styles.tagWrapper}`}>
-							<PrimaryTag text={tag.text} url={tag.url} color="dark" />
-						</span>
+			<Link href={`${slug}`} className={`${styles.link}`}>
+				<div className={`${styles.image}`}>
+					<Image
+						src={`${image.url}`}
+						alt={image.alternativeText}
+						fill
+						style={{ objectFit: "cover" }}
+					/>
+					<span className={`${styles.tagWrapper}`}>
+						<PrimaryTag text={tag.text} url={tag.url} color="dark" />
+					</span>
+				</div>
+				<div className={`${styles.content}`}>
+					<div className={`${styles.row1}`}>
+						<span className={`${styles.title}`}>{title}</span>
 					</div>
-					<div className={`${styles.content}`}>
-						<div className={`${styles.row1}`}>
-							<span className={`${styles.title}`}>{title}</span>
-						</div>
-						<div className={`${styles.row2}`}>
-							{data1 && <span className={`${styles.data1}`}>{data1}</span>}
-						</div>
+					<div className={`${styles.row2}`}>
+						{data1 && <span className={`${styles.data1}`}>{data1}</span>}
 					</div>
-				</a>
+				</div>
 			</Link>
 		</article>
 	)

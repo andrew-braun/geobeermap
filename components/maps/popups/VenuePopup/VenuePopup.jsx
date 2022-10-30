@@ -26,7 +26,7 @@ export default function VenuePopup({ venue, onClose }) {
 		].filter((item) => item)
 
 		return (
-			<PrimaryPopup
+            <PrimaryPopup
 				anchor="top"
 				longitude={Number(location.longitude)}
 				latitude={Number(location.latitude)}
@@ -35,10 +35,10 @@ export default function VenuePopup({ venue, onClose }) {
 			>
 				<div className={`${styles.popupContent}`}>
 					<Link href={`/venues/${venue.slug}`}>
-						<a>
-							<h2 className={`${styles.title}`}>{venue.name}</h2>
-						</a>
-					</Link>
+
+                        <h2 className={`${styles.title}`}>{venue.name}</h2>
+
+                    </Link>
 					<div className={`${styles.venueInfo}`}>
 						<span className={`${styles.infoContainer}`}>
 							<span className={`${styles.infoIcon}`}>
@@ -67,6 +67,6 @@ export default function VenuePopup({ venue, onClose }) {
 					</div>
 				</div>
 			</PrimaryPopup>
-		)
-	})
+        );
+	});
 }
