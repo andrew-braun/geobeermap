@@ -44,15 +44,15 @@ export default function VenuePopup({ venue, onClose }) {
 							<span className={`${styles.infoIcon}`}>
 								<FaStoreAlt />
 							</span>
-							<p className={`${styles.infoText}`}>
+							<span className={`${styles.infoText}`}>
 								{venueBusinessTypes.join(", ")}
-							</p>
+							</span>
 						</span>
 						<span className={`${styles.infoContainer}`}>
 							<span className={`${styles.infoIcon}`}>
 								<FaMapMarkerAlt />
 							</span>
-							<p className={`${styles.infoText}`}>{location.name}</p>
+							<span className={`${styles.infoText}`}>{location.name}</span>
 						</span>
 					</div>
 					<div className={`${styles.socialIcons}`}>

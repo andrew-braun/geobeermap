@@ -9,12 +9,9 @@ import Map, {
 	GeolocateControl,
 } from "react-map-gl"
 
-const PrimaryMarker = dynamic(() =>
-	import("components/maps/markers/PrimaryMarker")
-)
-const VenuePopup = dynamic(() =>
-	import("components/maps/popups/VenuePopup/VenuePopup")
-)
+import PrimaryMarker from "components/maps/markers/PrimaryMarker"
+
+import VenuePopup from "components/maps/popups/VenuePopup/VenuePopup"
 
 const MapSidebar = dynamic(() => import("./MapSidebar"))
 const SlideIn = dynamic(() => import("components/ui/SlideIn/SlideIn"))
@@ -66,6 +63,10 @@ export default function MainMap({ venues }) {
 		},
 		[venues, activeVenue, setPopupInfo]
 	)
+
+	useEffect(() => {
+		console.log(popupInfo)
+	}, [popupInfo])
 
 	const handlePopupClose = (event) => {
 		setActiveVenue(null)

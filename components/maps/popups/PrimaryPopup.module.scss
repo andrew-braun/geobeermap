@@ -14,4 +14,10 @@
 			background-image: url("/images/icons/icon-small-close-button.svg");
 		}
 	}
+	&.show {
+		opacity: 1;
+	}
+	&.hide {
+		opacity: 0;
+	}
 }

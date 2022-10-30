@@ -1,4 +1,3 @@
-import { forwardRef } from "react"
 import { Marker } from "react-map-gl"
 import { FaMapMarkerAlt } from "react-icons/fa"
 
@@ -33,4 +32,4 @@ function PrimaryMarker({
 	)
 }
 
-export default forwardRef(PrimaryMarker)
+export default PrimaryMarker
