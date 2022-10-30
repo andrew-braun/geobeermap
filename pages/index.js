@@ -7,19 +7,17 @@ import styles from "./Home.module.scss"
 
 export default function Home({ venues }) {
 	return (
-		<Layout>
-			<div>
-				<Head>
-					<title>GeoBeerMap</title>
-					<meta
-						name="description"
-						content="A website for finding craft beer in the country of Georgia"
-					/>
-					<link rel="icon" href="/favicon.ico" />
-				</Head>
-				<HomeContent venues={venues} />
-			</div>
-		</Layout>
+		<div>
+			<Head>
+				<title>GeoBeerMap</title>
+				<meta
+					name="description"
+					content="A website for finding craft beer in the country of Georgia"
+				/>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			<HomeContent venues={venues} />
+		</div>
 	)
 }
 

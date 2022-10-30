@@ -1,0 +1,22 @@
+.venue {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+
+	.sidebar {
+		grid-column: 1;
+		padding-right: var(--spacing-medium);
+
+		.logoWrapper {
+			position: relative;
+			min-width: 200px;
+			max-width: 400px;
+			min-height: 200px;
+			max-height: 400px;
+			margin-top: var(--spacing-medium);
+		}
+	}
+	.content {
+		grid-column: 2;
+		padding: 0 var(--spacing-medium);
+	}
+}
