@@ -9,15 +9,18 @@ import styles from "./Venue.module.scss"
 export default function Venue({ venue }) {
 	console.log(venue)
 	return (
-		<div className={`${styles.venue}`}>
+		<div
+			className={`${styles.venue} section
+		`}
+		>
 			<VenueSidebar venue={venue} side="left" />
 			<main className={`${styles.content}`}>
-				<div className={`${styles.text}`}>
+				<section className={`${styles.text}`}>
 					<h2 className={`sectionHeading`}>{venue.name}</h2>
 					<div
 						dangerouslySetInnerHTML={{ __html: markdown(venue.description) }}
 					/>
-				</div>
+				</section>
 			</main>
 		</div>
 	)

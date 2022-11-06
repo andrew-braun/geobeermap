@@ -1,15 +1,8 @@
 .sidebar {
-	margin: 0 var(--spacing-large);
+	// margin: 0 var(--spacing-large);
 	grid-row: 1;
-	border-image: linear-gradient(
-			to bottom,
-			transparent 20%,
-			var(--accent-2),
-			transparent 98%
-		)
-		30;
-	border-width: 0 0 0 2px;
-	border-style: solid;
+	height: 100%;
+	border-width: 0;
 	border-radius: var(--border-radius-medium);
 	overflow: hidden;
 
@@ -23,16 +16,23 @@
 	.logoWrapper {
 		position: relative;
 		min-width: 200px;
-		max-width: 400px;
+		max-width: max-content;
 		min-height: 200px;
 		max-height: 400px;
+		margin: auto;
+		border-radius: 500px;
+		overflow: hidden;
 	}
 	.sidebarContent {
 		height: 100%;
 		padding: var(--spacing-large);
-		border-image: linear-gradient(to bottom, var(--accent-2), transparent 50%)
+		border-image: linear-gradient(
+				to bottom,
+				var(--accent-2) 0%,
+				transparent 60%
+			)
 			30;
-		border-width: 0 2px 0 0;
+		border-width: 0 1px 0 1px;
 		border-style: solid;
 
 		.socialLinksContainer {

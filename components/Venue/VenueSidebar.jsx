@@ -32,7 +32,7 @@ export default function VenueSidebar({ venue, side }) {
 					src={venue.business_information.logo.data.attributes.url}
 					alt={`${venue.name} logo`}
 					fill
-					style={{ objectFit: "cover" }}
+					style={{ objectFit: "scale-down" }}
 				/>
 			</div>
 			<div className={`${styles.sidebarContent}`}>
