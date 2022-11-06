@@ -26,9 +26,9 @@
 	--margin-medium: #{1rem};
 
 	--spacing-small: #{0.5rem};
-	--spacing-medium: #{0.75rem};
-	--spacing-large: #{1.25rem};
-	--spacing-large-2: #{1.75rem};
+	--spacing-medium: #{1rem};
+	--spacing-large: #{1.5rem};
+	--spacing-large-2: #{2rem};
 	--spacing-large-3: #{2.5rem};
 
 	--transition-speed-medium: #{0.3s};
@@ -66,6 +66,7 @@ body {
 	h2 {
 		min-width: 200px;
 		max-width: max-content;
+		padding-bottom: var(--spacing-small);
 		border-image: linear-gradient(to right, var(--accent-1), transparent) 30;
 		border-width: 0 0 1px 0;
 		border-style: solid;
@@ -81,6 +82,9 @@ body {
 			color: var(--primary-text);
 			text-decoration: underline;
 		}
+		&:where(h2):hover {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -92,6 +96,7 @@ body {
 .sectionHeading {
 	min-width: 200px;
 	max-width: max-content;
+	padding-bottom: var(--spacing-small);
 	margin-bottom: var(--spacing-medium);
 	border-image: linear-gradient(to right, var(--accent-1), transparent) 30;
 	border-width: 0 0 1px 0;

@@ -17,4 +17,28 @@
 		max-height: 400px;
 		margin-top: var(--spacing-medium);
 	}
+	.sidebarContent {
+		padding: var(--spacing-large);
+		.socialLinksContainer {
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: var(--spacing-large);
+
+			a:first-child {
+				margin-left: 0;
+			}
+		}
+		.locations {
+			.locationsList {
+				display: flex;
+				align-items: center;
+				.neighborhood {
+					padding-right: var(--spacing-small);
+				}
+				.locationIcon {
+					margin: 0 var(--spacing-medium) 0 var(--spacing-small);
+				}
+			}
+		}
+	}
 }

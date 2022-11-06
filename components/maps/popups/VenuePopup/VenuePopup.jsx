@@ -50,7 +50,9 @@ export default function VenuePopup({ venue, onClose }) {
 							<span className={`${styles.infoIcon}`}>
 								<FaMapMarkerAlt />
 							</span>
-							<span className={`${styles.infoText}`}>{location.name}</span>
+							<span className={`${styles.infoText}`}>
+								{location.name} - {location.neighborhood.name}
+							</span>
 						</span>
 					</div>
 					<div className={`${styles.socialIcons}`}>

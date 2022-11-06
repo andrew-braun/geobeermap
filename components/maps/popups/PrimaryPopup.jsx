@@ -15,6 +15,7 @@ export default function PrimaryPopup({
 			latitude={Number(latitude)}
 			className={`${styles.primaryPopup}`}
 			onClose={onClose}
+			maxWidth="auto"
 		>
 			{children}
 		</Popup>
