@@ -1,0 +1,20 @@
+.sidebar {
+	padding-right: var(--spacing-medium);
+	grid-row: 1;
+
+	&.left {
+		grid-column: 1;
+	}
+	&.right {
+		grid-column: 2;
+	}
+
+	.logoWrapper {
+		position: relative;
+		min-width: 200px;
+		max-width: 400px;
+		min-height: 200px;
+		max-height: 400px;
+		margin-top: var(--spacing-medium);
+	}
+}

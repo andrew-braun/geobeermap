@@ -12,7 +12,7 @@ export default function SocialLinks({
 	twitter,
 	untappd,
 	website,
-	googleMaps,
+	google_maps,
 	size = iconSizes.small,
 }) {
 	return (
@@ -48,9 +48,9 @@ export default function SocialLinks({
 			{website && (
 				<SocialLink link={website} icon={<TbWorld size={size} />} size={size} />
 			)}
-			{googleMaps && (
+			{google_maps && (
 				<SocialLink
-					link={googleMaps}
+					link={google_maps}
 					icon={<SiGooglemaps size={size} />}
 					size={size}
 				/>

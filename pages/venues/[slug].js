@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { fetchAllVenues } from "lib/helpers/api/strapi/strapi"
 import { fetchVenue } from "lib/helpers/api/strapi/strapi"
+import VenueSidebar from "components/Venue/VenueSidebar"
 
 import styles from "./Venue.module.scss"
 
@@ -8,19 +9,12 @@ export default function Venue({ venue }) {
 	console.log(venue)
 	return (
 		<div className={`${styles.venue}`}>
-			<aside className={`${styles.sidebar}`}>
-				<div className={`${styles.logoWrapper}`}>
-					<Image
-						src={venue.business_information.logo.data.attributes.url}
-						alt={`${venue.name} logo`}
-						fill
-						style={{ objectFit: "cover" }}
-					/>
-				</div>
-			</aside>
+			<VenueSidebar venue={venue} side="left" />
 			<main className={`${styles.content}`}>
-				<h2>{venue.name}</h2>
-				<p>{venue.description}</p>
+				<div className={`${styles.text}`}>
+					<h2 className={`sectionHeading`}>{venue.name}</h2>
+					<div>{venue.description}</div>
+				</div>
 			</main>
 		</div>
 	)

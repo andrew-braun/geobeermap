@@ -11,14 +11,14 @@ import styles from "./index.module.scss"
 
 export default function HomeContent({ venues }) {
 	return (
-		<main>
+		<main className={`${styles.homeContent}`}>
 			<div className={`${styles.mapContainer}`}>
 				<MainMap venues={venues} />
 			</div>
 
 			<section className={`section`}>
 				<Suspense fallback={`Loading venues...`}>
-					<h2 className={`sectionHeading`}>Venues</h2>
+					<h2 className={`sectionHeading ${styles.venuesHeading}`}>Venues</h2>
 
 					<VenueList venues={venues} />
 				</Suspense>

@@ -18,6 +18,8 @@
 	--font-size-large: #{2.2rem};
 	--font-size-extra-large: #{2.7rem};
 
+	--text-width: #{768px};
+
 	--side-padding: #{5vw};
 
 	--margin-small: #{0.5rem};
@@ -68,7 +70,9 @@ body {
 		border-width: 0 0 1px 0;
 		border-style: solid;
 	}
-
+	p {
+		line-height: 1.2;
+	}
 	a {
 		color: var(--accent-2);
 		text-decoration: none;
@@ -88,6 +92,7 @@ body {
 .sectionHeading {
 	min-width: 200px;
 	max-width: max-content;
+	margin-bottom: var(--spacing-medium);
 	border-image: linear-gradient(to right, var(--accent-1), transparent) 30;
 	border-width: 0 0 1px 0;
 	border-style: solid;

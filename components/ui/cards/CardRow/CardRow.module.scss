@@ -1,4 +1,8 @@
 .cardRow {
 	display: flex;
 	flex-wrap: wrap;
+
+	article:first-child {
+		margin-left: 0;
+	}
 }
