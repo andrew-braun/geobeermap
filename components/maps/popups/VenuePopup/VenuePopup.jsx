@@ -51,7 +51,9 @@ export default function VenuePopup({ venue, onClose }) {
 								<FaMapMarkerAlt />
 							</span>
 							<span className={`${styles.infoText}`}>
-								{location.name} - {location.neighborhood.name}
+								{location.name}{" "}
+								{location.neighborhood.name !== location.name &&
+									"- " + location.neighborhood.name}
 							</span>
 						</span>
 					</div>

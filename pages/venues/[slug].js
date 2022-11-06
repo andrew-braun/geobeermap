@@ -1,4 +1,6 @@
 import Image from "next/image"
+import { marked } from "marked"
+import DOMPurify from "dompurify"
 import { fetchAllVenues } from "lib/helpers/api/strapi/strapi"
 import { fetchVenue } from "lib/helpers/api/strapi/strapi"
 import VenueSidebar from "components/Venue/VenueSidebar"
@@ -13,7 +15,11 @@ export default function Venue({ venue }) {
 			<main className={`${styles.content}`}>
 				<div className={`${styles.text}`}>
 					<h2 className={`sectionHeading`}>{venue.name}</h2>
-					<div>{venue.description}</div>
+					<div
+						dangerouslySetInnerHTML={{
+							__html: DOMPurify.sanitize(marked.parse(venue.description)),
+						}}
+					/>
 				</div>
 			</main>
 		</div>

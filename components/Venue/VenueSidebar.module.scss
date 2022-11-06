@@ -21,7 +21,7 @@
 		padding: var(--spacing-large);
 		.socialLinksContainer {
 			display: flex;
-			justify-content: space-between;
+			justify-content: flex-start;
 			padding-bottom: var(--spacing-large);
 
 			a:first-child {

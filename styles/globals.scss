@@ -72,7 +72,7 @@ body {
 		border-style: solid;
 	}
 	p {
-		line-height: 1.2;
+		line-height: 1.6;
 	}
 	a {
 		color: var(--accent-2);
@@ -82,7 +82,7 @@ body {
 			color: var(--primary-text);
 			text-decoration: underline;
 		}
-		&:where(h2):hover {
+		&:has(h2):hover {
 			text-decoration: none;
 		}
 	}
