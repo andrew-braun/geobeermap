@@ -9,7 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"dompurify": "^2.4.0",
+		"isomorphic-dompurify": "^0.23.0",
 		"mapbox-gl": "^2.9.2",
 		"marked": "^4.2.2",
 		"next": "^13.0.0",
