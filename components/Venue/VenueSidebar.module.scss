@@ -1,6 +1,17 @@
 .sidebar {
-	padding-right: var(--spacing-medium);
+	margin: 0 var(--spacing-large);
 	grid-row: 1;
+	border-image: linear-gradient(
+			to bottom,
+			transparent 20%,
+			var(--accent-2),
+			transparent 98%
+		)
+		30;
+	border-width: 0 0 0 2px;
+	border-style: solid;
+	border-radius: var(--border-radius-medium);
+	overflow: hidden;
 
 	&.left {
 		grid-column: 1;
@@ -15,10 +26,15 @@
 		max-width: 400px;
 		min-height: 200px;
 		max-height: 400px;
-		margin-top: var(--spacing-medium);
 	}
 	.sidebarContent {
+		height: 100%;
 		padding: var(--spacing-large);
+		border-image: linear-gradient(to bottom, var(--accent-2), transparent 50%)
+			30;
+		border-width: 0 2px 0 0;
+		border-style: solid;
+
 		.socialLinksContainer {
 			display: flex;
 			justify-content: flex-start;
