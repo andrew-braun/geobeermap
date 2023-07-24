@@ -16,13 +16,13 @@ export default function HomeContent({ venues }) {
 				<MainMap venues={venues} />
 			</div>
 
-			<section className={`section`}>
+			{/* <section className={`section`}>
 				<Suspense fallback={`Loading venues...`}>
 					<h2 className={`sectionHeading ${styles.venuesHeading}`}>Venues</h2>
 
 					<VenueList venues={venues} />
 				</Suspense>
-			</section>
+			</section> */}
 		</main>
 	)
 }

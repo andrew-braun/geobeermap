@@ -5,22 +5,28 @@ import { FaMapMarkerAlt } from "react-icons/fa"
 import styles from "./VenueSidebar.module.scss"
 
 export default function VenueSidebar({ venue, side }) {
-	console.log(venue)
-	const locations = venue.location.map((location) => (
-		<Link
-			key={location.id}
-			href={location?.map_link ?? venue.social_links.google_maps}
-			target="_blank"
-			className={`${styles.locationsList}`}
-		>
-			<FaMapMarkerAlt size={25} className={`${styles.locationIcon}`} />
-			<span className={`${styles.neighborhood}`}>
-				{location.neighborhood.data.attributes.name},
-			</span>
-			<span>{location.city.data.attributes.name}</span>
-		</Link>
-	))
-	console.log(locations)
+	const locations = venue.location.map((location) => {
+		const city = location?.city?.data?.attributes?.name
+		const neighborhood = location?.neighborhood?.data?.attributes?.name
+
+		return (
+			<Link
+				key={location.id}
+				href={location?.map_link ?? venue.social_links.google_maps}
+				target="_blank"
+				className={`${styles.locationsList}`}
+			>
+				<FaMapMarkerAlt size={25} className={`${styles.locationIcon}`} />
+				<span className={`${styles.neighborhood}`}>
+					{neighborhood && neighborhood},
+				</span>
+				<span>{city && city}</span>
+			</Link>
+		)
+	})
+
+	const logo = venue?.business_information?.logo?.data?.attributes?.url
+
 	return (
 		<aside
 			className={`${styles.sidebar} ${
@@ -28,9 +34,9 @@ export default function VenueSidebar({ venue, side }) {
 			}`}
 		>
 			<div className={`${styles.logoWrapper}`}>
-				{venue.business_information.logo.data.attributes.url && (
+				{logo && (
 					<Image
-						src={venue.business_information.logo.data.attributes.url}
+						src={logo}
 						alt={`${venue.name} logo`}
 						fill
 						style={{ objectFit: "scale-down" }}
