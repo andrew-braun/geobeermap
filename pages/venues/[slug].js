@@ -7,7 +7,6 @@ import VenueSidebar from "components/Venue/VenueSidebar"
 import styles from "./Venue.module.scss"
 
 export default function Venue({ venue }) {
-	console.log(venue)
 	return (
 		<div
 			className={`${styles.venue} section

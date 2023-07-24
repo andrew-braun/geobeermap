@@ -64,9 +64,9 @@ export default function MainMap({ venues }) {
 		[venues, activeVenue, setPopupInfo]
 	)
 
-	useEffect(() => {
-		console.log(popupInfo)
-	}, [popupInfo])
+	// useEffect(() => {
+	// 	console.log(popupInfo)
+	// }, [popupInfo])
 
 	const handlePopupClose = (event) => {
 		setActiveVenue(null)

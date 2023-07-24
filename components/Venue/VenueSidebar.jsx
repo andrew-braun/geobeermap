@@ -5,8 +5,14 @@ import { FaMapMarkerAlt } from "react-icons/fa"
 import styles from "./VenueSidebar.module.scss"
 
 export default function VenueSidebar({ venue, side }) {
-	const locations = venue.location.map((location) => {
-		return <VenueInformation venue={venue} location={location} key={venue.id} />
+	const locations = venue.location.map((location, index) => {
+		return (
+			<VenueInformation
+				venue={venue}
+				location={location}
+				key={`${location.id}-${index}`}
+			/>
+		)
 	})
 
 	const logo = venue?.business_information?.logo?.data?.attributes?.url
