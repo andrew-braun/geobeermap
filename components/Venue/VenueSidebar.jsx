@@ -28,12 +28,14 @@ export default function VenueSidebar({ venue, side }) {
 			}`}
 		>
 			<div className={`${styles.logoWrapper}`}>
-				<Image
-					src={venue.business_information.logo.data.attributes.url}
-					alt={`${venue.name} logo`}
-					fill
-					style={{ objectFit: "scale-down" }}
-				/>
+				{venue.business_information.logo.data.attributes.url && (
+					<Image
+						src={venue.business_information.logo.data.attributes.url}
+						alt={`${venue.name} logo`}
+						fill
+						style={{ objectFit: "scale-down" }}
+					/>
+				)}
 			</div>
 			<div className={`${styles.sidebarContent}`}>
 				<div className={`${styles.socialLinksContainer}`}>

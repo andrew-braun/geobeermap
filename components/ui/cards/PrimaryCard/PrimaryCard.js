@@ -10,12 +10,14 @@ export default function PrimaryCard({ title, slug, image, tag, data1 }) {
 		<article className={`${styles.card}`}>
 			<Link href={`${slug}`} className={`${styles.link}`}>
 				<div className={`${styles.image}`}>
-					<Image
-						src={`${image.url}`}
-						alt={image.alternativeText}
-						fill
-						style={{ objectFit: "cover" }}
-					/>
+					{image?.url && (
+						<Image
+							src={`${image.url}`}
+							alt={image.alternativeText}
+							fill
+							style={{ objectFit: "cover" }}
+						/>
+					)}
 					<span className={`${styles.tagWrapper}`}>
 						<PrimaryTag text={tag.text} url={tag.url} color="dark" />
 					</span>
