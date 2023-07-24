@@ -1,6 +1,8 @@
 .homeContent {
+	// overflow-y: hidden;
 	.mapContainer {
-		min-height: 80vh;
+		position: relative;
+		height: clamp(400px, 80vh, 100%);
 	}
 	.venuesHeading {
 		margin-top: 1rem;
