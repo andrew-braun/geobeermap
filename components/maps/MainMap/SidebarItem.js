@@ -4,7 +4,12 @@ import SocialLinks from "components/SocialLinks/SocialLinks"
 
 import styles from "./SidebarItem.module.scss"
 
-export default function SidebarItem({ venue, active, onClick }) {
+export default function SidebarItem({
+	venue,
+	active,
+	onClick,
+	isInSearchResults,
+}) {
 	const { id, name, slug, location, social_links, business_information } = venue
 	const { business_type, currently_operating, logo } = business_information
 	const {
@@ -16,6 +21,10 @@ export default function SidebarItem({ venue, active, onClick }) {
 		youtube,
 		google_maps,
 	} = social_links
+
+	if (!isInSearchResults) {
+		return null
+	}
 
 	return (
 		<article

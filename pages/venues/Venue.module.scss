@@ -3,11 +3,22 @@
 	grid-template-columns: 1fr 3fr;
 	min-height: 80vh;
 
+	@media (max-width: 768px) {
+		grid-template-columns: 100%;
+		min-height: 0;
+	}
+
 	.content {
 		grid-column: 2;
 		grid-row: 1;
 		max-width: var(--text-width);
 		padding: 0 var(--spacing-medium);
 		margin: 0 auto;
+
+		@media (max-width: 768px) {
+			grid-column: 1;
+			grid-row: 2;
+			margin-top: var(--spacing-large-2);
+		}
 	}
 }

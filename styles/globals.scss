@@ -3,8 +3,10 @@
 	--primary-background-translucent: #{hsla(220, 95%, 8%, 0.95)};
 	--secondary-background: #{hsla(251, 70%, 6%, 0.95)};
 	--accent-1: #{hsla(41, 77, 60, 1)};
+	--accent-1-transparent: #{hsla(41, 77, 60, 0.35)};
 	--accent-2: #{hsla(180, 60, 49, 1)};
 	--accent-2-translucent: #{hsla(180, 60, 49, 0.75)};
+	--accent-2-transparent: #{hsla(180, 60, 49, 0.35)};
 	--light-transparent: #{hsla(0, 0%, 95%, 0.3)};
 
 	--primary-heading-color: hsla(180, 100%, 29%, 1);
@@ -37,6 +39,8 @@
 	--transition-speed-medium: #{0.3s};
 
 	--border-radius-medium: #{4px};
+	--border-radius-medium-2: #{6px};
+	--border-radius-large: #{8px};
 
 	--icon-size-medium: #{30px};
 }

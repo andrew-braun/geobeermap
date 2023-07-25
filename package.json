@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"fuse.js": "^6.6.2",
 		"isomorphic-dompurify": "^1.8.0",
 		"mapbox-gl": "^2.15.0",
 		"marked": "^5.1.1",
