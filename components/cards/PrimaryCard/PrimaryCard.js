@@ -1,9 +1,10 @@
-import Image from "next/image"
+import { CldImage } from "next-cloudinary"
 import Link from "next/link"
 
 import PrimaryTag from "components/ui/tags/PrimaryTag"
 
 import styles from "./PrimaryCard.module.scss"
+import { insertCloudinaryFolder } from "lib/helpers/images/cloudinary"
 
 export default function PrimaryCard({ title, slug, image, tag, data1 }) {
 	return (
@@ -11,8 +12,8 @@ export default function PrimaryCard({ title, slug, image, tag, data1 }) {
 			<Link href={`${slug}`} className={`${styles.link}`}>
 				<div className={`${styles.image}`}>
 					{image?.url && (
-						<Image
-							src={`${image.url}`}
+						<CldImage
+							src={`${insertCloudinaryFolder(image.url, "logos_new")}`}
 							alt={image.alternativeText}
 							fill
 							style={{ objectFit: "cover" }}

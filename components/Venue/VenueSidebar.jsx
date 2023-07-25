@@ -1,8 +1,10 @@
 import Image from "next/image"
+import { CldImage } from "next-cloudinary"
 import Link from "next/link"
 import SocialLinks from "components/SocialLinks/SocialLinks"
 import { FaMapMarkerAlt } from "react-icons/fa"
 import styles from "./VenueSidebar.module.scss"
+import { insertCloudinaryFolder } from "lib/helpers/images/cloudinary"
 
 export default function VenueSidebar({ venue, side }) {
 	const locations = venue.location.map((location, index) => {
@@ -15,7 +17,10 @@ export default function VenueSidebar({ venue, side }) {
 		)
 	})
 
-	const logo = venue?.business_information?.logo?.data?.attributes?.url
+	const logo = insertCloudinaryFolder(
+		venue?.business_information?.logo?.data?.attributes?.url,
+		"logos_new"
+	)
 
 	return (
 		<aside
@@ -25,7 +30,7 @@ export default function VenueSidebar({ venue, side }) {
 		>
 			<div className={`${styles.logoWrapper}`}>
 				{logo && (
-					<Image
+					<CldImage
 						src={logo}
 						alt={`${venue.name} logo`}
 						fill
