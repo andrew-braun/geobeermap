@@ -2,8 +2,9 @@ import React from "react"
 import { useForm } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
+import { submitForm } from "lib/helpers/api/forms/submit"
 
-import Button from "components/ui/buttons/PrimaryButton"
+import PrimaryButton from "components/ui/buttons/PrimaryButton"
 
 import styles from "./ContactForm.module.scss"
 import formStyles from "./FormStyles.module.scss"
@@ -26,8 +27,13 @@ export default function ContactForm() {
 		resolver: yupResolver(validationSchema),
 	})
 
-	const onSubmit = (values) => {
-		console.log("Form submitted:", values)
+	const onSubmit = async (values) => {
+		const response = await submitForm(values)
+		const data = await response
+
+		if (!!data?.error) {
+			console.error(`Error: ${data.message}`)
+		}
 	}
 
 	return (
@@ -66,12 +72,12 @@ export default function ContactForm() {
 				{errors.message && <span>Message is required</span>}
 			</div>
 			<div className={`${styles.submitButtonWrapper}`}>
-				<Button
+				<PrimaryButton
 					buttonProps={{ type: "submit" }}
 					classNames={`${styles.contactSubmit}`}
 				>
 					Submit
-				</Button>
+				</PrimaryButton>
 			</div>
 		</form>
 	)

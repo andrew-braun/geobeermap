@@ -1,15 +1,38 @@
 .button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	padding: var(--spacing-medium);
-	border-width: 0;
-	background: var(--primary-button-color);
+
+	border-width: 2px;
+	border-color: transparent;
 	font-size: var(--font-size-medium);
 	color: var(--primary-text);
 	transition: var(--transition-medium);
+	background: transparent;
 	border-radius: var(--border-radius-medium);
+
+	&.variation_fill {
+		background: var(--primary-button-color);
+	}
+
+	&.variation_outline {
+		border: 2px solid var(--primary-button-color);
+
+		&:hover {
+			background: var(--primary-button-color);
+		}
+	}
 
 	&:hover {
 		cursor: pointer;
-		filter: brightness(1.25);
+		filter: brightness(1.45);
+	}
+
+	.icon {
+		display: flex;
+		align-items: center;
+		margin-right: var(--spacing-medium);
 	}
 }

@@ -4,4 +4,10 @@
 	align-items: center;
 	width: clamp(300px, 480px, 80%);
 	margin: auto;
+	padding-bottom: var(--spacing-large-2);
+
+	.gitHubButtonWrapper {
+		width: 100%;
+		margin-top: var(--spacing-large-2);
+	}
 }
