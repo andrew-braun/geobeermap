@@ -11,6 +11,7 @@ export default function SidebarItem({
 	isInSearchResults,
 }) {
 	const { id, name, slug, location, social_links, business_information } = venue
+
 	const { business_type, currently_operating, logo } = business_information
 	const {
 		facebook,

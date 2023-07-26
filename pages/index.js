@@ -15,7 +15,6 @@ export default function Home({ venues }) {
 		description: siteDescription,
 	} = siteData
 
-	console.log(siteTitle, siteUrl, siteDescription)
 	return (
 		<>
 			<NextSeo
