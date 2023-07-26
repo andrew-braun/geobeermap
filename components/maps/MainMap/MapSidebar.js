@@ -1,13 +1,17 @@
-import { useState, useMemo } from "react"
+import { useState, useMemo, useContext } from "react"
 import dynamic from "next/dynamic"
 
 import SearchBox from "components/search/SearchBox/SearchBox"
 const SidebarItem = dynamic(() => import("./SidebarItem"))
 
+import { SearchContext } from "context/SearchContext"
+
 import styles from "./MapSidebar.module.scss"
 
 export default function MapSidebar({ venues, activeVenue, handleVenueClick }) {
-	const [searchState, setSearchState] = useState([])
+	// const [searchState, setSearchState] = useState([])
+
+	const { searchState, setSearchState } = useContext(SearchContext)
 
 	// Format data for search (does passing less data to Fuse make it faster?)
 	const searchData = venues.map((venue) => {
@@ -50,7 +54,7 @@ export default function MapSidebar({ venues, activeVenue, handleVenueClick }) {
 				if (searchState?.length) {
 					const aScore = searchState.find((result) => result.id === a.id)?.score
 					const bScore = searchState.find((result) => result.id === b.id)?.score
-					console.log(aScore)
+
 					if (aScore < bScore) {
 						return -1
 					}

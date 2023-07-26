@@ -1,7 +1,9 @@
+import { useContext } from "react"
 import Head from "next/head"
 import Layout from "components/layout/Layout"
 import Favicon from "components/meta/Favicon"
 import "../styles/globals.scss"
+import { SearchProvider } from "context/SearchContext"
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -9,7 +11,9 @@ function MyApp({ Component, pageProps }) {
 			<Head>
 				<Favicon />
 			</Head>
-			<Component {...pageProps} />
+			<SearchProvider>
+				<Component {...pageProps} />
+			</SearchProvider>
 		</Layout>
 	)
 }
