@@ -14,6 +14,8 @@ import UtilityIcon from "components/ui/icons/UtilityIcon"
 export default function Venue({ venue }) {
 	const { title: siteTitle, url: siteUrl } = siteData
 
+	if (!venue) return null
+
 	return (
 		<>
 			<NextSeo
@@ -25,7 +27,9 @@ export default function Venue({ venue }) {
 					description: `Looking for a craft beer in Georgia? ${venue.name} in ${venue.location[0].city} is a great place to start!`,
 					images: [
 						{
-							url: venue.business_information.logo.data.attributes.url,
+							url:
+								venue?.business_information?.logo?.data?.attributes?.url ??
+								null,
 						},
 					],
 					site_name: siteTitle,
@@ -80,7 +84,7 @@ export async function getStaticProps({ params }) {
 
 	return {
 		props: {
-			venue: JSON.parse(JSON.stringify(venue.data.attributes)),
+			venue: JSON.parse(JSON.stringify(venue?.data?.attributes)) ?? null,
 			id: venue.data.id,
 		},
 	}
