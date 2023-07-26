@@ -5,15 +5,19 @@ import styles from "./PrimaryButton.module.scss"
 export default function PrimaryButton({
 	children,
 	onClick,
-	buttonProps,
+	buttonProps = {},
 	variation = "fill",
 	icon,
 	link,
 	target,
 }) {
+	const { disabled } = buttonProps
+
 	const buttonElement = (
 		<button
-			className={`${styles.button} ${styles[`variation_${variation}`]}`}
+			className={`${styles.button} ${styles[`variation_${variation}`]} ${
+				disabled ? styles.disabled : ""
+			}`}
 			onClick={onClick}
 			{...buttonProps}
 		>

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
@@ -22,17 +22,18 @@ export default function ContactForm() {
 	const {
 		register,
 		handleSubmit,
-		formState: { errors },
+		formState: { errors, isSubmitting, isSubmitSuccessful },
 		reset,
 	} = useForm(validationSchema, {
 		resolver: yupResolver(validationSchema),
 	})
 
+	const [isModalActive, setIsModalActive] = useState(false)
+
 	const onSubmit = async (values) => {
 		try {
 			const response = await submitForm(values)
 			const data = await response
-
 			if (!!data?.error) {
 				console.error(`Error: ${data.message}`)
 				return
@@ -44,49 +45,84 @@ export default function ContactForm() {
 		}
 	}
 
+	const toggleModal = () => {
+		setIsModalActive((prev) => !prev)
+	}
+
+	useEffect(() => {
+		console.log(isSubmitSuccessful)
+		if (isSubmitSuccessful) {
+			toggleModal()
+		}
+	}, [isSubmitSuccessful])
+
 	return (
-		<form onSubmit={handleSubmit(onSubmit)} className={`${formStyles.form}`}>
-			<div className={`${formStyles.formInputContainer}`}>
-				<label htmlFor="name" className={`${formStyles.label}`}>
-					Name
-				</label>
-				<input
-					type="text"
-					{...register("name", { required: true })}
-					className={`${formStyles.formInput}`}
-				/>
-				{errors.name && <span>Name is required</span>}
-			</div>
-			<div className={`${formStyles.formInputContainer}`}>
-				<label htmlFor="email" className={`${formStyles.label}`}>
-					Email
-				</label>
-				<input
-					type="email"
-					{...register("email", { required: true, email: true })}
-					className={`${formStyles.formInput}`}
-				/>
-				{errors.email && <span>Invalid email address</span>}
-			</div>
-			<div className={`${formStyles.formInputContainer}`}>
-				<label htmlFor="message" className={`${formStyles.label}`}>
-					Message
-				</label>
-				<textarea
-					{...register("message", { required: true })}
-					className={`${formStyles.formInput}  ${formStyles.textArea}`}
-					rows="20"
-				/>
-				{errors.message && <span>Message is required</span>}
-			</div>
-			<div className={`${styles.submitButtonWrapper}`}>
-				<PrimaryButton
-					buttonProps={{ type: "submit" }}
-					classNames={`${styles.contactSubmit}`}
-				>
-					Submit
-				</PrimaryButton>
-			</div>
-		</form>
+		<>
+			<form onSubmit={handleSubmit(onSubmit)} className={`${formStyles.form}`}>
+				<div className={`${formStyles.formInputContainer}`}>
+					<label htmlFor="name" className={`${formStyles.label}`}>
+						Name
+					</label>
+					<input
+						type="text"
+						{...register("name", { required: true })}
+						disabled={isSubmitting}
+						className={`${formStyles.formInput} ${
+							isSubmitting ? formStyles.disabled : ""
+						}`}
+					/>
+					{errors.name && <span>Name is required</span>}
+				</div>
+				<div className={`${formStyles.formInputContainer}`}>
+					<label htmlFor="email" className={`${formStyles.label}`}>
+						Email
+					</label>
+					<input
+						type="email"
+						{...register("email", { required: true, email: true })}
+						disabled={isSubmitting}
+						className={`${formStyles.formInput} ${
+							isSubmitting ? formStyles.disabled : ""
+						}`}
+					/>
+					{errors.email && <span>Invalid email address</span>}
+				</div>
+				<div className={`${formStyles.formInputContainer}`}>
+					<label htmlFor="message" className={`${formStyles.label}`}>
+						Message
+					</label>
+					<textarea
+						{...register("message", { required: true })}
+						className={`${formStyles.formInput}  ${formStyles.textArea} ${
+							isSubmitting ? formStyles.disabled : ""
+						}`}
+						rows="20"
+						disabled={isSubmitting}
+					/>
+					{errors.message && <span>Message is required</span>}
+				</div>
+				<div className={`${styles.submitButtonWrapper} `}>
+					<PrimaryButton
+						buttonProps={{ type: "submit", disabled: isSubmitting }}
+						classNames={`${styles.contactSubmit} ${
+							isSubmitting ? formStyles.disabled : ""
+						}`}
+					>
+						Submit
+					</PrimaryButton>
+				</div>
+			</form>
+
+			{isModalActive && (
+				<div className={`${formStyles.formSuccessModalContainer}`}>
+					<div className={`${formStyles.formSuccessModal}`}>
+						<p>Successfully submitted your message!</p>
+						<div className={`${formStyles.buttonWrapper}`}>
+							<PrimaryButton onClick={toggleModal}>Close</PrimaryButton>
+						</div>
+					</div>
+				</div>
+			)}
+		</>
 	)
 }

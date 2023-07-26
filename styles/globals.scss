@@ -1,6 +1,7 @@
 :root {
 	--primary-background: #{hsl(220, 95%, 8%)};
 	--primary-background-translucent: #{hsla(220, 95%, 8%, 0.95)};
+	--primary-background-transparent: #{hsla(220, 95%, 8%, 0.55)};
 	--secondary-background: #{hsla(251, 70%, 6%, 0.95)};
 	--accent-1: #{hsla(41, 77, 60, 1)};
 	--accent-1-transparent: #{hsla(41, 77, 60, 0.35)};

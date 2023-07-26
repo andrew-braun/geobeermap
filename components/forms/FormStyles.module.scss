@@ -16,9 +16,44 @@
 			&.textArea {
 				height: 15rem;
 			}
+
+			&.disabled {
+				opacity: 0.2;
+				background: hsla(0, 0%, 100%, 0.5);
+			}
 		}
 		.label {
 			font-size: var(--font-size-small-2);
+		}
+	}
+}
+
+.formSuccessModalContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--primary-background-transparent);
+
+	.formSuccessModal {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: clamp(280px, 520px, 80vw);
+		height: 220px;
+		padding-bottom: var(--spacing-large);
+		background-color: var(--primary-background);
+		border: 2px solid var(--accent-2);
+		border-radius: var(--border-radius-large);
+
+		.buttonWrapper {
+			width: 80%;
 		}
 	}
 }

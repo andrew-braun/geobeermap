@@ -25,6 +25,14 @@
 		}
 	}
 
+	&.disabled {
+		opacity: 0.5;
+
+		&:hover {
+			cursor: not-allowed;
+		}
+	}
+
 	&:hover {
 		cursor: pointer;
 		filter: brightness(1.45);
