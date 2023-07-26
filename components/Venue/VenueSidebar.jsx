@@ -11,13 +11,22 @@ import styles from "./VenueSidebar.module.scss"
 export default function VenueSidebar({ venue, side }) {
 	const locations = venue.location.map((location, index) => {
 		return (
-			<VenueInformation
+			<VenueLocation
 				venue={venue}
 				location={location}
 				key={`${location.id}-${index}`}
 			/>
 		)
 	})
+
+	const { business_information } = venue
+	const business_types = [
+		business_information?.business_type,
+		business_information?.business_type_2 ?? null,
+		business_information?.business_type_3 ?? null,
+	]
+		?.filter((type) => !!type)
+		.join("/")
 
 	const logo = insertCloudinaryFolder(
 		venue?.business_information?.logo?.data?.attributes?.url,
@@ -41,6 +50,11 @@ export default function VenueSidebar({ venue, side }) {
 				)}
 			</div>
 			<div className={`${styles.sidebarContent}`}>
+				<div className={`${styles.businessTypes}`}>
+					{business_types && (
+						<p className={`${styles.text}`}>{business_types}</p>
+					)}
+				</div>
 				<div className={`${styles.socialLinksContainer}`}>
 					<SocialLinks {...venue.social_links} />
 				</div>
@@ -50,7 +64,7 @@ export default function VenueSidebar({ venue, side }) {
 	)
 }
 
-function VenueInformation({ venue, location }) {
+function VenueLocation({ venue, location }) {
 	const city = location?.city?.data?.attributes?.name
 	const neighborhood = location?.neighborhood?.data?.attributes?.name
 

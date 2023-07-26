@@ -45,6 +45,17 @@
 		// 	transparent 15%
 		// );
 
+		.businessTypes {
+			margin: 0;
+			padding: 0;
+			text-transform: capitalize;
+
+			.text {
+				margin-top: 0;
+				padding: 0;
+			}
+		}
+
 		.socialLinksContainer {
 			display: flex;
 			justify-content: flex-start;

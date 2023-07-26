@@ -2,6 +2,7 @@
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 	min-height: 80vh;
+	color: var(--primary-text);
 
 	@media (max-width: 768px) {
 		grid-template-columns: 100%;
