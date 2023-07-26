@@ -1,10 +1,12 @@
-import Image from "next/image"
 import { CldImage } from "next-cloudinary"
 import Link from "next/link"
-import SocialLinks from "components/SocialLinks/SocialLinks"
 import { FaMapMarkerAlt } from "react-icons/fa"
-import styles from "./VenueSidebar.module.scss"
+
+import SocialLinks from "components/SocialLinks/SocialLinks"
+
 import { insertCloudinaryFolder } from "lib/helpers/images/cloudinary"
+
+import styles from "./VenueSidebar.module.scss"
 
 export default function VenueSidebar({ venue, side }) {
 	const locations = venue.location.map((location, index) => {
