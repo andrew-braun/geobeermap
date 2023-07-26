@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useForm } from "react-hook-form"
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
@@ -23,16 +23,24 @@ export default function ContactForm() {
 		register,
 		handleSubmit,
 		formState: { errors },
+		reset,
 	} = useForm(validationSchema, {
 		resolver: yupResolver(validationSchema),
 	})
 
 	const onSubmit = async (values) => {
-		const response = await submitForm(values)
-		const data = await response
+		try {
+			const response = await submitForm(values)
+			const data = await response
 
-		if (!!data?.error) {
-			console.error(`Error: ${data.message}`)
+			if (!!data?.error) {
+				console.error(`Error: ${data.message}`)
+				return
+			}
+			reset()
+			return
+		} catch (error) {
+			console.error(error)
 		}
 	}
 

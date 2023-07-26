@@ -1,6 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
+
+import Nav from "components/layout/Nav"
+
 import styles from "./Header.module.scss"
+
 export default function Header() {
 	return (
 		<header className={`${styles.header}`}>
@@ -14,6 +18,7 @@ export default function Header() {
 				</div>
 				<span className={`${styles.title}`}>GeoBeerMap</span>
 			</Link>
+			<Nav />
 		</header>
 	)
 }
