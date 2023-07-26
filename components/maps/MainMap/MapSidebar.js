@@ -1,10 +1,12 @@
-import { useState, useMemo, useContext } from "react"
+import { useMemo, useContext } from "react"
 import dynamic from "next/dynamic"
 
 import SearchBox from "components/search/SearchBox/SearchBox"
 const SidebarItem = dynamic(() => import("./SidebarItem"))
 
 import { SearchContext } from "context/SearchContext"
+
+import { filterVenuesBySearchState } from "lib/helpers/content/venues"
 
 import styles from "./MapSidebar.module.scss"
 
@@ -46,9 +48,7 @@ export default function MapSidebar({ venues, activeVenue, handleVenueClick }) {
 		let currentVenues = venues
 
 		if (searchState?.length) {
-			let venueResults = venues.filter((venue) => {
-				return searchState.some((result) => result.id === venue.id)
-			})
+			let venueResults = filterVenuesBySearchState({ venues, searchState })
 
 			const sortedVenues = venueResults?.sort((a, b) => {
 				if (searchState?.length) {

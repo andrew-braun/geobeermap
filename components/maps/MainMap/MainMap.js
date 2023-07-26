@@ -1,8 +1,7 @@
-import { useState, useEffect, useMemo, useCallback } from "react"
+import { useState, useEffect, useMemo, useCallback, useContext } from "react"
 import { CgArrowLongRightL } from "react-icons/cg"
 import dynamic from "next/dynamic"
 import Map, {
-	Popup,
 	NavigationControl,
 	FullscreenControl,
 	ScaleControl,
@@ -10,11 +9,13 @@ import Map, {
 } from "react-map-gl"
 
 import PrimaryMarker from "components/maps/markers/PrimaryMarker"
-
 import VenuePopup from "components/maps/popups/VenuePopup/VenuePopup"
-
 const MapSidebar = dynamic(() => import("./MapSidebar"))
 const SlideIn = dynamic(() => import("components/ui/SlideIn/SlideIn"))
+
+import { SearchContext } from "context/SearchContext"
+
+import { filterVenuesBySearchState } from "lib/helpers/content/venues"
 
 import { iconSizes } from "styles/style-variables"
 import "mapbox-gl/dist/mapbox-gl.css"
@@ -32,6 +33,8 @@ export default function MainMap({ venues }) {
 	const [isSidebarHidden, setIsSidebarHidden] = useState(false)
 	const [activeVenue, setActiveVenue] = useState(null)
 	const [popupInfo, setPopupInfo] = useState(null)
+
+	const { searchState } = useContext(SearchContext)
 
 	// Run only on first page load when location request is made; when permission is granted, move and zoom
 	useEffect(() => {
@@ -64,36 +67,37 @@ export default function MainMap({ venues }) {
 		[venues, activeVenue, setPopupInfo]
 	)
 
-	// useEffect(() => {
-	// 	console.log(popupInfo)
-	// }, [popupInfo])
-
 	const handlePopupClose = (event) => {
 		setActiveVenue(null)
 		setPopupInfo(null)
 	}
 
-	const mapMarkers = useMemo(
-		() =>
-			venues
-				.map((venue, venueIndex) => {
-					const locationMarkers = venue.location.locations.map((location) => {
-						return (
-							<PrimaryMarker
-								longitude={location.longitude}
-								latitude={location.latitude}
-								onClick={handleVenueClick}
-								venueSlug={venue.slug}
-								active={activeVenue === venue.slug}
-								key={`${venue.slug}-${location.location_id}`}
-							/>
-						)
-					})
-					return locationMarkers
+	const mapMarkers = useMemo(() => {
+		let currentVenues = venues
+
+		if (searchState?.length) {
+			let venueResults = filterVenuesBySearchState({ venues, searchState })
+			currentVenues = venueResults
+		}
+
+		return currentVenues
+			.map((venue, venueIndex) => {
+				const locationMarkers = venue.location.locations.map((location) => {
+					return (
+						<PrimaryMarker
+							longitude={location.longitude}
+							latitude={location.latitude}
+							onClick={handleVenueClick}
+							venueSlug={venue.slug}
+							active={activeVenue === venue.slug}
+							key={`${venue.slug}-${location.location_id}`}
+						/>
+					)
 				})
-				.flat(),
-		[venues, activeVenue, handleVenueClick]
-	)
+				return locationMarkers
+			})
+			.flat()
+	}, [venues, activeVenue, searchState, handleVenueClick])
 
 	const handleSidebarButtonClick = () => {
 		setIsSidebarHidden(!isSidebarHidden)
