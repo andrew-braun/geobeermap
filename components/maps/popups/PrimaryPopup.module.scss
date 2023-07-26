@@ -2,6 +2,7 @@
 	padding: 0;
 	width: clamp(250px, 360px, 90vw);
 	min-height: 200px;
+	transition: opacity 0.3s ease-in-out;
 
 	div:global(.mapboxgl-popup-content) {
 		height: 100%;
@@ -16,8 +17,10 @@
 	}
 	&.show {
 		opacity: 1;
+		transition: all 0.3s ease-in-out;
 	}
 	&.hide {
 		opacity: 0;
+		transition: all 0.3s ease-in-out;
 	}
 }

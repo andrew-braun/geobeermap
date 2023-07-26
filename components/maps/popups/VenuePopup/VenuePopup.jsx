@@ -51,9 +51,11 @@ export default function VenuePopup({ venue, onClose }) {
 								<FaMapMarkerAlt />
 							</span>
 							<span className={`${styles.infoText}`}>
-								{location.name}{" "}
-								{location.neighborhood.name !== location.name &&
-									"- " + location.neighborhood.name}
+								<Link href={`${google_maps}`}>
+									{location.name}{" "}
+									{location.neighborhood.name !== location.name &&
+										"- " + location.neighborhood.name}
+								</Link>
 							</span>
 						</span>
 					</div>
