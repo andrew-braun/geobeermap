@@ -25,6 +25,8 @@
 			max-width: max-content;
 		}
 		.type {
+			margin-top: var(--spacing-small);
+			color: var(--primary-text);
 			text-transform: capitalize;
 		}
 	}
