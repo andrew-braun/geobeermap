@@ -20,7 +20,10 @@ export default function SlideIn({
 				className={`${styles.arrow} ${arrowOutside ? styles.arrowOutside : ""}`}
 				onClick={onClick}
 			>
-				<HiArrowNarrowLeft size={iconSizes.medium} />
+				<HiArrowNarrowLeft
+					size={iconSizes.medium}
+					color="var(--primary-text)"
+				/>
 			</div>
 			<div>{children}</div>
 		</aside>

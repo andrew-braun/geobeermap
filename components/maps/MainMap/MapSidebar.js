@@ -99,12 +99,14 @@ export default function MapSidebar({ venues, activeVenue, handleVenueClick }) {
 
 	return (
 		<aside className={`${styles.mapSidebar}`}>
-			<SearchBox
-				searchData={searchData}
-				keys={searchKeys}
-				updateSearchState={setSearchState}
-				idsOnly={false}
-			/>
+			<div className={`${styles.searchBoxWrapper}`}>
+				<SearchBox
+					searchData={searchData}
+					keys={searchKeys}
+					updateSearchState={setSearchState}
+					idsOnly={false}
+				/>
+			</div>
 			{venueList}
 		</aside>
 	)

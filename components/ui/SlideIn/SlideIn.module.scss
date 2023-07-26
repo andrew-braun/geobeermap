@@ -16,14 +16,18 @@
 
 	.arrow {
 		position: absolute;
-		right: var(--spacing-small);
+		// top: var(--spacing-large);
+		right: -40px;
 		z-index: 100;
 		display: block;
 		width: max-content;
 		padding: 0 var(--spacing-small);
-		border-radius: var(--border-radius-medium);
+		border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0;
 		background: var(transparent);
 		transition: all var(--transition-speed-medium) ease-in-out;
+		background: var(--primary-background);
+		border: 1px solid var(--primary-button-color);
+		border-width: 2px 2px 2px 0;
 		svg:global() {
 			display: flex;
 			align-items: center;
@@ -37,7 +41,8 @@
 			color: black;
 		}
 		&:hover {
-			background: var(--primary-button-hover-color);
+			background: var(--primary-button-color);
+			filter: brightness(1.25);
 		}
 	}
 	&:hover {
