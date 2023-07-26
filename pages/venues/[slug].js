@@ -36,6 +36,11 @@ export default function Venue({ venue }) {
 			>
 				<VenueSidebar venue={venue} side="left" />
 				<main className={`${styles.content}`}>
+					{!venue.business_information.currently_operating && (
+						<div className={`${styles.notOperatingAlert}`}>
+							This business is permanently or temporarily closed
+						</div>
+					)}
 					<section className={`${styles.text}`}>
 						<h2 className={`sectionHeading`}>{venue.name}</h2>
 						<div

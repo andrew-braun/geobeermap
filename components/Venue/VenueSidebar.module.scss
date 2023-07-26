@@ -45,21 +45,32 @@
 		// 	transparent 15%
 		// );
 
+		.sidebarItem {
+			padding: var(--spacing-medium) 0;
+			border-image: linear-gradient(
+					90deg,
+					transparent 15%,
+					var(--accent-1) 30%,
+					transparent 65%
+				)
+				30;
+			border-width: 0 0 1px 0;
+			border-style: solid;
+		}
+
 		.businessTypes {
-			margin: 0;
-			padding: 0;
 			text-transform: capitalize;
 
 			.text {
-				margin-top: 0;
-				padding: 0;
+				margin: 0;
 			}
 		}
 
 		.socialLinksContainer {
 			display: flex;
 			justify-content: flex-start;
-			padding-bottom: var(--spacing-large);
+			padding: calc(var(--spacing-medium) - var(--spacing-small)) 0;
+
 			flex-wrap: wrap;
 
 			a:first-child {

@@ -50,12 +50,12 @@ export default function VenueSidebar({ venue, side }) {
 				)}
 			</div>
 			<div className={`${styles.sidebarContent}`}>
-				<div className={`${styles.businessTypes}`}>
+				<div className={`${styles.businessTypes} ${styles.sidebarItem}`}>
 					{business_types && (
 						<p className={`${styles.text}`}>{business_types}</p>
 					)}
 				</div>
-				<div className={`${styles.socialLinksContainer}`}>
+				<div className={`${styles.socialLinksContainer} ${styles.sidebarItem}`}>
 					<SocialLinks {...venue.social_links} />
 				</div>
 				<div className={`${styles.locations}`}>{locations}</div>
@@ -73,7 +73,7 @@ function VenueLocation({ venue, location }) {
 			key={location.id}
 			href={location?.map_link ?? venue?.social_links?.google_maps ?? "#"}
 			target="_blank"
-			className={`${styles.locationsList}`}
+			className={`${styles.locationsList} ${styles.sidebarItem}`}
 		>
 			<FaMapMarkerAlt size={25} className={`${styles.locationIcon}`} />
 			<span className={`${styles.neighborhood}`}>

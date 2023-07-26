@@ -23,4 +23,11 @@
 			margin-top: var(--spacing-large-2);
 		}
 	}
+
+	.notOperatingAlert {
+		background-color: firebrick;
+		margin-bottom: var(--spacing-large);
+		padding: var(--spacing-small);
+		border-radius: var(--border-radius-medium);
+	}
 }
