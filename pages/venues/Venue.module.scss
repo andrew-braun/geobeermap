@@ -25,9 +25,15 @@
 	}
 
 	.notOperatingAlert {
-		background-color: firebrick;
+		display: flex;
+		align-items: center;
 		margin-bottom: var(--spacing-large);
 		padding: var(--spacing-small);
+		background-color: var(--alert-color);
 		border-radius: var(--border-radius-medium);
+
+		.text {
+			margin-left: var(--spacing-small);
+		}
 	}
 }

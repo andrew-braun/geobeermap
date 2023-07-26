@@ -45,7 +45,7 @@ export default function VenueSidebar({ venue, side }) {
 						src={logo}
 						alt={`${venue.name} logo`}
 						fill
-						style={{ objectFit: "scale-down" }}
+						// style={{ objectFit: "scale-down" }}
 					/>
 				)}
 			</div>

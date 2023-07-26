@@ -9,6 +9,7 @@ import { fetchVenue } from "lib/helpers/api/strapi/strapi"
 import { siteData } from "lib/data/site/site-data"
 
 import styles from "./Venue.module.scss"
+import UtilityIcon from "components/ui/icons/UtilityIcon"
 
 export default function Venue({ venue }) {
 	const { title: siteTitle, url: siteUrl } = siteData
@@ -38,7 +39,10 @@ export default function Venue({ venue }) {
 				<main className={`${styles.content}`}>
 					{!venue.business_information.currently_operating && (
 						<div className={`${styles.notOperatingAlert}`}>
-							This business is permanently or temporarily closed
+							<UtilityIcon icon="warning" color="var(--primary-text)" />
+							<span className={`${styles.text}`}>
+								This business is permanently or temporarily closed
+							</span>
 						</div>
 					)}
 					<section className={`${styles.text}`}>
