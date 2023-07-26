@@ -1,0 +1,7 @@
+.contactContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: clamp(300px, 480px, 80%);
+	margin: auto;
+}

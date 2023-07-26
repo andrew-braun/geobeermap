@@ -15,8 +15,8 @@
 	--primary-text: #{hsla(218, 22, 93, 1)};
 	--dark-text: #{hsla(0, 90%, 5%, 1)};
 
-	--primary-button-color: #{#006b6b};
-	--primary-button-hover-color: #{#004f58};
+	--primary-button-color: #{hsl(180, 100%, 21%)};
+	--primary-button-hover-color: #{hsl(186, 100%, 17%)};
 
 	--font-size-small: #{1.2rem};
 	--font-size-small-2: #{1.4rem};
@@ -39,6 +39,8 @@
 	--spacing-large-2: #{2rem};
 	--spacing-large-3: #{2.5rem};
 
+	--transition-medium: #{all 0.3s ease-in-out};
+
 	--transition-speed-medium: #{0.3s};
 
 	--border-radius-medium: #{4px};
@@ -52,8 +54,9 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: var(--font-ubuntu), Arial, Helvetica, sans-serif;
 	background: var(--primary-background);
+	font-family: var(--font-ubuntu), Arial, Helvetica, sans-serif;
+	color: var(--primary-text);
 }
 
 html {

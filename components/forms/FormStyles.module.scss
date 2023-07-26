@@ -1,0 +1,24 @@
+.form {
+	width: 100%;
+
+	.formInputContainer {
+		.formInput {
+			width: 100%;
+			height: 40px;
+			margin: var(--spacing-small) 0;
+			padding: var(--spacing-medium);
+			border-radius: var(--border-radius-medium);
+			border: 2px solid var(--accent-2);
+			background: transparent;
+			font-size: var(--font-size-medium);
+			color: var(--primary-text);
+
+			&.textArea {
+				height: 16rem;
+			}
+		}
+		.label {
+			font-size: var(--font-size-small-2);
+		}
+	}
+}

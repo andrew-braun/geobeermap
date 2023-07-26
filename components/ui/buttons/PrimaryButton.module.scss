@@ -1,0 +1,15 @@
+.button {
+	width: 100%;
+	padding: var(--spacing-medium);
+	border-width: 0;
+	background: var(--primary-button-color);
+	font-size: var(--font-size-medium);
+	color: var(--primary-text);
+	transition: var(--transition-medium);
+	border-radius: var(--border-radius-medium);
+
+	&:hover {
+		cursor: pointer;
+		filter: brightness(1.25);
+	}
+}
