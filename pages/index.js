@@ -1,23 +1,40 @@
-import Head from "next/head"
-import Layout from "components/layout/Layout"
+import { NextSeo } from "next-seo"
+
 import HomeContent from "components/HomeContent"
 
 import { fetchAllVenues } from "/lib/helpers/api/strapi/strapi"
+
+import { siteData } from "lib/data/site/site-data"
+
 import styles from "./Home.module.scss"
 
 export default function Home({ venues }) {
+	const {
+		title: siteTitle,
+		url: siteUrl,
+		description: siteDescription,
+	} = siteData
+
+	console.log(siteTitle, siteUrl, siteDescription)
 	return (
-		<div>
-			<Head>
-				<title>GeoBeerMap</title>
-				<meta
-					name="description"
-					content="A website for finding craft beer in the country of Georgia"
-				/>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+		<>
+			<NextSeo
+				title={`Home - ${siteTitle}`}
+				description={siteDescription}
+				openGraph={{
+					url: `${siteUrl}`,
+					title: `${siteTitle}`,
+					description: `${siteDescription}`,
+					images: [
+						{
+							url: "/images/brand/geobeermap-square-logo.png",
+						},
+					],
+					site_name: siteTitle,
+				}}
+			/>
 			<HomeContent venues={venues} />
-		</div>
+		</>
 	)
 }
 

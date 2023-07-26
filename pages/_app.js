@@ -1,4 +1,3 @@
-import { useContext } from "react"
 import Head from "next/head"
 import Layout from "components/layout/Layout"
 import Favicon from "components/meta/Favicon"

@@ -11,7 +11,7 @@ import { siteData } from "lib/data/site/site-data"
 import styles from "./Venue.module.scss"
 
 export default function Venue({ venue }) {
-	const { title: siteTitle, url: siteUrl } = siteData.title
+	const { title: siteTitle, url: siteUrl } = siteData
 
 	return (
 		<>
@@ -50,7 +50,7 @@ export default function Venue({ venue }) {
 
 export async function getStaticPaths() {
 	const venues = await fetchAllVenues()
-	const venueSlugs = await venues.map((venue) => {
+	const venueSlugs = venues.map((venue) => {
 		return {
 			params: {
 				slug: venue.slug,
