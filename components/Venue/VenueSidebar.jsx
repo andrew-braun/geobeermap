@@ -55,13 +55,13 @@ function VenueInformation({ venue, location }) {
 	return (
 		<Link
 			key={location.id}
-			href={location?.map_link ?? venue.social_links.google_maps}
+			href={location?.map_link ?? venue?.social_links?.google_maps ?? "#"}
 			target="_blank"
 			className={`${styles.locationsList}`}
 		>
 			<FaMapMarkerAlt size={25} className={`${styles.locationIcon}`} />
 			<span className={`${styles.neighborhood}`}>
-				{neighborhood && neighborhood},
+				{neighborhood && neighborhood + ", "}
 			</span>
 			<span>{city && city}</span>
 		</Link>

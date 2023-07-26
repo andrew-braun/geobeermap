@@ -1,4 +1,5 @@
-import { createContext, useState } from "react"
+import { createContext, useState, useEffect } from "react"
+import { useRouter } from "next/router"
 
 export const SearchContext = createContext({
 	searchState: [],
@@ -7,6 +8,12 @@ export const SearchContext = createContext({
 
 export const SearchProvider = ({ children }) => {
 	const [searchState, setSearchState] = useState([])
+
+	const router = useRouter()
+
+	useEffect(() => {
+		setSearchState([])
+	}, [router.asPath])
 
 	return (
 		<SearchContext.Provider value={{ searchState, setSearchState }}>

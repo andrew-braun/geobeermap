@@ -11,7 +11,8 @@
 	.content {
 		grid-column: 2;
 		grid-row: 1;
-		max-width: var(--text-width);
+		min-width: 100%;
+		// max-width: var(--text-width);
 		padding: 0 var(--spacing-medium);
 		margin: 0 auto;
 

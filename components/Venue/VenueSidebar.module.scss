@@ -26,24 +26,24 @@
 	}
 	.sidebarContent {
 		height: auto;
+		min-width: 225px;
 		max-width: max-content;
 		margin: var(--spacing-large) auto 0 auto;
 		padding: var(--spacing-large);
-		// border-image: linear-gradient(
-		// 		to bottom,
-		// 		var(--accent-2) 0%,
-		// 		transparent 60%
-		// 	)
-		// 	30;
-		// border-width: 0 1px 0 1px;
-		// border-width: 1px;
-		// border-style: solid;
+		border-image: linear-gradient(
+				to bottom,
+				var(--accent-2) 0%,
+				transparent 80%
+			)
+			30;
+		border-width: 0px 1px 0px 0px;
+		border-style: solid;
 		border-radius: var(--border-radius-medium-2);
-		background-image: linear-gradient(
-			to top,
-			var(--accent-1-transparent) 0%,
-			transparent 15%
-		);
+		// background-image: linear-gradient(
+		// 	to top,
+		// 	var(--accent-1-transparent) 0%,
+		// 	transparent 15%
+		// );
 
 		.socialLinksContainer {
 			display: flex;
