@@ -41,7 +41,7 @@ export async function getServerSideProps({ res }) {
 	const venueData = await fetchAllVenues({
 		processVenue: false,
 		data: "minimal",
-		paramString: "?sort[0]=slug:asc&fields[0]=slug&fields[1]=updatedAt",
+		paramString: "?sort=slug:asc&fields[0]=slug&fields[1]=updatedAt",
 	})
 
 	// We generate the XML sitemap with the posts data
