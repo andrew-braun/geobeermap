@@ -14,7 +14,7 @@ export default function Home({ venues }) {
 		url: siteUrl,
 		description: siteDescription,
 	} = siteData
-
+	console.log(venues)
 	return (
 		<>
 			<NextSeo
@@ -38,11 +38,14 @@ export default function Home({ venues }) {
 }
 
 export async function getStaticProps() {
-	const venues = await fetchAllVenues(true)
+	const venues = await fetchAllVenues({ processData: true })
+	const venuesWithoutDescription = venues.map((venue) => {
+		return { ...venue, description: null }
+	})
 
 	return {
 		props: {
-			venues,
+			venues: venuesWithoutDescription,
 		},
 	}
 }

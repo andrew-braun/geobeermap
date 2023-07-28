@@ -62,7 +62,11 @@ export default function Venue({ venue }) {
 }
 
 export async function getStaticPaths() {
-	const venues = await fetchAllVenues()
+	const venues = await fetchAllVenues({
+		processData: false,
+		paramString: "?fields=slug",
+	})
+
 	const venueSlugs = venues.map((venue) => {
 		return {
 			params: {
