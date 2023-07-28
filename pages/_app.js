@@ -25,7 +25,7 @@ export default function MyApp({ Component, pageProps }) {
 				<Favicon />
 			</Head>
 			<Script
-				strategy="afterInteractive"
+				strategy="worker"
 				id="google-tag-manager"
 			>{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
