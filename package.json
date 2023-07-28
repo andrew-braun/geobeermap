@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@builder.io/partytown": "^0.8.0",
 		"@hookform/resolvers": "^3.1.1",
 		"form-data": "^4.0.0",
 		"fuse.js": "^6.6.2",
