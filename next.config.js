@@ -3,6 +3,9 @@ const { generateNewSlugRedirects } = require("./lib/data/site/redirects")
 
 const nextConfig = {
 	reactStrictMode: true,
+	experimental: {
+		nextScriptWorkers: true,
+	},
 	images: {
 		domains: ["res.cloudinary.com"],
 	},
