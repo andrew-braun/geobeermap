@@ -45,6 +45,10 @@
 		// 	transparent 15%
 		// );
 
+		@media (max-width: 768px) {
+			border-width: 0;
+		}
+
 		.sidebarItem {
 			padding: var(--spacing-medium) 0;
 			border-image: linear-gradient(
