@@ -50,7 +50,6 @@ export default function ContactForm() {
 	}
 
 	useEffect(() => {
-		console.log(isSubmitSuccessful)
 		if (isSubmitSuccessful) {
 			toggleModal()
 		}

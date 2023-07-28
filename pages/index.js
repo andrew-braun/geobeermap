@@ -14,7 +14,7 @@ export default function Home({ venues }) {
 		url: siteUrl,
 		description: siteDescription,
 	} = siteData
-	console.log(venues)
+
 	return (
 		<>
 			<NextSeo
