@@ -6,7 +6,6 @@ import { siteData } from "lib/data/site/site-data"
 function generateSiteMap({ venues }) {
 	const venueEntries = venues
 		.map((venue) => {
-			console.log(venue)
 			return `
                 <url>
                 <loc>${`${siteData.url}/venues/${venue?.attributes?.slug}`}</loc>
