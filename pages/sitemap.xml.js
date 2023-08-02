@@ -47,10 +47,10 @@ export async function getServerSideProps({ res }) {
 
 	// We generate the XML sitemap with the posts data
 	const sitemap = generateSiteMap({ venues: venueData })
-
+	console.log(sitemap)
 	res.setHeader("Content-Type", "text/xml")
 
-	// // Send the XML to the browser
+	// Send the XML to the browser
 	res.write(`${sitemap}`)
 	res.end()
 
