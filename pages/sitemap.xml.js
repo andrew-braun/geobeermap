@@ -6,6 +6,7 @@ import { siteData } from "lib/data/site/site-data"
 function generateSiteMap({ venues }) {
 	const venueEntries = venues
 		.map((venue) => {
+			console.log(venue)
 			return `
                 <url>
                 <loc>${`${siteData.url}/venues/${venue?.attributes?.slug}`}</loc>
@@ -39,10 +40,10 @@ export async function getServerSideProps({ res }) {
 	// We make an API call to gather the URLs for our site
 
 	const venueData = await fetchAllVenues({
-		processVenue: false,
+		processData: false,
 		data: "minimal",
 		paramString:
-			"?sort=slug:asc&fields[0]=slug&fields[1]=updatedAt?pagination[limit]=1000",
+			"?sort=slug:asc&fields[0]=slug&fields[1]=updatedAt&pagination[limit]=1000",
 	})
 
 	// We generate the XML sitemap with the posts data
@@ -50,7 +51,7 @@ export async function getServerSideProps({ res }) {
 
 	res.setHeader("Content-Type", "text/xml")
 
-	// Send the XML to the browser
+	// // Send the XML to the browser
 	res.write(`${sitemap}`)
 	res.end()
 
